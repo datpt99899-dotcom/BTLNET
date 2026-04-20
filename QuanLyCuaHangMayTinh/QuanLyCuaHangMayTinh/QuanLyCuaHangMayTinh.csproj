@@ -191,11 +191,11 @@
     <Compile Include="GUI\frmNhapKho.Designer.cs">
       <DependentUpon>frmNhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmQuanLyBanHangNhanVien.cs">
+    <Compile Include="GUI\frmadmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmQuanLyBanHangNhanVien.Designer.cs">
-      <DependentUpon>frmQuanLyBanHangNhanVien.cs</DependentUpon>
+    <Compile Include="GUI\frmadmin.Designer.cs">
+      <DependentUpon>frmadmin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDanhMuc.cs">
       <SubType>Form</SubType>
@@ -348,8 +348,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmQuanLyBanHangNhanVien.resx">
-      <DependentUpon>frmQuanLyBanHangNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmadmin.resx">
+      <DependentUpon>frmadmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
