@@ -414,6 +414,7 @@
     <None Include="Resources\tra_sua_tc.jpg" />
     <None Include="Resources\tra_thach_dao.jpg" />
     <None Include="Resources\traxanh_latte.jpg" />
+    <None Include="Resources\b-pc-mcc-1920x1080.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

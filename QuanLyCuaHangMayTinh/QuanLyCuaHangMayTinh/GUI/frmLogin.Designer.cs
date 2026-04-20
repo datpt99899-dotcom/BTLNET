@@ -69,7 +69,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyCuaHangMayTinh.Properties.Resources.pngegg__1_;
+            this.pictureBox1.Image = global::QuanLyCuaHangMayTinh.Properties.Resources.b_pc_mcc_1920x1080;
             this.pictureBox1.Location = new System.Drawing.Point(22, 20);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -110,7 +110,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.BackColor = System.Drawing.Color.Turquoise;
             this.label6.Location = new System.Drawing.Point(-2, 14);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
