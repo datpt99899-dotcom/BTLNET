@@ -1,0 +1,1 @@
+Added System.Configuration reference and replaced auto-generated Settings.Designer.cs with a stable manual wrapper to prevent WinForms designer failures caused by ApplicationScopedSettingAttribute. Also disabled auto-generation metadata for Settings.settings in the csproj.

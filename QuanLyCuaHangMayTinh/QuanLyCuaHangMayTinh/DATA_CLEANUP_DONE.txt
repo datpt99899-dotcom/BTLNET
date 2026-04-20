@@ -1,0 +1,7 @@
+Da don sach phan data legacy trong project ql may tinh:
+- Chuan hoa connection setting ve DefaultConnection va QuanLyCuaHangMayTinhConnectionString
+- Loai bo query bang cu NguyenLieu / KhuyenMai / Ban / MaBan
+- frmNguyenLieu -> dung schema SanPham moi
+- frmKhuyenMai -> dung schema NhaCungCap moi
+- frm_quanlyban -> dung schema DonDatHang moi
+- Xoa metadata TableAdapter cu trong frmBaoCao.resx

@@ -1,0 +1,1 @@
+Fixed WinForms designer settings/configuration issue by removing Settings.settings from project, stabilizing Settings.Designer.cs, removing legacy connection string names, and changing DataSet XSD connection metadata to not use ApplicationSettings property references. Delete .vs/bin/obj before opening in Visual Studio.

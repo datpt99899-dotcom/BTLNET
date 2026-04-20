@@ -1,0 +1,19 @@
+Da ghep phan data/dataset moi tu bo ql_maytinh_data_migration_step2_dataset vao bo ql_maytinh2_data_fixed_preserve_forms.
+
+Da cap nhat trong file 1:
+- App.config
+- Properties/Settings.*
+- Function.cs
+- DapperRepository.cs
+- StaticData.cs
+- SecurityHelper.cs
+- frmLogin.*
+- QuanLy/frmBaoCao.*
+- QuanLyCuaHangMayTinhDataSet.xsd/.xsc/.xss
+- database_QuanLyCuaHangMayTinh.sql
+- Repositories/AuthRepository.cs
+- Repositories/ProductRepository.cs
+- Repositories/ReportRepository.cs
+- QuanLyCuaHangMayTinh.csproj
+
+Muc tieu: giu form cua file 1, thay phan data/dataset theo bo moi.

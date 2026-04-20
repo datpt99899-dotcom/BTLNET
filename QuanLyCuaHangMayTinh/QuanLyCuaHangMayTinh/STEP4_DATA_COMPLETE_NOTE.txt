@@ -1,0 +1,21 @@
+STEP 4 - DATA MIGRATION CONTINUED ON FILE1_MERGED_WITH_STEP2_DATA
+
+Updated in this round:
+- QuanLy/frmQuanlyHoadon.cs -> query HoaDonBan + ChiTietHoaDonBan with new schema
+- ThuKho/frmBaoCaoKho.cs -> chart uses SanPham + ChiTietPhieuNhap
+- QuanLy/frmTraHang.cs -> create PhieuTraHang from HoaDonBan
+- ThuNgan/frmBaocaohoadon_Nhanvien.cs -> report uses HoaDonBan new schema
+- QuanLy/frmSanpham.cs -> uses SanPham + LoaiSanPham + ThuongHieu + NhaCungCap
+- ThuKho/frmNhapKho.cs -> uses PhieuNhapKho + ChiTietPhieuNhap
+- ThuNgan/frmBanhang_Nhanvien.cs -> POS direct sale uses HoaDonBan + ChiTietHoaDonBan
+- QuanLy/frmThongKeDonHang.cs -> charts use HoaDonBan / DonDatHang
+- QuanLy/frmDanhmucsanpham.cs -> uses LoaiSanPham
+- ThuKho/frmNhanVienKho.cs -> button 'Sản phẩm' now opens frmSanpham instead of frmNguyenLieu
+- QuanLy/frm_quanly.cs -> disabled old buttons that still mapped to legacy forms
+- Properties/Settings.* + XSD + SQL -> connection/schema updated to QuanLyCuaHangMayTinhDB
+- database_QuanLyCuaHangMayTinh.sql -> added HinhAnh column in SanPham for compatibility with frmSanpham
+
+Still legacy and not fully migrated in this round:
+- QuanLy/frmKhuyenMai.cs
+- QuanLy/frm_quanlyban.cs
+- ThuKho/frmNguyenLieu.cs (no longer opened from warehouse menu)
