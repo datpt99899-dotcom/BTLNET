@@ -299,6 +299,9 @@
     <EmbeddedResource Include="GUI\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoaiSanPham.resx">
+      <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThongKeSP.resx">
       <DependentUpon>frmThongKeSP.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmBaoCaoKho.resx">
       <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThuongHieu.resx">
+      <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTonKho.resx">
       <DependentUpon>frmTonKho.cs</DependentUpon>
