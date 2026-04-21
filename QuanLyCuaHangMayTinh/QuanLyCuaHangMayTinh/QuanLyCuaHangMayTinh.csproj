@@ -121,35 +121,29 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\Forms\frmLoaiSanPham.cs">
+    <Compile Include="GUI\frmLoaiSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Forms\frmLoaiSanPham.Designer.cs">
+    <Compile Include="GUI\frmLoaiSanPham.Designer.cs">
       <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\frmMenuDemo.cs">
+    <Compile Include="GUI\frmMenuDemo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Forms\frmMenuDemo.Designer.cs">
+    <Compile Include="GUI\frmMenuDemo.Designer.cs">
       <DependentUpon>frmMenuDemo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\frmNhaCungCap.cs">
+    <Compile Include="GUI\frmNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Forms\frmNhaCungCap.Designer.cs">
+    <Compile Include="GUI\frmNhaCungCap.Designer.cs">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\frmSanPham.cs">
+    <Compile Include="GUI\frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Forms\frmSanPham.Designer.cs">
+    <Compile Include="GUI\frmSanPham.Designer.cs">
       <DependentUpon>frmSanPham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Forms\frmThuongHieu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Forms\frmThuongHieu.Designer.cs">
-      <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmThongTinTK.cs">
       <SubType>Form</SubType>
@@ -162,6 +156,12 @@
     </Compile>
     <Compile Include="GUI\frmDonHang.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThuongHieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThuongHieu.Designer.cs">
+      <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmTraHang.cs">
       <SubType>Form</SubType>
@@ -226,18 +226,6 @@
     </Compile>
     <Compile Include="GUI\frmadmin.Designer.cs">
       <DependentUpon>frmadmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmDanhMuc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmDanhMuc.Designer.cs">
-      <DependentUpon>frmDanhMuc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmSanPham.Designer.cs">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmMain.cs">
       <SubType>Form</SubType>
@@ -308,15 +296,6 @@
     <Compile Include="DTO\PhieuTraHangDTO.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\Forms\frmLoaiSanPham.resx">
-      <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Forms\frmMenuDemo.resx">
-      <DependentUpon>frmMenuDemo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Forms\frmThuongHieu.resx">
-      <DependentUpon>frmThuongHieu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,13 +335,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDanhMuc.resx">
-      <DependentUpon>frmDanhMuc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmSanPham.resx">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

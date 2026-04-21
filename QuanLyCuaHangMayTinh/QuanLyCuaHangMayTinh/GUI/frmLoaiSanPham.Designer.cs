@@ -41,29 +41,29 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
 
         private void InitializeComponent()
         {
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.grpThongTin = new System.Windows.Forms.GroupBox();
-            this.lblMaLoai = new System.Windows.Forms.Label();
-            this.lblTenLoai = new System.Windows.Forms.Label();
-            this.txtMaLoai = new System.Windows.Forms.TextBox();
-            this.txtTenLoai = new System.Windows.Forms.TextBox();
-            this.grpTimKiem = new System.Windows.Forms.GroupBox();
-            this.lblTimKiemTitle = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.grpChucNang = new System.Windows.Forms.GroupBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.grpDanhSach = new System.Windows.Forms.GroupBox();
-            this.dgvLoaiSanPham = new System.Windows.Forms.DataGridView();
-            this.lblVaiTro = new System.Windows.Forms.Label();
-            this.lblHuongDan = new System.Windows.Forms.Label();
+            this.pnlHeader = new Panel();
+            this.lblTitle = new Label();
+            this.lblSubtitle = new Label();
+            this.grpThongTin = new GroupBox();
+            this.lblMaLoai = new Label();
+            this.lblTenLoai = new Label();
+            this.txtMaLoai = new TextBox();
+            this.txtTenLoai = new TextBox();
+            this.grpTimKiem = new GroupBox();
+            this.lblTimKiemTitle = new Label();
+            this.txtTimKiem = new TextBox();
+            this.btnTimKiem = new Button();
+            this.grpChucNang = new GroupBox();
+            this.btnThem = new Button();
+            this.btnSua = new Button();
+            this.btnXoa = new Button();
+            this.btnLuu = new Button();
+            this.btnHuy = new Button();
+            this.btnLamMoi = new Button();
+            this.grpDanhSach = new GroupBox();
+            this.dgvLoaiSanPham = new DataGridView();
+            this.lblVaiTro = new Label();
+            this.lblHuongDan = new Label();
             this.pnlHeader.SuspendLayout();
             this.grpThongTin.SuspendLayout();
             this.grpTimKiem.SuspendLayout();
@@ -74,33 +74,33 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(166)))));
+            this.pnlHeader.BackColor = Color.FromArgb(44, 88, 166);
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Controls.Add(this.lblSubtitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Dock = DockStyle.Top;
+            this.pnlHeader.Location = new Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1289, 78);
+            this.pnlHeader.Size = new Size(1084, 78);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(22, 14);
+            this.lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            this.lblTitle.ForeColor = Color.White;
+            this.lblTitle.Location = new Point(22, 14);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(421, 45);
+            this.lblTitle.Size = new Size(260, 30);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "QUẢN LÝ LOẠI SẢN PHẨM";
             // 
             // lblSubtitle
             // 
             this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSubtitle.Location = new System.Drawing.Point(24, 47);
+            this.lblSubtitle.ForeColor = Color.WhiteSmoke;
+            this.lblSubtitle.Location = new Point(24, 47);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(461, 25);
+            this.lblSubtitle.Size = new Size(368, 20);
             this.lblSubtitle.TabIndex = 1;
             this.lblSubtitle.Text = "Thêm, sửa, xóa, tìm kiếm loại sản phẩm theo dữ liệu SQL";
             // 
@@ -110,10 +110,10 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpThongTin.Controls.Add(this.lblTenLoai);
             this.grpThongTin.Controls.Add(this.txtMaLoai);
             this.grpThongTin.Controls.Add(this.txtTenLoai);
-            this.grpThongTin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpThongTin.Location = new System.Drawing.Point(24, 98);
+            this.grpThongTin.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.grpThongTin.Location = new Point(24, 98);
             this.grpThongTin.Name = "grpThongTin";
-            this.grpThongTin.Size = new System.Drawing.Size(408, 150);
+            this.grpThongTin.Size = new Size(408, 150);
             this.grpThongTin.TabIndex = 1;
             this.grpThongTin.TabStop = false;
             this.grpThongTin.Text = "Thông tin loại sản phẩm";
@@ -121,37 +121,37 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // lblMaLoai
             // 
             this.lblMaLoai.AutoSize = true;
-            this.lblMaLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblMaLoai.Location = new System.Drawing.Point(20, 42);
+            this.lblMaLoai.Font = new Font("Segoe UI", 10F);
+            this.lblMaLoai.Location = new Point(20, 42);
             this.lblMaLoai.Name = "lblMaLoai";
-            this.lblMaLoai.Size = new System.Drawing.Size(77, 28);
+            this.lblMaLoai.Size = new Size(58, 19);
             this.lblMaLoai.TabIndex = 0;
             this.lblMaLoai.Text = "Mã loại";
             // 
             // lblTenLoai
             // 
             this.lblTenLoai.AutoSize = true;
-            this.lblTenLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTenLoai.Location = new System.Drawing.Point(20, 88);
+            this.lblTenLoai.Font = new Font("Segoe UI", 10F);
+            this.lblTenLoai.Location = new Point(20, 88);
             this.lblTenLoai.Name = "lblTenLoai";
-            this.lblTenLoai.Size = new System.Drawing.Size(78, 28);
+            this.lblTenLoai.Size = new Size(61, 19);
             this.lblTenLoai.TabIndex = 1;
             this.lblTenLoai.Text = "Tên loại";
             // 
             // txtMaLoai
             // 
-            this.txtMaLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMaLoai.Location = new System.Drawing.Point(124, 38);
+            this.txtMaLoai.Font = new Font("Segoe UI", 10F);
+            this.txtMaLoai.Location = new Point(124, 38);
             this.txtMaLoai.Name = "txtMaLoai";
-            this.txtMaLoai.Size = new System.Drawing.Size(245, 34);
+            this.txtMaLoai.Size = new Size(245, 25);
             this.txtMaLoai.TabIndex = 2;
             // 
             // txtTenLoai
             // 
-            this.txtTenLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTenLoai.Location = new System.Drawing.Point(124, 84);
+            this.txtTenLoai.Font = new Font("Segoe UI", 10F);
+            this.txtTenLoai.Location = new Point(124, 84);
             this.txtTenLoai.Name = "txtTenLoai";
-            this.txtTenLoai.Size = new System.Drawing.Size(245, 34);
+            this.txtTenLoai.Size = new Size(245, 25);
             this.txtTenLoai.TabIndex = 3;
             // 
             // grpTimKiem
@@ -159,10 +159,10 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpTimKiem.Controls.Add(this.lblTimKiemTitle);
             this.grpTimKiem.Controls.Add(this.txtTimKiem);
             this.grpTimKiem.Controls.Add(this.btnTimKiem);
-            this.grpTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpTimKiem.Location = new System.Drawing.Point(455, 98);
+            this.grpTimKiem.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.grpTimKiem.Location = new Point(455, 98);
             this.grpTimKiem.Name = "grpTimKiem";
-            this.grpTimKiem.Size = new System.Drawing.Size(603, 88);
+            this.grpTimKiem.Size = new Size(603, 88);
             this.grpTimKiem.TabIndex = 2;
             this.grpTimKiem.TabStop = false;
             this.grpTimKiem.Text = "Tìm kiếm";
@@ -170,29 +170,29 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // lblTimKiemTitle
             // 
             this.lblTimKiemTitle.AutoSize = true;
-            this.lblTimKiemTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTimKiemTitle.Location = new System.Drawing.Point(19, 39);
+            this.lblTimKiemTitle.Font = new Font("Segoe UI", 10F);
+            this.lblTimKiemTitle.Location = new Point(19, 39);
             this.lblTimKiemTitle.Name = "lblTimKiemTitle";
-            this.lblTimKiemTitle.Size = new System.Drawing.Size(82, 28);
+            this.lblTimKiemTitle.Size = new Size(55, 19);
             this.lblTimKiemTitle.TabIndex = 0;
             this.lblTimKiemTitle.Text = "Từ khóa";
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTimKiem.Location = new System.Drawing.Point(86, 35);
+            this.txtTimKiem.Font = new Font("Segoe UI", 10F);
+            this.txtTimKiem.Location = new Point(86, 35);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(377, 34);
+            this.txtTimKiem.Size = new Size(377, 25);
             this.txtTimKiem.TabIndex = 1;
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(166)))));
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(480, 33);
+            this.btnTimKiem.BackColor = Color.FromArgb(44, 88, 166);
+            this.btnTimKiem.FlatStyle = FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = Color.White;
+            this.btnTimKiem.Location = new Point(480, 33);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(101, 30);
+            this.btnTimKiem.Size = new Size(101, 30);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -206,19 +206,19 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpChucNang.Controls.Add(this.btnLuu);
             this.grpChucNang.Controls.Add(this.btnHuy);
             this.grpChucNang.Controls.Add(this.btnLamMoi);
-            this.grpChucNang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpChucNang.Location = new System.Drawing.Point(455, 195);
+            this.grpChucNang.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.grpChucNang.Location = new Point(455, 195);
             this.grpChucNang.Name = "grpChucNang";
-            this.grpChucNang.Size = new System.Drawing.Size(603, 124);
+            this.grpChucNang.Size = new Size(603, 124);
             this.grpChucNang.TabIndex = 3;
             this.grpChucNang.TabStop = false;
             this.grpChucNang.Text = "Chức năng";
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(23, 34);
+            this.btnThem.Location = new Point(23, 34);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(92, 34);
+            this.btnThem.Size = new Size(92, 34);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -226,9 +226,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(123, 34);
+            this.btnSua.Location = new Point(123, 34);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(92, 34);
+            this.btnSua.Size = new Size(92, 34);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -236,9 +236,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(223, 34);
+            this.btnXoa.Location = new Point(223, 34);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(92, 34);
+            this.btnXoa.Size = new Size(92, 34);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -246,9 +246,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(323, 34);
+            this.btnLuu.Location = new Point(323, 34);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(92, 34);
+            this.btnLuu.Size = new Size(92, 34);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -256,9 +256,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(423, 34);
+            this.btnHuy.Location = new Point(423, 34);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(92, 34);
+            this.btnHuy.Size = new Size(92, 34);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -266,9 +266,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(23, 76);
+            this.btnLamMoi.Location = new Point(23, 76);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(92, 34);
+            this.btnLamMoi.Size = new Size(92, 34);
             this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
@@ -277,10 +277,10 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // grpDanhSach
             // 
             this.grpDanhSach.Controls.Add(this.dgvLoaiSanPham);
-            this.grpDanhSach.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpDanhSach.Location = new System.Drawing.Point(24, 332);
+            this.grpDanhSach.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.grpDanhSach.Location = new Point(24, 332);
             this.grpDanhSach.Name = "grpDanhSach";
-            this.grpDanhSach.Size = new System.Drawing.Size(1034, 327);
+            this.grpDanhSach.Size = new Size(1034, 327);
             this.grpDanhSach.TabIndex = 4;
             this.grpDanhSach.TabStop = false;
             this.grpDanhSach.Text = "Danh sách loại sản phẩm";
@@ -289,46 +289,44 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.dgvLoaiSanPham.AllowUserToAddRows = false;
             this.dgvLoaiSanPham.AllowUserToDeleteRows = false;
-            this.dgvLoaiSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLoaiSanPham.BackgroundColor = System.Drawing.Color.White;
-            this.dgvLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoaiSanPham.Location = new System.Drawing.Point(16, 29);
+            this.dgvLoaiSanPham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLoaiSanPham.BackgroundColor = Color.White;
+            this.dgvLoaiSanPham.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoaiSanPham.Location = new Point(16, 29);
             this.dgvLoaiSanPham.MultiSelect = false;
             this.dgvLoaiSanPham.Name = "dgvLoaiSanPham";
             this.dgvLoaiSanPham.ReadOnly = true;
             this.dgvLoaiSanPham.RowHeadersVisible = false;
-            this.dgvLoaiSanPham.RowHeadersWidth = 62;
-            this.dgvLoaiSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoaiSanPham.Size = new System.Drawing.Size(1001, 281);
+            this.dgvLoaiSanPham.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLoaiSanPham.Size = new Size(1001, 281);
             this.dgvLoaiSanPham.TabIndex = 0;
             this.dgvLoaiSanPham.SelectionChanged += new System.EventHandler(this.dgvLoaiSanPham_SelectionChanged);
             // 
             // lblVaiTro
             // 
             this.lblVaiTro.AutoSize = true;
-            this.lblVaiTro.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblVaiTro.Location = new System.Drawing.Point(27, 267);
+            this.lblVaiTro.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.lblVaiTro.Location = new Point(27, 267);
             this.lblVaiTro.Name = "lblVaiTro";
-            this.lblVaiTro.Size = new System.Drawing.Size(157, 28);
+            this.lblVaiTro.Size = new Size(103, 19);
             this.lblVaiTro.TabIndex = 5;
             this.lblVaiTro.Text = "Vai trò hiện tại:";
             // 
             // lblHuongDan
             // 
-            this.lblHuongDan.ForeColor = System.Drawing.Color.DimGray;
-            this.lblHuongDan.Location = new System.Drawing.Point(24, 292);
+            this.lblHuongDan.ForeColor = Color.DimGray;
+            this.lblHuongDan.Location = new Point(24, 292);
             this.lblHuongDan.Name = "lblHuongDan";
-            this.lblHuongDan.Size = new System.Drawing.Size(408, 30);
+            this.lblHuongDan.Size = new Size(408, 30);
             this.lblHuongDan.TabIndex = 6;
-            this.lblHuongDan.Text = "Admin và Nhân viên kho được phép thêm, sửa, xóa. Nhân viên bán hàng chủ yếu tra c" +
-    "ứu.";
+            this.lblHuongDan.Text = "Admin và Nhân viên kho được phép thêm, sửa, xóa. Nhân viên bán hàng chủ yếu tra cứu.";
             // 
             // frmLoaiSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1289, 681);
+            this.AutoScaleDimensions = new SizeF(7F, 15F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.BackColor = Color.WhiteSmoke;
+            this.ClientSize = new Size(1084, 681);
             this.Controls.Add(this.lblHuongDan);
             this.Controls.Add(this.lblVaiTro);
             this.Controls.Add(this.grpDanhSach);
@@ -336,11 +334,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.Controls.Add(this.grpTimKiem);
             this.Controls.Add(this.grpThongTin);
             this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new Font("Segoe UI", 9F);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmLoaiSanPham";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "frmLoaiSanPham";
             this.Load += new System.EventHandler(this.frmLoaiSanPham_Load);
             this.pnlHeader.ResumeLayout(false);
@@ -354,7 +352,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
     }
 }
