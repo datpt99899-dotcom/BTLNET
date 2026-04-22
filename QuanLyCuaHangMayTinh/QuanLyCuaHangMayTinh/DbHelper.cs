@@ -1,3 +1,4 @@
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,7 +14,20 @@ namespace QuanLyCuaHangMayTinh_Forms.Data
         {
             return new SqlConnection(_connectionString);
         }
+        public static DataTable GetDataTable(string query, params SqlParameter[] parameters)
+        {
+            return ExecuteQuery(query, parameters);
+        }
 
+        public static T ExecuteScalar<T>(string query, params SqlParameter[] parameters)
+        {
+            object result = ExecuteScalar(query, parameters);
+
+            if (result == null || result == DBNull.Value)
+                return default(T);
+
+            return (T)Convert.ChangeType(result, typeof(T));
+        }
         public static DataTable ExecuteQuery(string query, params SqlParameter[] parameters)
         {
             using (SqlConnection conn = GetConnection())

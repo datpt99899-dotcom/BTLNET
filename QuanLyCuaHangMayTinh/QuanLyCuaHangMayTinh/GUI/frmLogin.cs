@@ -3,8 +3,6 @@ using System.Data;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using QuanLyCuaHangMayTinh.Repositories;
-using QuanLyCuaHangMayTinh.ThuKho;
-using QuanLyCuaHangMayTinh.ThuNgan;
 
 namespace QuanLyCuaHangMayTinh
 {
@@ -112,6 +110,11 @@ namespace QuanLyCuaHangMayTinh
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

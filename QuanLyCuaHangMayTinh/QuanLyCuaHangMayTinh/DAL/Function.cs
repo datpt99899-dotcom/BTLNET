@@ -19,7 +19,10 @@ namespace QuanLyCuaHangMayTinh
                 ?? ConfigurationManager.ConnectionStrings["QuanLyCuaHangMayTinhConnectionString"]?.ConnectionString
                 ?? "Data Source=.;Initial Catalog=QuanLyCuaHangMayTinhDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         }
-
+        public static void RunSqlDel(string sql, string tableName)
+        {
+            RunSqlDel(sql);
+        }
         public static void Connect()
         {
             if (Conn != null && Conn.State == ConnectionState.Open) return;

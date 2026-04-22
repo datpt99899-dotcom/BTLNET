@@ -121,6 +121,8 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbHelper.cs" />
+    <Compile Include="FormMode.cs" />
     <Compile Include="GUI\frmLoaiSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +166,6 @@
       <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmTraHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmThongKeSP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmBaoCaoDoanhThu.Designer.cs">
@@ -310,9 +309,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmThongKeSP.resx">
-      <DependentUpon>frmThongKeSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThongTinTK.resx">
       <DependentUpon>frmThongTinTK.cs</DependentUpon>
@@ -474,7 +470,5 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Combat\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

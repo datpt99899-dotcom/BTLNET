@@ -40,7 +40,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1002, 117);
             this.pnlHeader.TabIndex = 6;
@@ -66,8 +66,8 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             "Nhân viên kho",
             "Nhân viên bán hàng",
             "Kế toán"});
-            this.cboVaiTro.Location = new System.Drawing.Point(163, 143);
-            this.cboVaiTro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboVaiTro.Location = new System.Drawing.Point(119, 145);
+            this.cboVaiTro.Margin = new System.Windows.Forms.Padding(4);
             this.cboVaiTro.Name = "cboVaiTro";
             this.cboVaiTro.Size = new System.Drawing.Size(374, 36);
             this.cboVaiTro.TabIndex = 4;
@@ -79,14 +79,14 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblVaiTro.Location = new System.Drawing.Point(31, 148);
             this.lblVaiTro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVaiTro.Name = "lblVaiTro";
-            this.lblVaiTro.Size = new System.Drawing.Size(133, 28);
+            this.lblVaiTro.Size = new System.Drawing.Size(80, 28);
             this.lblVaiTro.TabIndex = 5;
-            this.lblVaiTro.Text = "Vai trò demo";
+            this.lblVaiTro.Text = "Vai trò ";
             // 
             // btnLoaiSanPham
             // 
             this.btnLoaiSanPham.Location = new System.Drawing.Point(36, 213);
-            this.btnLoaiSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoaiSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoaiSanPham.Name = "btnLoaiSanPham";
             this.btnLoaiSanPham.Size = new System.Drawing.Size(503, 51);
             this.btnLoaiSanPham.TabIndex = 3;
@@ -96,7 +96,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // btnThuongHieu
             // 
             this.btnThuongHieu.Location = new System.Drawing.Point(36, 280);
-            this.btnThuongHieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThuongHieu.Margin = new System.Windows.Forms.Padding(4);
             this.btnThuongHieu.Name = "btnThuongHieu";
             this.btnThuongHieu.Size = new System.Drawing.Size(503, 51);
             this.btnThuongHieu.TabIndex = 2;
@@ -106,7 +106,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // btnNhaCungCap
             // 
             this.btnNhaCungCap.Location = new System.Drawing.Point(36, 347);
-            this.btnNhaCungCap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNhaCungCap.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
             this.btnNhaCungCap.Size = new System.Drawing.Size(503, 51);
             this.btnNhaCungCap.TabIndex = 1;
@@ -116,7 +116,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // btnSanPham
             // 
             this.btnSanPham.Location = new System.Drawing.Point(36, 413);
-            this.btnSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(503, 51);
             this.btnSanPham.TabIndex = 0;
@@ -137,7 +137,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.Controls.Add(this.lblVaiTro);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMenuDemo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
