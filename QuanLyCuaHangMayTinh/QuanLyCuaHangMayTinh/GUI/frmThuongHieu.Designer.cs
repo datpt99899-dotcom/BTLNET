@@ -302,7 +302,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.MaximizeBox = false;
             this.Name = "frmThuongHieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThuongHieu";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmThuongHieu_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
