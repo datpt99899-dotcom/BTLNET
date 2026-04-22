@@ -8,7 +8,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         private System.ComponentModel.IContainer components = null;
         private Panel pnlHeader;
         private Label lblTitle;
-        private Label lblSubtitle;
         private GroupBox grpThongTin;
         private Label lblMaThuongHieu;
         private Label lblTenThuongHieu;
@@ -27,8 +26,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         private Button btnLamMoi;
         private GroupBox grpDanhSach;
         private DataGridView dgvThuongHieu;
-        private Label lblVaiTro;
-        private Label lblHuongDan;
 
         protected override void Dispose(bool disposing)
         {
@@ -43,7 +40,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
             this.grpThongTin = new System.Windows.Forms.GroupBox();
             this.lblMaThuongHieu = new System.Windows.Forms.Label();
             this.lblTenThuongHieu = new System.Windows.Forms.Label();
@@ -62,8 +58,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.grpDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvThuongHieu = new System.Windows.Forms.DataGridView();
-            this.lblVaiTro = new System.Windows.Forms.Label();
-            this.lblHuongDan = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.grpThongTin.SuspendLayout();
             this.grpTimKiem.SuspendLayout();
@@ -76,7 +70,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(96)))), ((int)(((byte)(158)))));
             this.pnlHeader.Controls.Add(this.lblTitle);
-            this.pnlHeader.Controls.Add(this.lblSubtitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -93,16 +86,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblTitle.Size = new System.Drawing.Size(392, 45);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "QUẢN LÝ THƯƠNG HIỆU";
-            // 
-            // lblSubtitle
-            // 
-            this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSubtitle.Location = new System.Drawing.Point(24, 47);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(491, 25);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "Quản lý mã và tên thương hiệu để dùng cho form sản phẩm";
             // 
             // grpThongTin
             // 
@@ -303,34 +286,12 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.dgvThuongHieu.TabIndex = 0;
             this.dgvThuongHieu.SelectionChanged += new System.EventHandler(this.dgvThuongHieu_SelectionChanged);
             // 
-            // lblVaiTro
-            // 
-            this.lblVaiTro.AutoSize = true;
-            this.lblVaiTro.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblVaiTro.Location = new System.Drawing.Point(27, 267);
-            this.lblVaiTro.Name = "lblVaiTro";
-            this.lblVaiTro.Size = new System.Drawing.Size(157, 28);
-            this.lblVaiTro.TabIndex = 5;
-            this.lblVaiTro.Text = "Vai trò hiện tại:";
-            // 
-            // lblHuongDan
-            // 
-            this.lblHuongDan.ForeColor = System.Drawing.Color.DimGray;
-            this.lblHuongDan.Location = new System.Drawing.Point(24, 292);
-            this.lblHuongDan.Name = "lblHuongDan";
-            this.lblHuongDan.Size = new System.Drawing.Size(408, 30);
-            this.lblHuongDan.TabIndex = 6;
-            this.lblHuongDan.Text = "Thương hiệu dùng để lọc và gán cho sản phẩm. Không xóa nếu đã có sản phẩm sử dụng" +
-    ".";
-            // 
             // frmThuongHieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1084, 681);
-            this.Controls.Add(this.lblHuongDan);
-            this.Controls.Add(this.lblVaiTro);
             this.Controls.Add(this.grpDanhSach);
             this.Controls.Add(this.grpChucNang);
             this.Controls.Add(this.grpTimKiem);
@@ -353,7 +314,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpDanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
     }
