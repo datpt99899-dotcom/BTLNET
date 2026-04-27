@@ -16,36 +16,19 @@ namespace QuanLyCuaHangMayTinh
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblHeaderSubTitle = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pnlContent = new System.Windows.Forms.Panel();
-            this.pnlGrid = new System.Windows.Forms.Panel();
-            this.dgv = new System.Windows.Forms.DataGridView();
-            this.lblGridTitle = new System.Windows.Forms.Label();
-            this.pnlGapChartGrid = new System.Windows.Forms.Panel();
-            this.pnlChart = new System.Windows.Forms.Panel();
-            this.chtDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblChartTitle = new System.Windows.Forms.Label();
-            this.pnlGapStatsChart = new System.Windows.Forms.Panel();
-            this.pnlStats = new System.Windows.Forms.Panel();
-            this.tblStats = new System.Windows.Forms.TableLayoutPanel();
-            this.cardDoanhThu = new System.Windows.Forms.Panel();
-            this.lblDoanhThuHint = new System.Windows.Forms.Label();
-            this.lblDoanhThuTitle = new System.Windows.Forms.Label();
-            this.lblDoanhThu = new System.Windows.Forms.Label();
-            this.cardDonHang = new System.Windows.Forms.Panel();
-            this.lblDonHangHint = new System.Windows.Forms.Label();
-            this.lblDonHangTitle = new System.Windows.Forms.Label();
-            this.lblDonHang = new System.Windows.Forms.Label();
-            this.cardTB = new System.Windows.Forms.Panel();
-            this.lblTBHint = new System.Windows.Forms.Label();
-            this.lblTBTitle = new System.Windows.Forms.Label();
-            this.lblTB = new System.Windows.Forms.Label();
-            this.pnlGapFilterStats = new System.Windows.Forms.Panel();
+            this.pnlTabs = new System.Windows.Forms.Panel();
+            this.pnlTabIndicator = new System.Windows.Forms.Panel();
+            this.flpTabs = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnTabDoanhThu = new System.Windows.Forms.Button();
+            this.btnTabSPBanChay = new System.Windows.Forms.Button();
+            this.btnTabDonTrangThai = new System.Windows.Forms.Button();
+            this.btnTabBieuDo = new System.Windows.Forms.Button();
+            this.pnlGapTabsFilter = new System.Windows.Forms.Panel();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.tblFilter = new System.Windows.Forms.TableLayoutPanel();
             this.pnlFrom = new System.Windows.Forms.Panel();
@@ -61,365 +44,177 @@ namespace QuanLyCuaHangMayTinh
             this.btnXem = new System.Windows.Forms.Button();
             this.btnInBaoCao = new System.Windows.Forms.Button();
             this.btnXuatExcel = new System.Windows.Forms.Button();
-            this.pnlGapTabsFilter = new System.Windows.Forms.Panel();
-            this.pnlTabs = new System.Windows.Forms.Panel();
-            this.pnlTabIndicator = new System.Windows.Forms.Panel();
-            this.flpTabs = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnTabDoanhThu = new System.Windows.Forms.Button();
-            this.btnTabSPBanChay = new System.Windows.Forms.Button();
-            this.btnTabDonTrangThai = new System.Windows.Forms.Button();
-            this.btnTabBieuDo = new System.Windows.Forms.Button();
+            this.pnlGapFilterStats = new System.Windows.Forms.Panel();
+            this.pnlStats = new System.Windows.Forms.Panel();
+            this.tblStats = new System.Windows.Forms.TableLayoutPanel();
+            this.cardDoanhThu = new System.Windows.Forms.Panel();
+            this.lblDoanhThuHint = new System.Windows.Forms.Label();
+            this.lblDoanhThuTitle = new System.Windows.Forms.Label();
+            this.lblDoanhThu = new System.Windows.Forms.Label();
+            this.cardDonHang = new System.Windows.Forms.Panel();
+            this.lblDonHangHint = new System.Windows.Forms.Label();
+            this.lblDonHangTitle = new System.Windows.Forms.Label();
+            this.lblDonHang = new System.Windows.Forms.Label();
+            this.cardTB = new System.Windows.Forms.Panel();
+            this.lblTBHint = new System.Windows.Forms.Label();
+            this.lblTBTitle = new System.Windows.Forms.Label();
+            this.lblTB = new System.Windows.Forms.Label();
+            this.pnlGapStatsChart = new System.Windows.Forms.Panel();
+            this.pnlChart = new System.Windows.Forms.Panel();
+            this.chtDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblChartTitle = new System.Windows.Forms.Label();
+            this.pnlGapChartGrid = new System.Windows.Forms.Panel();
+            this.pnlGrid = new System.Windows.Forms.Panel();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.lblGridTitle = new System.Windows.Forms.Label();
+            this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
-            this.pnlContent.SuspendLayout();
-            this.pnlGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
-            this.pnlChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).BeginInit();
-            this.pnlStats.SuspendLayout();
-            this.tblStats.SuspendLayout();
-            this.cardDoanhThu.SuspendLayout();
-            this.cardDonHang.SuspendLayout();
-            this.cardTB.SuspendLayout();
+            this.pnlTabs.SuspendLayout();
+            this.flpTabs.SuspendLayout();
             this.pnlFilter.SuspendLayout();
             this.tblFilter.SuspendLayout();
             this.pnlFrom.SuspendLayout();
             this.pnlTo.SuspendLayout();
             this.pnlLoai.SuspendLayout();
             this.flpActions.SuspendLayout();
-            this.pnlTabs.SuspendLayout();
-            this.flpTabs.SuspendLayout();
+            this.pnlStats.SuspendLayout();
+            this.tblStats.SuspendLayout();
+            this.cardDoanhThu.SuspendLayout();
+            this.cardDonHang.SuspendLayout();
+            this.cardTB.SuspendLayout();
+            this.pnlChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).BeginInit();
+            this.pnlGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pnlHeader.Controls.Add(this.lblHeaderSubTitle);
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.pnlHeader.Size = new System.Drawing.Size(1200, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(1200, 75);
             this.pnlHeader.TabIndex = 0;
-            // 
-            // lblHeaderSubTitle
-            // 
-            this.lblHeaderSubTitle.AutoSize = true;
-            this.lblHeaderSubTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblHeaderSubTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHeaderSubTitle.Location = new System.Drawing.Point(22, 32);
-            this.lblHeaderSubTitle.Name = "lblHeaderSubTitle";
-            this.lblHeaderSubTitle.Size = new System.Drawing.Size(364, 28);
-            this.lblHeaderSubTitle.TabIndex = 1;
-            this.lblHeaderSubTitle.Text = "Admin • Kế toán • Doanh thu • Thống kê";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(22, 9);
+            this.lblTitle.Location = new System.Drawing.Point(385, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(182, 28);
+            this.lblTitle.Size = new System.Drawing.Size(525, 48);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Báo cáo & Thống kê";
-            //            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
+            this.lblTitle.Text = "Báo cáo & Thống kê Doanh Thu ";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlContent
+            // pnlTabs
             // 
-            this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlContent.Controls.Add(this.pnlGrid);
-            this.pnlContent.Controls.Add(this.pnlGapChartGrid);
-            this.pnlContent.Controls.Add(this.pnlChart);
-            this.pnlContent.Controls.Add(this.pnlGapStatsChart);
-            this.pnlContent.Controls.Add(this.pnlStats);
-            this.pnlContent.Controls.Add(this.pnlGapFilterStats);
-            this.pnlContent.Controls.Add(this.pnlFilter);
-            this.pnlContent.Controls.Add(this.pnlGapTabsFilter);
-            this.pnlContent.Controls.Add(this.pnlTabs);
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 60);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Padding = new System.Windows.Forms.Padding(16, 0, 16, 16);
-            this.pnlContent.Size = new System.Drawing.Size(1200, 840);
-            this.pnlContent.TabIndex = 1;
+            this.pnlTabs.BackColor = System.Drawing.Color.White;
+            this.pnlTabs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTabs.Controls.Add(this.pnlTabIndicator);
+            this.pnlTabs.Controls.Add(this.flpTabs);
+            this.pnlTabs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTabs.Location = new System.Drawing.Point(16, 0);
+            this.pnlTabs.Name = "pnlTabs";
+            this.pnlTabs.Padding = new System.Windows.Forms.Padding(12, 6, 12, 0);
+            this.pnlTabs.Size = new System.Drawing.Size(1168, 53);
+            this.pnlTabs.TabIndex = 0;
             // 
-            // pnlGrid
+            // pnlTabIndicator
             // 
-            this.pnlGrid.BackColor = System.Drawing.Color.White;
-            this.pnlGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlGrid.Controls.Add(this.dgv);
-            this.pnlGrid.Controls.Add(this.lblGridTitle);
-            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGrid.Location = new System.Drawing.Point(16, 559);
-            this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
-            this.pnlGrid.Size = new System.Drawing.Size(1168, 265);
-            this.pnlGrid.TabIndex = 8;
+            this.pnlTabIndicator.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pnlTabIndicator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTabIndicator.Enabled = false;
+            this.pnlTabIndicator.Location = new System.Drawing.Point(12, 48);
+            this.pnlTabIndicator.Name = "pnlTabIndicator";
+            this.pnlTabIndicator.Size = new System.Drawing.Size(1142, 3);
+            this.pnlTabIndicator.TabIndex = 1;
             // 
-            // dgv
+            // flpTabs
             // 
-            this.dgv.ColumnHeadersHeight = 32;
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.Location = new System.Drawing.Point(16, 35);
-            this.dgv.Name = "dgv";
-            this.dgv.RowHeadersWidth = 62;
-            this.dgv.Size = new System.Drawing.Size(1134, 212);
-            this.dgv.TabIndex = 1;
+            this.flpTabs.Controls.Add(this.btnTabDoanhThu);
+            this.flpTabs.Controls.Add(this.btnTabSPBanChay);
+            this.flpTabs.Controls.Add(this.btnTabDonTrangThai);
+            this.flpTabs.Controls.Add(this.btnTabBieuDo);
+            this.flpTabs.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.flpTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpTabs.Enabled = false;
+            this.flpTabs.Location = new System.Drawing.Point(12, 6);
+            this.flpTabs.Margin = new System.Windows.Forms.Padding(0);
+            this.flpTabs.Name = "flpTabs";
+            this.flpTabs.Size = new System.Drawing.Size(1142, 45);
+            this.flpTabs.TabIndex = 0;
+            this.flpTabs.WrapContents = false;
             // 
-            // lblGridTitle
+            // btnTabDoanhThu
             // 
-            this.lblGridTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblGridTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblGridTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblGridTitle.Location = new System.Drawing.Point(16, 12);
-            this.lblGridTitle.Name = "lblGridTitle";
-            this.lblGridTitle.Size = new System.Drawing.Size(1134, 23);
-            this.lblGridTitle.TabIndex = 0;
-            this.lblGridTitle.Text = "CHI TIẾT DOANH THU";
+            this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
+            this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnTabDoanhThu.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnTabDoanhThu.Location = new System.Drawing.Point(0, 0);
+            this.btnTabDoanhThu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTabDoanhThu.Name = "btnTabDoanhThu";
+            this.btnTabDoanhThu.Size = new System.Drawing.Size(155, 43);
+            this.btnTabDoanhThu.TabIndex = 0;
+            this.btnTabDoanhThu.Text = "Doanh thu";
+            this.btnTabDoanhThu.UseVisualStyleBackColor = true;
             // 
-            // pnlGapChartGrid
+            // btnTabSPBanChay
             // 
-            this.pnlGapChartGrid.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGapChartGrid.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGapChartGrid.Location = new System.Drawing.Point(16, 547);
-            this.pnlGapChartGrid.Name = "pnlGapChartGrid";
-            this.pnlGapChartGrid.Size = new System.Drawing.Size(1168, 12);
-            this.pnlGapChartGrid.TabIndex = 7;
+            this.btnTabSPBanChay.FlatAppearance.BorderSize = 0;
+            this.btnTabSPBanChay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabSPBanChay.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnTabSPBanChay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.btnTabSPBanChay.Location = new System.Drawing.Point(155, 0);
+            this.btnTabSPBanChay.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTabSPBanChay.Name = "btnTabSPBanChay";
+            this.btnTabSPBanChay.Size = new System.Drawing.Size(132, 43);
+            this.btnTabSPBanChay.TabIndex = 1;
+            this.btnTabSPBanChay.Text = "SP bán chạy";
+            this.btnTabSPBanChay.UseVisualStyleBackColor = true;
             // 
-            // pnlChart
+            // btnTabDonTrangThai
             // 
-            this.pnlChart.BackColor = System.Drawing.Color.White;
-            this.pnlChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlChart.Controls.Add(this.chtDoanhThu);
-            this.pnlChart.Controls.Add(this.lblChartTitle);
-            this.pnlChart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlChart.Location = new System.Drawing.Point(16, 303);
-            this.pnlChart.Name = "pnlChart";
-            this.pnlChart.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
-            this.pnlChart.Size = new System.Drawing.Size(1168, 244);
-            this.pnlChart.TabIndex = 6;
+            this.btnTabDonTrangThai.FlatAppearance.BorderSize = 0;
+            this.btnTabDonTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabDonTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnTabDonTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.btnTabDonTrangThai.Location = new System.Drawing.Point(287, 0);
+            this.btnTabDonTrangThai.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTabDonTrangThai.Name = "btnTabDonTrangThai";
+            this.btnTabDonTrangThai.Size = new System.Drawing.Size(188, 43);
+            this.btnTabDonTrangThai.TabIndex = 2;
+            this.btnTabDonTrangThai.Text = "Đơn theo trạng thái";
+            this.btnTabDonTrangThai.UseVisualStyleBackColor = true;
             // 
-            // chtDoanhThu
+            // btnTabBieuDo
             // 
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chtDoanhThu.ChartAreas.Add(chartArea1);
-            this.chtDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.BackColor = System.Drawing.Color.White;
-            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            legend1.Name = "Legend1";
-            this.chtDoanhThu.Legends.Add(legend1);
-            this.chtDoanhThu.Location = new System.Drawing.Point(16, 35);
-            this.chtDoanhThu.Name = "chtDoanhThu";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "DoanhThu";
-            this.chtDoanhThu.Series.Add(series1);
-            this.chtDoanhThu.Size = new System.Drawing.Size(1134, 191);
-            this.chtDoanhThu.TabIndex = 1;
+            this.btnTabBieuDo.FlatAppearance.BorderSize = 0;
+            this.btnTabBieuDo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabBieuDo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnTabBieuDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.btnTabBieuDo.Location = new System.Drawing.Point(475, 0);
+            this.btnTabBieuDo.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTabBieuDo.Name = "btnTabBieuDo";
+            this.btnTabBieuDo.Size = new System.Drawing.Size(115, 43);
+            this.btnTabBieuDo.TabIndex = 3;
+            this.btnTabBieuDo.Text = "Biểu đồ";
+            this.btnTabBieuDo.UseVisualStyleBackColor = true;
             // 
-            // lblChartTitle
+            // pnlGapTabsFilter
             // 
-            this.lblChartTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblChartTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblChartTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblChartTitle.Location = new System.Drawing.Point(16, 12);
-            this.lblChartTitle.Name = "lblChartTitle";
-            this.lblChartTitle.Size = new System.Drawing.Size(1134, 23);
-            this.lblChartTitle.TabIndex = 0;
-            this.lblChartTitle.Text = "BIỂU ĐỒ DOANH THU (THEO NGÀY)";
-            // 
-            // pnlGapStatsChart
-            // 
-            this.pnlGapStatsChart.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGapStatsChart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGapStatsChart.Location = new System.Drawing.Point(16, 291);
-            this.pnlGapStatsChart.Name = "pnlGapStatsChart";
-            this.pnlGapStatsChart.Size = new System.Drawing.Size(1168, 12);
-            this.pnlGapStatsChart.TabIndex = 5;
-            // 
-            // pnlStats
-            // 
-            this.pnlStats.BackColor = System.Drawing.Color.White;
-            this.pnlStats.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlStats.Controls.Add(this.tblStats);
-            this.pnlStats.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStats.Location = new System.Drawing.Point(16, 181);
-            this.pnlStats.Name = "pnlStats";
-            this.pnlStats.Padding = new System.Windows.Forms.Padding(16, 12, 16, 12);
-            this.pnlStats.Size = new System.Drawing.Size(1168, 110);
-            this.pnlStats.TabIndex = 4;
-            // 
-            // tblStats
-            // 
-            this.tblStats.ColumnCount = 3;
-            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblStats.Controls.Add(this.cardDoanhThu, 0, 0);
-            this.tblStats.Controls.Add(this.cardDonHang, 1, 0);
-            this.tblStats.Controls.Add(this.cardTB, 2, 0);
-            this.tblStats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblStats.Location = new System.Drawing.Point(16, 12);
-            this.tblStats.Name = "tblStats";
-            this.tblStats.RowCount = 1;
-            this.tblStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblStats.Size = new System.Drawing.Size(1134, 84);
-            this.tblStats.TabIndex = 0;
-            // 
-            // cardDoanhThu
-            // 
-            this.cardDoanhThu.BackColor = System.Drawing.Color.White;
-            this.cardDoanhThu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardDoanhThu.Controls.Add(this.lblDoanhThuHint);
-            this.cardDoanhThu.Controls.Add(this.lblDoanhThuTitle);
-            this.cardDoanhThu.Controls.Add(this.lblDoanhThu);
-            this.cardDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardDoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.cardDoanhThu.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.cardDoanhThu.Name = "cardDoanhThu";
-            this.cardDoanhThu.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.cardDoanhThu.Size = new System.Drawing.Size(368, 84);
-            this.cardDoanhThu.TabIndex = 0;
-            // 
-            // lblDoanhThuHint
-            // 
-            this.lblDoanhThuHint.AutoSize = true;
-            this.lblDoanhThuHint.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblDoanhThuHint.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDoanhThuHint.Location = new System.Drawing.Point(14, 52);
-            this.lblDoanhThuHint.Name = "lblDoanhThuHint";
-            this.lblDoanhThuHint.Size = new System.Drawing.Size(231, 28);
-            this.lblDoanhThuHint.TabIndex = 2;
-            this.lblDoanhThuHint.Text = "Tổng doanh thu trong kỳ";
-            // 
-            // lblDoanhThuTitle
-            // 
-            this.lblDoanhThuTitle.AutoSize = true;
-            this.lblDoanhThuTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblDoanhThuTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblDoanhThuTitle.Location = new System.Drawing.Point(14, 8);
-            this.lblDoanhThuTitle.Name = "lblDoanhThuTitle";
-            this.lblDoanhThuTitle.Size = new System.Drawing.Size(160, 28);
-            this.lblDoanhThuTitle.TabIndex = 0;
-            this.lblDoanhThuTitle.Text = "Tổng doanh thu";
-            // 
-            // lblDoanhThu
-            // 
-            this.lblDoanhThu.AutoSize = true;
-            this.lblDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblDoanhThu.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDoanhThu.Location = new System.Drawing.Point(14, 29);
-            this.lblDoanhThu.Name = "lblDoanhThu";
-            this.lblDoanhThu.Size = new System.Drawing.Size(23, 28);
-            this.lblDoanhThu.TabIndex = 1;
-            this.lblDoanhThu.Text = "0";
-            // 
-            // cardDonHang
-            // 
-            this.cardDonHang.BackColor = System.Drawing.Color.White;
-            this.cardDonHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardDonHang.Controls.Add(this.lblDonHangHint);
-            this.cardDonHang.Controls.Add(this.lblDonHangTitle);
-            this.cardDonHang.Controls.Add(this.lblDonHang);
-            this.cardDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardDonHang.Location = new System.Drawing.Point(378, 0);
-            this.cardDonHang.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.cardDonHang.Name = "cardDonHang";
-            this.cardDonHang.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.cardDonHang.Size = new System.Drawing.Size(368, 84);
-            this.cardDonHang.TabIndex = 1;
-            // 
-            // lblDonHangHint
-            // 
-            this.lblDonHangHint.AutoSize = true;
-            this.lblDonHangHint.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblDonHangHint.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDonHangHint.Location = new System.Drawing.Point(14, 52);
-            this.lblDonHangHint.Name = "lblDonHangHint";
-            this.lblDonHangHint.Size = new System.Drawing.Size(203, 28);
-            this.lblDonHangHint.TabIndex = 2;
-            this.lblDonHangHint.Text = "Số đơn hàng trong kỳ";
-            // 
-            // lblDonHangTitle
-            // 
-            this.lblDonHangTitle.AutoSize = true;
-            this.lblDonHangTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblDonHangTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblDonHangTitle.Location = new System.Drawing.Point(14, 8);
-            this.lblDonHangTitle.Name = "lblDonHangTitle";
-            this.lblDonHangTitle.Size = new System.Drawing.Size(129, 28);
-            this.lblDonHangTitle.TabIndex = 0;
-            this.lblDonHangTitle.Text = "Số đơn hàng";
-            // 
-            // lblDonHang
-            // 
-            this.lblDonHang.AutoSize = true;
-            this.lblDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblDonHang.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDonHang.Location = new System.Drawing.Point(14, 29);
-            this.lblDonHang.Name = "lblDonHang";
-            this.lblDonHang.Size = new System.Drawing.Size(23, 28);
-            this.lblDonHang.TabIndex = 1;
-            this.lblDonHang.Text = "0";
-            // 
-            // cardTB
-            // 
-            this.cardTB.BackColor = System.Drawing.Color.White;
-            this.cardTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardTB.Controls.Add(this.lblTBHint);
-            this.cardTB.Controls.Add(this.lblTBTitle);
-            this.cardTB.Controls.Add(this.lblTB);
-            this.cardTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTB.Location = new System.Drawing.Point(756, 0);
-            this.cardTB.Margin = new System.Windows.Forms.Padding(0);
-            this.cardTB.Name = "cardTB";
-            this.cardTB.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.cardTB.Size = new System.Drawing.Size(378, 84);
-            this.cardTB.TabIndex = 2;
-            // 
-            // lblTBHint
-            // 
-            this.lblTBHint.AutoSize = true;
-            this.lblTBHint.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTBHint.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTBHint.Location = new System.Drawing.Point(14, 52);
-            this.lblTBHint.Name = "lblTBHint";
-            this.lblTBHint.Size = new System.Drawing.Size(214, 28);
-            this.lblTBHint.TabIndex = 2;
-            this.lblTBHint.Text = "TB / đơn hàng trong kỳ";
-            // 
-            // lblTBTitle
-            // 
-            this.lblTBTitle.AutoSize = true;
-            this.lblTBTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblTBTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblTBTitle.Location = new System.Drawing.Point(14, 8);
-            this.lblTBTitle.Name = "lblTBTitle";
-            this.lblTBTitle.Size = new System.Drawing.Size(170, 28);
-            this.lblTBTitle.TabIndex = 0;
-            this.lblTBTitle.Text = "TB mỗi đơn hàng";
-            // 
-            // lblTB
-            // 
-            this.lblTB.AutoSize = true;
-            this.lblTB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblTB.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTB.Location = new System.Drawing.Point(14, 29);
-            this.lblTB.Name = "lblTB";
-            this.lblTB.Size = new System.Drawing.Size(23, 28);
-            this.lblTB.TabIndex = 1;
-            this.lblTB.Text = "0";
-            // 
-            // pnlGapFilterStats
-            // 
-            this.pnlGapFilterStats.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGapFilterStats.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGapFilterStats.Location = new System.Drawing.Point(16, 169);
-            this.pnlGapFilterStats.Name = "pnlGapFilterStats";
-            this.pnlGapFilterStats.Size = new System.Drawing.Size(1168, 12);
-            this.pnlGapFilterStats.TabIndex = 3;
+            this.pnlGapTabsFilter.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGapTabsFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGapTabsFilter.Location = new System.Drawing.Point(16, 53);
+            this.pnlGapTabsFilter.Name = "pnlGapTabsFilter";
+            this.pnlGapTabsFilter.Size = new System.Drawing.Size(1168, 17);
+            this.pnlGapTabsFilter.TabIndex = 1;
             // 
             // pnlFilter
             // 
@@ -427,7 +222,7 @@ namespace QuanLyCuaHangMayTinh
             this.pnlFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlFilter.Controls.Add(this.tblFilter);
             this.pnlFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFilter.Location = new System.Drawing.Point(16, 48);
+            this.pnlFilter.Location = new System.Drawing.Point(16, 70);
             this.pnlFilter.Name = "pnlFilter";
             this.pnlFilter.Padding = new System.Windows.Forms.Padding(16, 12, 16, 12);
             this.pnlFilter.Size = new System.Drawing.Size(1168, 121);
@@ -597,11 +392,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnXuatExcel
             // 
-            this.btnXuatExcel.BackColor = System.Drawing.Color.White;
+            this.btnXuatExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnXuatExcel.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnXuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuatExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnXuatExcel.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.White;
             this.btnXuatExcel.Location = new System.Drawing.Point(235, 28);
             this.btnXuatExcel.Margin = new System.Windows.Forms.Padding(0);
             this.btnXuatExcel.Name = "btnXuatExcel";
@@ -610,106 +405,303 @@ namespace QuanLyCuaHangMayTinh
             this.btnXuatExcel.Text = "Xuất Excel";
             this.btnXuatExcel.UseVisualStyleBackColor = false;
             // 
-            // pnlGapTabsFilter
+            // pnlGapFilterStats
             // 
-            this.pnlGapTabsFilter.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGapTabsFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGapTabsFilter.Location = new System.Drawing.Point(16, 38);
-            this.pnlGapTabsFilter.Name = "pnlGapTabsFilter";
-            this.pnlGapTabsFilter.Size = new System.Drawing.Size(1168, 10);
-            this.pnlGapTabsFilter.TabIndex = 1;
+            this.pnlGapFilterStats.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGapFilterStats.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGapFilterStats.Location = new System.Drawing.Point(16, 191);
+            this.pnlGapFilterStats.Name = "pnlGapFilterStats";
+            this.pnlGapFilterStats.Size = new System.Drawing.Size(1168, 12);
+            this.pnlGapFilterStats.TabIndex = 3;
             // 
-            // pnlTabs
+            // pnlStats
             // 
-            this.pnlTabs.BackColor = System.Drawing.Color.White;
-            this.pnlTabs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTabs.Controls.Add(this.pnlTabIndicator);
-            this.pnlTabs.Controls.Add(this.flpTabs);
-            this.pnlTabs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTabs.Location = new System.Drawing.Point(16, 0);
-            this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Padding = new System.Windows.Forms.Padding(12, 6, 12, 0);
-            this.pnlTabs.Size = new System.Drawing.Size(1168, 38);
-            this.pnlTabs.TabIndex = 0;
+            this.pnlStats.BackColor = System.Drawing.Color.White;
+            this.pnlStats.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlStats.Controls.Add(this.tblStats);
+            this.pnlStats.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStats.Location = new System.Drawing.Point(16, 203);
+            this.pnlStats.Name = "pnlStats";
+            this.pnlStats.Padding = new System.Windows.Forms.Padding(16, 12, 16, 12);
+            this.pnlStats.Size = new System.Drawing.Size(1168, 110);
+            this.pnlStats.TabIndex = 4;
             // 
-            // pnlTabIndicator
+            // tblStats
             // 
-            this.pnlTabIndicator.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pnlTabIndicator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTabIndicator.Location = new System.Drawing.Point(12, 33);
-            this.pnlTabIndicator.Name = "pnlTabIndicator";
-            this.pnlTabIndicator.Size = new System.Drawing.Size(1142, 3);
-            this.pnlTabIndicator.TabIndex = 1;
+            this.tblStats.ColumnCount = 3;
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblStats.Controls.Add(this.cardDoanhThu, 0, 0);
+            this.tblStats.Controls.Add(this.cardDonHang, 1, 0);
+            this.tblStats.Controls.Add(this.cardTB, 2, 0);
+            this.tblStats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblStats.Location = new System.Drawing.Point(16, 12);
+            this.tblStats.Name = "tblStats";
+            this.tblStats.RowCount = 1;
+            this.tblStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblStats.Size = new System.Drawing.Size(1134, 84);
+            this.tblStats.TabIndex = 0;
             // 
-            // flpTabs
+            // cardDoanhThu
             // 
-            this.flpTabs.Controls.Add(this.btnTabDoanhThu);
-            this.flpTabs.Controls.Add(this.btnTabSPBanChay);
-            this.flpTabs.Controls.Add(this.btnTabDonTrangThai);
-            this.flpTabs.Controls.Add(this.btnTabBieuDo);
-            this.flpTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpTabs.Location = new System.Drawing.Point(12, 6);
-            this.flpTabs.Margin = new System.Windows.Forms.Padding(0);
-            this.flpTabs.Name = "flpTabs";
-            this.flpTabs.Size = new System.Drawing.Size(1142, 30);
-            this.flpTabs.TabIndex = 0;
-            this.flpTabs.WrapContents = false;
+            this.cardDoanhThu.BackColor = System.Drawing.Color.White;
+            this.cardDoanhThu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardDoanhThu.Controls.Add(this.lblDoanhThuHint);
+            this.cardDoanhThu.Controls.Add(this.lblDoanhThuTitle);
+            this.cardDoanhThu.Controls.Add(this.lblDoanhThu);
+            this.cardDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardDoanhThu.Location = new System.Drawing.Point(0, 0);
+            this.cardDoanhThu.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.cardDoanhThu.Name = "cardDoanhThu";
+            this.cardDoanhThu.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
+            this.cardDoanhThu.Size = new System.Drawing.Size(368, 84);
+            this.cardDoanhThu.TabIndex = 0;
             // 
-            // btnTabDoanhThu
+            // lblDoanhThuHint
             // 
-            this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
-            this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnTabDoanhThu.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnTabDoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.btnTabDoanhThu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabDoanhThu.Name = "btnTabDoanhThu";
-            this.btnTabDoanhThu.Size = new System.Drawing.Size(155, 43);
-            this.btnTabDoanhThu.TabIndex = 0;
-            this.btnTabDoanhThu.Text = "Doanh thu";
-            this.btnTabDoanhThu.UseVisualStyleBackColor = true;
+            this.lblDoanhThuHint.AutoSize = true;
+            this.lblDoanhThuHint.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblDoanhThuHint.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDoanhThuHint.Location = new System.Drawing.Point(14, 52);
+            this.lblDoanhThuHint.Name = "lblDoanhThuHint";
+            this.lblDoanhThuHint.Size = new System.Drawing.Size(231, 28);
+            this.lblDoanhThuHint.TabIndex = 2;
+            this.lblDoanhThuHint.Text = "Tổng doanh thu trong kỳ";
             // 
-            // btnTabSPBanChay
+            // lblDoanhThuTitle
             // 
-            this.btnTabSPBanChay.FlatAppearance.BorderSize = 0;
-            this.btnTabSPBanChay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabSPBanChay.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnTabSPBanChay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabSPBanChay.Location = new System.Drawing.Point(155, 0);
-            this.btnTabSPBanChay.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabSPBanChay.Name = "btnTabSPBanChay";
-            this.btnTabSPBanChay.Size = new System.Drawing.Size(132, 43);
-            this.btnTabSPBanChay.TabIndex = 1;
-            this.btnTabSPBanChay.Text = "SP bán chạy";
-            this.btnTabSPBanChay.UseVisualStyleBackColor = true;
+            this.lblDoanhThuTitle.AutoSize = true;
+            this.lblDoanhThuTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblDoanhThuTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.lblDoanhThuTitle.Location = new System.Drawing.Point(14, 8);
+            this.lblDoanhThuTitle.Name = "lblDoanhThuTitle";
+            this.lblDoanhThuTitle.Size = new System.Drawing.Size(160, 28);
+            this.lblDoanhThuTitle.TabIndex = 0;
+            this.lblDoanhThuTitle.Text = "Tổng doanh thu";
             // 
-            // btnTabDonTrangThai
+            // lblDoanhThu
             // 
-            this.btnTabDonTrangThai.FlatAppearance.BorderSize = 0;
-            this.btnTabDonTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDonTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnTabDonTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabDonTrangThai.Location = new System.Drawing.Point(287, 0);
-            this.btnTabDonTrangThai.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabDonTrangThai.Name = "btnTabDonTrangThai";
-            this.btnTabDonTrangThai.Size = new System.Drawing.Size(188, 43);
-            this.btnTabDonTrangThai.TabIndex = 2;
-            this.btnTabDonTrangThai.Text = "Đơn theo trạng thái";
-            this.btnTabDonTrangThai.UseVisualStyleBackColor = true;
+            this.lblDoanhThu.AutoSize = true;
+            this.lblDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblDoanhThu.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblDoanhThu.Location = new System.Drawing.Point(14, 29);
+            this.lblDoanhThu.Name = "lblDoanhThu";
+            this.lblDoanhThu.Size = new System.Drawing.Size(23, 28);
+            this.lblDoanhThu.TabIndex = 1;
+            this.lblDoanhThu.Text = "0";
             // 
-            // btnTabBieuDo
+            // cardDonHang
             // 
-            this.btnTabBieuDo.FlatAppearance.BorderSize = 0;
-            this.btnTabBieuDo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabBieuDo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnTabBieuDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabBieuDo.Location = new System.Drawing.Point(475, 0);
-            this.btnTabBieuDo.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabBieuDo.Name = "btnTabBieuDo";
-            this.btnTabBieuDo.Size = new System.Drawing.Size(115, 43);
-            this.btnTabBieuDo.TabIndex = 3;
-            this.btnTabBieuDo.Text = "Biểu đồ";
-            this.btnTabBieuDo.UseVisualStyleBackColor = true;
+            this.cardDonHang.BackColor = System.Drawing.Color.White;
+            this.cardDonHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardDonHang.Controls.Add(this.lblDonHangHint);
+            this.cardDonHang.Controls.Add(this.lblDonHangTitle);
+            this.cardDonHang.Controls.Add(this.lblDonHang);
+            this.cardDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardDonHang.Location = new System.Drawing.Point(378, 0);
+            this.cardDonHang.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.cardDonHang.Name = "cardDonHang";
+            this.cardDonHang.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
+            this.cardDonHang.Size = new System.Drawing.Size(368, 84);
+            this.cardDonHang.TabIndex = 1;
+            // 
+            // lblDonHangHint
+            // 
+            this.lblDonHangHint.AutoSize = true;
+            this.lblDonHangHint.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblDonHangHint.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDonHangHint.Location = new System.Drawing.Point(14, 52);
+            this.lblDonHangHint.Name = "lblDonHangHint";
+            this.lblDonHangHint.Size = new System.Drawing.Size(203, 28);
+            this.lblDonHangHint.TabIndex = 2;
+            this.lblDonHangHint.Text = "Số đơn hàng trong kỳ";
+            // 
+            // lblDonHangTitle
+            // 
+            this.lblDonHangTitle.AutoSize = true;
+            this.lblDonHangTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblDonHangTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.lblDonHangTitle.Location = new System.Drawing.Point(14, 8);
+            this.lblDonHangTitle.Name = "lblDonHangTitle";
+            this.lblDonHangTitle.Size = new System.Drawing.Size(129, 28);
+            this.lblDonHangTitle.TabIndex = 0;
+            this.lblDonHangTitle.Text = "Số đơn hàng";
+            // 
+            // lblDonHang
+            // 
+            this.lblDonHang.AutoSize = true;
+            this.lblDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblDonHang.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblDonHang.Location = new System.Drawing.Point(14, 29);
+            this.lblDonHang.Name = "lblDonHang";
+            this.lblDonHang.Size = new System.Drawing.Size(23, 28);
+            this.lblDonHang.TabIndex = 1;
+            this.lblDonHang.Text = "0";
+            // 
+            // cardTB
+            // 
+            this.cardTB.BackColor = System.Drawing.Color.White;
+            this.cardTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardTB.Controls.Add(this.lblTBHint);
+            this.cardTB.Controls.Add(this.lblTBTitle);
+            this.cardTB.Controls.Add(this.lblTB);
+            this.cardTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTB.Location = new System.Drawing.Point(756, 0);
+            this.cardTB.Margin = new System.Windows.Forms.Padding(0);
+            this.cardTB.Name = "cardTB";
+            this.cardTB.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
+            this.cardTB.Size = new System.Drawing.Size(378, 84);
+            this.cardTB.TabIndex = 2;
+            // 
+            // lblTBHint
+            // 
+            this.lblTBHint.AutoSize = true;
+            this.lblTBHint.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblTBHint.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTBHint.Location = new System.Drawing.Point(14, 52);
+            this.lblTBHint.Name = "lblTBHint";
+            this.lblTBHint.Size = new System.Drawing.Size(214, 28);
+            this.lblTBHint.TabIndex = 2;
+            this.lblTBHint.Text = "TB / đơn hàng trong kỳ";
+            // 
+            // lblTBTitle
+            // 
+            this.lblTBTitle.AutoSize = true;
+            this.lblTBTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblTBTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.lblTBTitle.Location = new System.Drawing.Point(14, 8);
+            this.lblTBTitle.Name = "lblTBTitle";
+            this.lblTBTitle.Size = new System.Drawing.Size(170, 28);
+            this.lblTBTitle.TabIndex = 0;
+            this.lblTBTitle.Text = "TB mỗi đơn hàng";
+            // 
+            // lblTB
+            // 
+            this.lblTB.AutoSize = true;
+            this.lblTB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblTB.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblTB.Location = new System.Drawing.Point(14, 29);
+            this.lblTB.Name = "lblTB";
+            this.lblTB.Size = new System.Drawing.Size(23, 28);
+            this.lblTB.TabIndex = 1;
+            this.lblTB.Text = "0";
+            // 
+            // pnlGapStatsChart
+            // 
+            this.pnlGapStatsChart.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGapStatsChart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGapStatsChart.Location = new System.Drawing.Point(16, 313);
+            this.pnlGapStatsChart.Name = "pnlGapStatsChart";
+            this.pnlGapStatsChart.Size = new System.Drawing.Size(1168, 12);
+            this.pnlGapStatsChart.TabIndex = 5;
+            // 
+            // pnlChart
+            // 
+            this.pnlChart.BackColor = System.Drawing.Color.White;
+            this.pnlChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChart.Controls.Add(this.chtDoanhThu);
+            this.pnlChart.Controls.Add(this.lblChartTitle);
+            this.pnlChart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlChart.Location = new System.Drawing.Point(16, 325);
+            this.pnlChart.Name = "pnlChart";
+            this.pnlChart.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
+            this.pnlChart.Size = new System.Drawing.Size(1168, 244);
+            this.pnlChart.TabIndex = 6;
+            // 
+            // chtDoanhThu
+            // 
+            chartArea3.BackColor = System.Drawing.Color.White;
+            chartArea3.Name = "ChartArea1";
+            this.chtDoanhThu.ChartAreas.Add(chartArea3);
+            this.chtDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.BackColor = System.Drawing.Color.White;
+            legend3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            legend3.Name = "Legend1";
+            this.chtDoanhThu.Legends.Add(legend3);
+            this.chtDoanhThu.Location = new System.Drawing.Point(16, 35);
+            this.chtDoanhThu.Name = "chtDoanhThu";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "DoanhThu";
+            this.chtDoanhThu.Series.Add(series3);
+            this.chtDoanhThu.Size = new System.Drawing.Size(1134, 191);
+            this.chtDoanhThu.TabIndex = 1;
+            // 
+            // lblChartTitle
+            // 
+            this.lblChartTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblChartTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblChartTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.lblChartTitle.Location = new System.Drawing.Point(16, 12);
+            this.lblChartTitle.Name = "lblChartTitle";
+            this.lblChartTitle.Size = new System.Drawing.Size(1134, 23);
+            this.lblChartTitle.TabIndex = 0;
+            this.lblChartTitle.Text = "BIỂU ĐỒ DOANH THU (THEO NGÀY)";
+            // 
+            // pnlGapChartGrid
+            // 
+            this.pnlGapChartGrid.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGapChartGrid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGapChartGrid.Location = new System.Drawing.Point(16, 569);
+            this.pnlGapChartGrid.Name = "pnlGapChartGrid";
+            this.pnlGapChartGrid.Size = new System.Drawing.Size(1168, 12);
+            this.pnlGapChartGrid.TabIndex = 7;
+            // 
+            // pnlGrid
+            // 
+            this.pnlGrid.BackColor = System.Drawing.Color.White;
+            this.pnlGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGrid.Controls.Add(this.dgv);
+            this.pnlGrid.Controls.Add(this.lblGridTitle);
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGrid.Location = new System.Drawing.Point(16, 581);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
+            this.pnlGrid.Size = new System.Drawing.Size(1168, 228);
+            this.pnlGrid.TabIndex = 8;
+            // 
+            // dgv
+            // 
+            this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv.ColumnHeadersHeight = 32;
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Enabled = false;
+            this.dgv.Location = new System.Drawing.Point(16, 47);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersWidth = 62;
+            this.dgv.Size = new System.Drawing.Size(1134, 163);
+            this.dgv.TabIndex = 1;
+            // 
+            // lblGridTitle
+            // 
+            this.lblGridTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblGridTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblGridTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.lblGridTitle.Location = new System.Drawing.Point(16, 12);
+            this.lblGridTitle.Name = "lblGridTitle";
+            this.lblGridTitle.Size = new System.Drawing.Size(1134, 35);
+            this.lblGridTitle.TabIndex = 0;
+            this.lblGridTitle.Text = "CHI TIẾT DOANH THU";
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlContent.Controls.Add(this.pnlGrid);
+            this.pnlContent.Controls.Add(this.pnlGapChartGrid);
+            this.pnlContent.Controls.Add(this.pnlChart);
+            this.pnlContent.Controls.Add(this.pnlGapStatsChart);
+            this.pnlContent.Controls.Add(this.pnlStats);
+            this.pnlContent.Controls.Add(this.pnlGapFilterStats);
+            this.pnlContent.Controls.Add(this.pnlFilter);
+            this.pnlContent.Controls.Add(this.pnlGapTabsFilter);
+            this.pnlContent.Controls.Add(this.pnlTabs);
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 75);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Padding = new System.Windows.Forms.Padding(16, 0, 16, 16);
+            this.pnlContent.Size = new System.Drawing.Size(1200, 825);
+            this.pnlContent.TabIndex = 1;
             // 
             // frmBaoCao
             // 
@@ -726,19 +718,8 @@ namespace QuanLyCuaHangMayTinh
             this.Load += new System.EventHandler(this.frmBaoCao_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.pnlContent.ResumeLayout(false);
-            this.pnlGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
-            this.pnlChart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).EndInit();
-            this.pnlStats.ResumeLayout(false);
-            this.tblStats.ResumeLayout(false);
-            this.cardDoanhThu.ResumeLayout(false);
-            this.cardDoanhThu.PerformLayout();
-            this.cardDonHang.ResumeLayout(false);
-            this.cardDonHang.PerformLayout();
-            this.cardTB.ResumeLayout(false);
-            this.cardTB.PerformLayout();
+            this.pnlTabs.ResumeLayout(false);
+            this.flpTabs.ResumeLayout(false);
             this.pnlFilter.ResumeLayout(false);
             this.tblFilter.ResumeLayout(false);
             this.pnlFrom.ResumeLayout(false);
@@ -748,8 +729,19 @@ namespace QuanLyCuaHangMayTinh
             this.pnlLoai.ResumeLayout(false);
             this.pnlLoai.PerformLayout();
             this.flpActions.ResumeLayout(false);
-            this.pnlTabs.ResumeLayout(false);
-            this.flpTabs.ResumeLayout(false);
+            this.pnlStats.ResumeLayout(false);
+            this.tblStats.ResumeLayout(false);
+            this.cardDoanhThu.ResumeLayout(false);
+            this.cardDoanhThu.PerformLayout();
+            this.cardDonHang.ResumeLayout(false);
+            this.cardDonHang.PerformLayout();
+            this.cardTB.ResumeLayout(false);
+            this.cardTB.PerformLayout();
+            this.pnlChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).EndInit();
+            this.pnlGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.pnlContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -757,64 +749,53 @@ namespace QuanLyCuaHangMayTinh
         #endregion
 
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Label lblHeaderSubTitle;
         private System.Windows.Forms.Label lblTitle;
-
-        private System.Windows.Forms.Panel pnlContent;
-
         private System.Windows.Forms.Panel pnlTabs;
+        private System.Windows.Forms.Panel pnlTabIndicator;
         private System.Windows.Forms.FlowLayoutPanel flpTabs;
         private System.Windows.Forms.Button btnTabDoanhThu;
         private System.Windows.Forms.Button btnTabSPBanChay;
         private System.Windows.Forms.Button btnTabDonTrangThai;
         private System.Windows.Forms.Button btnTabBieuDo;
-        private System.Windows.Forms.Panel pnlTabIndicator;
-
         private System.Windows.Forms.Panel pnlGapTabsFilter;
-
         private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.TableLayoutPanel tblFilter;
         private System.Windows.Forms.Panel pnlFrom;
-        private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Panel pnlTo;
-        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpTo;
+        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Panel pnlLoai;
-        private System.Windows.Forms.Label lblLoai;
         private System.Windows.Forms.ComboBox cboLoai;
+        private System.Windows.Forms.Label lblLoai;
         private System.Windows.Forms.FlowLayoutPanel flpActions;
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.Button btnInBaoCao;
         private System.Windows.Forms.Button btnXuatExcel;
-
         private System.Windows.Forms.Panel pnlGapFilterStats;
-
         private System.Windows.Forms.Panel pnlStats;
         private System.Windows.Forms.TableLayoutPanel tblStats;
         private System.Windows.Forms.Panel cardDoanhThu;
+        private System.Windows.Forms.Label lblDoanhThuHint;
         private System.Windows.Forms.Label lblDoanhThuTitle;
         private System.Windows.Forms.Label lblDoanhThu;
-        private System.Windows.Forms.Label lblDoanhThuHint;
         private System.Windows.Forms.Panel cardDonHang;
+        private System.Windows.Forms.Label lblDonHangHint;
         private System.Windows.Forms.Label lblDonHangTitle;
         private System.Windows.Forms.Label lblDonHang;
-        private System.Windows.Forms.Label lblDonHangHint;
         private System.Windows.Forms.Panel cardTB;
+        private System.Windows.Forms.Label lblTBHint;
         private System.Windows.Forms.Label lblTBTitle;
         private System.Windows.Forms.Label lblTB;
-        private System.Windows.Forms.Label lblTBHint;
-
         private System.Windows.Forms.Panel pnlGapStatsChart;
-
         private System.Windows.Forms.Panel pnlChart;
-        private System.Windows.Forms.Label lblChartTitle;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtDoanhThu;
-
+        private System.Windows.Forms.Label lblChartTitle;
         private System.Windows.Forms.Panel pnlGapChartGrid;
-
         private System.Windows.Forms.Panel pnlGrid;
-        private System.Windows.Forms.Label lblGridTitle;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Label lblGridTitle;
+        private System.Windows.Forms.Panel pnlContent;
     }
 }
