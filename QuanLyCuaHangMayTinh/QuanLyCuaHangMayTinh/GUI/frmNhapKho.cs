@@ -7,12 +7,10 @@ namespace QuanLyCuaHangMayTinh
 {
     public partial class frmNhapKho : Form
     {
-        private DataTable tblPN;
-        private DataTable tblCT;
+        private DataTable tblPN;                     // Danh sách phiếu nhập từ DB
+        private DataTable tblTamThoi;                // DataTable tạm thời cho chi tiết
         private bool addingHeader;
-        private bool addingDetail;
-        private int oldDetailQty;
-        private string oldDetailProduct;
+        private int STT = 0;
 
         public frmNhapKho()
         {
@@ -22,335 +20,389 @@ namespace QuanLyCuaHangMayTinh
         private void frmNhapKho_Load(object sender, EventArgs e)
         {
             txtTongTien.Enabled = false;
-            txtMaHDN.Enabled = false;
+            txtMaPN.Enabled = false;
+            txtThanhTien.Enabled = false;
+
+            Function.Connect();
             LoadCombos();
             LoadReceiptGrid();
-            ToggleHeaderEditing(false);
-            ToggleDetailEditing(false);
+            InitializeDetailGrid();
+            ResetForm();
         }
 
+        // ===== KHỞI TẠO DATATABLE TẠM THỜI =====
+        private void InitializeDetailGrid()
+        {
+            tblTamThoi = new DataTable();
+            tblTamThoi.Columns.Add("STT", typeof(int));
+            tblTamThoi.Columns.Add("MaSanPham", typeof(string));
+            tblTamThoi.Columns.Add("TenSanPham", typeof(string));
+            tblTamThoi.Columns.Add("SoLuong", typeof(int));
+            tblTamThoi.Columns.Add("DonGiaNhap", typeof(decimal));
+            tblTamThoi.Columns.Add("ThanhTien", typeof(decimal));
+
+            dataGridView1.DataSource = tblTamThoi;
+            ConfigureDetailGridView();
+        }
+
+        private void ConfigureDetailGridView()
+        {
+            if (dataGridView1.Columns.Count >= 6)
+            {
+                dataGridView1.Columns[0].HeaderText = "STT";
+                dataGridView1.Columns[0].Width = 50;
+
+                dataGridView1.Columns[1].HeaderText = "Mã sản phẩm";
+                dataGridView1.Columns[1].Width = 100;
+
+                dataGridView1.Columns[2].HeaderText = "Tên sản phẩm";
+                dataGridView1.Columns[2].Width = 300;
+
+                dataGridView1.Columns[3].HeaderText = "Số lượng";
+                dataGridView1.Columns[3].Width = 80;
+
+                dataGridView1.Columns[4].HeaderText = "Đơn giá nhập (đ)";
+                dataGridView1.Columns[4].Width = 120;
+                dataGridView1.Columns[4].DefaultCellStyle.Format = "N0";
+                dataGridView1.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+                dataGridView1.Columns[5].HeaderText = "Thành tiền (đ)";
+                dataGridView1.Columns[5].Width = 120;
+                dataGridView1.Columns[5].DefaultCellStyle.Format = "N0";
+                dataGridView1.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+        }
+
+        // ===== LỰA CHỌN SAI PHẨM TỪ COMBOBOX =====
         private void LoadCombos()
         {
-            Function.FillCombo("SELECT MaNhanVien, HoTen FROM NhanVien WHERE MaVaiTro IN (N'VT01',N'VT02')", cboNVNhap, "MaNhanVien", "HoTen");
-            cboNVNhap.SelectedIndex = -1;
-            Function.FillCombo("SELECT MaNhaCungCap, TenNhaCungCap FROM NhaCungCap", cboNhaCungCap, "MaNhaCungCap", "TenNhaCungCap");
+            Function.FillCombo("SELECT MaNhaCungCap, TenNhaCungCap FROM NhaCungCap",
+                cboNhaCungCap, "MaNhaCungCap", "TenNhaCungCap");
             cboNhaCungCap.SelectedIndex = -1;
-            Function.FillCombo("SELECT MaSanPham, TenSanPham FROM SanPham", cboNguyenLieu, "MaSanPham", "TenSanPham");
-            cboNguyenLieu.SelectedIndex = -1;
+
+            Function.FillCombo("SELECT MaNhanVien, HoTen FROM NhanVien WHERE MaVaiTro IN (N'VT01',N'VT02')",
+                cboNVNhap, "MaNhanVien", "HoTen");
+            cboNVNhap.SelectedIndex = -1;
         }
 
-        private void ToggleHeaderEditing(bool enabled)
-        {
-            dtpNgayNhap.Enabled = enabled;
-            cboNVNhap.Enabled = enabled;
-            cboNhaCungCap.Enabled = enabled;
-            btnLuu1.Enabled = enabled;
-            btnLamMoi1.Enabled = enabled;
-        }
-
-        private void ToggleDetailEditing(bool enabled)
-        {
-            cboNguyenLieu.Enabled = enabled;
-            txtSLNhap.Enabled = enabled;
-            txtDonGiaNhap.Enabled = enabled;
-            btnLuu2.Enabled = enabled;
-            btnLamMoi2.Enabled = enabled;
-        }
-
+        // ===== LOAD DANH SÁCH PHIẾU NHẬP TỪ DATABASE =====
         private void LoadReceiptGrid()
         {
-            string sql = @"SELECT pn.MaPhieuNhap, pn.NgayNhap, nv.HoTen AS TenNhanVien, ncc.TenNhaCungCap, pn.TongTien,
+            string sql = @"SELECT pn.MaPhieuNhap, pn.NgayNhap, nv.HoTen, ncc.TenNhaCungCap, pn.TongTien,
                                   pn.MaNhaCungCap, pn.MaNhanVien
                            FROM PhieuNhapKho pn
                            INNER JOIN NhanVien nv ON pn.MaNhanVien = nv.MaNhanVien
                            INNER JOIN NhaCungCap ncc ON pn.MaNhaCungCap = ncc.MaNhaCungCap
                            ORDER BY pn.NgayNhap DESC";
             tblPN = Function.GetDataToTable(sql);
-            DataGridView1.DataSource = tblPN;
-            if (DataGridView1.Columns.Count > 0)
-            {
-                DataGridView1.Columns[0].HeaderText = "Mã phiếu nhập";
-                DataGridView1.Columns[1].HeaderText = "Ngày nhập";
-                DataGridView1.Columns[2].HeaderText = "Nhân viên";
-                DataGridView1.Columns[3].HeaderText = "Nhà cung cấp";
-                DataGridView1.Columns[4].HeaderText = "Tổng tiền";
-                DataGridView1.Columns[5].Visible = false;
-                DataGridView1.Columns[6].Visible = false;
-            }
+
             if (tblPN.Rows.Count > 0)
             {
-                txtMaHDN.Text = tblPN.Rows[0]["MaPhieuNhap"].ToString();
-                LoadDetailGrid(txtMaHDN.Text);
+                txtMaPN.Text = tblPN.Rows[0]["MaPhieuNhap"].ToString();
+                dtpNgayNhap.Value = Convert.ToDateTime(tblPN.Rows[0]["NgayNhap"]);
+                cboNVNhap.SelectedValue = tblPN.Rows[0]["MaNhanVien"];
+                cboNhaCungCap.SelectedValue = tblPN.Rows[0]["MaNhaCungCap"];
+                txtTongTien.Text = Convert.ToDecimal(tblPN.Rows[0]["TongTien"]).ToString("N0");
+                LoadDetailGridFromDB(txtMaPN.Text);
             }
             else
             {
-                DataGridView2.DataSource = null;
+                ResetForm();
             }
         }
 
-        private void LoadDetailGrid(string maPhieuNhap)
+        // ===== LOAD CHI TIẾT PHIẾU NHẬP TỪ DATABASE =====
+        private void LoadDetailGridFromDB(string maPhieuNhap)
         {
             string sql = @"SELECT ct.MaPhieuNhap, ct.MaSanPham, sp.TenSanPham, ct.SoLuong, ct.DonGiaNhap,
                                   ct.SoLuong * ct.DonGiaNhap AS ThanhTien
                            FROM ChiTietPhieuNhap ct
                            INNER JOIN SanPham sp ON ct.MaSanPham = sp.MaSanPham
                            WHERE ct.MaPhieuNhap = @MaPhieuNhap";
-            tblCT = Function.GetDataToTable(sql, new SqlParameter("@MaPhieuNhap", maPhieuNhap));
-            DataGridView2.DataSource = tblCT;
-            if (DataGridView2.Columns.Count > 0)
-            {
-                DataGridView2.Columns[0].Visible = false;
-                DataGridView2.Columns[1].Visible = false;
-                DataGridView2.Columns[2].HeaderText = "Sản phẩm";
-                DataGridView2.Columns[3].HeaderText = "Số lượng";
-                DataGridView2.Columns[4].HeaderText = "Đơn giá nhập";
-                DataGridView2.Columns[5].HeaderText = "Thành tiền";
-            }
-            UpdateReceiptTotal(maPhieuNhap);
+            DataTable tblCT = Function.GetDataToTable(sql, new SqlParameter("@MaPhieuNhap", maPhieuNhap));
+            dataGridView1.DataSource = tblCT;
+            ConfigureDetailGridView();
+            UpdateTotalFromDB(maPhieuNhap);
         }
 
-        private void UpdateReceiptTotal(string maPhieuNhap)
+        private void UpdateTotalFromDB(string maPhieuNhap)
         {
             string sumSql = "SELECT ISNULL(SUM(SoLuong * DonGiaNhap),0) FROM ChiTietPhieuNhap WHERE MaPhieuNhap = @MaPhieuNhap";
             string value = Function.GetFieldValues(sumSql.Replace("@MaPhieuNhap", "N'" + maPhieuNhap + "'"));
             txtTongTien.Text = string.IsNullOrWhiteSpace(value) ? "0" : Convert.ToDecimal(value).ToString("N0");
-            Function.RunSql("UPDATE PhieuNhapKho SET TongTien=@TongTien WHERE MaPhieuNhap=@MaPhieuNhap",
-                new SqlParameter("@TongTien", Convert.ToDecimal(string.IsNullOrWhiteSpace(value) ? "0" : value)),
-                new SqlParameter("@MaPhieuNhap", maPhieuNhap));
         }
 
-        private void ResetHeader()
+        // ===== TÌM SẢN PHẨM VỀ THÀNH TIỀN =====
+        private void UpdateThanhTien()
         {
-            txtMaHDN.Text = "";
+            int soLuong = 0;
+            decimal donGia = 0;
+            int.TryParse(txtSLNhap.Text, out soLuong);
+            decimal.TryParse(txtDonGiaNhap.Text, out donGia);
+
+            decimal thanhTien = soLuong * donGia;
+            txtThanhTien.Text = thanhTien.ToString("N0");
+        }
+
+        // ===== TÍNH TỔNG TIỀN DATAGRIDVIEW TẠM THỜI =====
+        private void UpdateTotalTemporary()
+        {
+            decimal total = 0;
+            foreach (DataRow row in tblTamThoi.Rows)
+            {
+                total += Convert.ToDecimal(row["ThanhTien"]);
+            }
+            txtTongTien.Text = total.ToString("N0");
+        }
+
+        private void ResetForm()
+        {
+            txtMaPN.Text = "";
             dtpNgayNhap.Value = DateTime.Now;
             cboNVNhap.SelectedIndex = -1;
             cboNhaCungCap.SelectedIndex = -1;
             txtTongTien.Text = "0";
-        }
-
-        private void ResetDetail()
-        {
-            cboNguyenLieu.SelectedIndex = -1;
             txtSLNhap.Text = "";
             txtDonGiaNhap.Text = "";
-            oldDetailQty = 0;
-            oldDetailProduct = null;
+            txtThanhTien.Text = "";
+            txtTimSP.Text = "";
+            InitializeDetailGrid();
+            STT = 0;
         }
 
-        private void DataGridView1_Click(object sender, EventArgs e)
+        // ===== CLICK CHỌN DỮ LIỆU TỪ COMBOBOX =====
+        private void cboNguyenLieu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DataGridView1.CurrentRow == null) return;
-            txtMaHDN.Text = Convert.ToString(DataGridView1.CurrentRow.Cells["MaPhieuNhap"].Value);
-            dtpNgayNhap.Value = Convert.ToDateTime(DataGridView1.CurrentRow.Cells["NgayNhap"].Value);
-            cboNVNhap.SelectedValue = Convert.ToString(DataGridView1.CurrentRow.Cells["MaNhanVien"].Value);
-            cboNhaCungCap.SelectedValue = Convert.ToString(DataGridView1.CurrentRow.Cells["MaNhaCungCap"].Value);
-            txtTongTien.Text = Convert.ToDecimal(DataGridView1.CurrentRow.Cells["TongTien"].Value).ToString("N0");
-            LoadDetailGrid(txtMaHDN.Text);
+            // Tính thành tiền mỗi khi thay đổi combobox
+            UpdateThanhTien();
         }
 
-        private void DataGridView2_Click(object sender, EventArgs e)
+        // ===== CLICK CHỌN DÒNG TRONG DATAGRIDVIEW =====
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (DataGridView2.CurrentRow == null) return;
-            cboNguyenLieu.SelectedValue = Convert.ToString(DataGridView2.CurrentRow.Cells["MaSanPham"].Value);
-            txtSLNhap.Text = Convert.ToString(DataGridView2.CurrentRow.Cells["SoLuong"].Value);
-            txtDonGiaNhap.Text = Convert.ToString(DataGridView2.CurrentRow.Cells["DonGiaNhap"].Value);
-            oldDetailQty = Convert.ToInt32(DataGridView2.CurrentRow.Cells["SoLuong"].Value);
-            oldDetailProduct = Convert.ToString(DataGridView2.CurrentRow.Cells["MaSanPham"].Value);
+            if (dataGridView1.CurrentRow == null) return;
+
+            // Nếu từ Database (có cột MaPhieuNhap)
+            if (dataGridView1.Columns.Contains("MaPhieuNhap"))
+            {
+                txtSLNhap.Text = dataGridView1.CurrentRow.Cells["SoLuong"].Value.ToString();
+                txtDonGiaNhap.Text = dataGridView1.CurrentRow.Cells["DonGiaNhap"].Value.ToString();
+                UpdateThanhTien();
+            }
         }
 
         private string GenerateReceiptCode() => "PNK" + DateTime.Now.ToString("yyyyMMddHHmmss");
 
-        private void btnThem1_Click(object sender, EventArgs e)
+        // ===== BUTTON: TẠO PHIẾU NHẬP MỚI =====
+        private void btnThem_Click(object sender, EventArgs e)
         {
             addingHeader = true;
-            ResetHeader();
-            txtMaHDN.Text = GenerateReceiptCode();
-            ToggleHeaderEditing(true);
+            ResetForm();
+            txtMaPN.Text = GenerateReceiptCode();
+            dtpNgayNhap.Enabled = true;
+            cboNVNhap.Enabled = true;
+            cboNhaCungCap.Enabled = true;
         }
 
-        private void btnLuu1_Click(object sender, EventArgs e)
+        // ===== BUTTON: LƯU PHIẾU NHẬP (HEADER) =====
+        private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text) || cboNVNhap.SelectedIndex < 0 || cboNhaCungCap.SelectedIndex < 0) return;
-            if (addingHeader)
+            if (string.IsNullOrWhiteSpace(txtMaPN.Text) || cboNVNhap.SelectedIndex < 0 || cboNhaCungCap.SelectedIndex < 0)
             {
-                Function.RunSql(@"INSERT INTO PhieuNhapKho(MaPhieuNhap, NgayNhap, MaNhaCungCap, MaNhanVien, TongTien)
-                                  VALUES(@MaPhieuNhap,@NgayNhap,@MaNhaCungCap,@MaNhanVien,0)",
-                    new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()),
-                    new SqlParameter("@NgayNhap", dtpNgayNhap.Value),
-                    new SqlParameter("@MaNhaCungCap", cboNhaCungCap.SelectedValue),
-                    new SqlParameter("@MaNhanVien", cboNVNhap.SelectedValue));
-            }
-            else
-            {
-                Function.RunSql(@"UPDATE PhieuNhapKho SET NgayNhap=@NgayNhap, MaNhaCungCap=@MaNhaCungCap, MaNhanVien=@MaNhanVien WHERE MaPhieuNhap=@MaPhieuNhap",
-                    new SqlParameter("@NgayNhap", dtpNgayNhap.Value),
-                    new SqlParameter("@MaNhaCungCap", cboNhaCungCap.SelectedValue),
-                    new SqlParameter("@MaNhanVien", cboNVNhap.SelectedValue),
-                    new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()));
-            }
-            addingHeader = false;
-            ToggleHeaderEditing(false);
-            LoadReceiptGrid();
-        }
-
-        private void btnSua1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text)) return;
-            addingHeader = false;
-            ToggleHeaderEditing(true);
-        }
-
-        private void btnXoa1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text)) return;
-            if (MessageBox.Show("Xóa phiếu nhập và toàn bộ chi tiết?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
-            foreach (DataRow row in tblCT.Rows)
-            {
-                Function.RunSql("UPDATE SanPham SET SoLuongTon = SoLuongTon - @SoLuong WHERE MaSanPham=@MaSanPham",
-                    new SqlParameter("@SoLuong", Convert.ToInt32(row["SoLuong"])),
-                    new SqlParameter("@MaSanPham", row["MaSanPham"].ToString()));
-            }
-            Function.RunSql("DELETE FROM ChiTietPhieuNhap WHERE MaPhieuNhap=@MaPhieuNhap", new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()));
-            Function.RunSql("DELETE FROM PhieuNhapKho WHERE MaPhieuNhap=@MaPhieuNhap", new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()));
-            LoadReceiptGrid();
-            ResetHeader();
-            ResetDetail();
-        }
-
-        private void btnTimKiem1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text)) { LoadReceiptGrid(); return; }
-            string sql = @"SELECT pn.MaPhieuNhap, pn.NgayNhap, nv.HoTen AS TenNhanVien, ncc.TenNhaCungCap, pn.TongTien,
-                                  pn.MaNhaCungCap, pn.MaNhanVien
-                           FROM PhieuNhapKho pn
-                           INNER JOIN NhanVien nv ON pn.MaNhanVien = nv.MaNhanVien
-                           INNER JOIN NhaCungCap ncc ON pn.MaNhaCungCap = ncc.MaNhaCungCap
-                           WHERE pn.MaPhieuNhap LIKE @Ma";
-            tblPN = Function.GetDataToTable(sql, new SqlParameter("@Ma", "%" + txtMaHDN.Text.Trim() + "%"));
-            DataGridView1.DataSource = tblPN;
-        }
-
-        private void btnLamMoi1_Click(object sender, EventArgs e)
-        {
-            addingHeader = false;
-            ToggleHeaderEditing(false);
-            ResetHeader();
-            LoadReceiptGrid();
-        }
-
-        private void btnThem2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text)) { MessageBox.Show("Vui lòng chọn hoặc tạo phiếu nhập trước."); return; }
-            addingDetail = true;
-            ResetDetail();
-            ToggleDetailEditing(true);
-        }
-
-        private void btnLuu2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text) || cboNguyenLieu.SelectedIndex < 0) return;
-            int soLuong = 0; decimal donGia = 0;
-            int.TryParse(txtSLNhap.Text, out soLuong);
-            decimal.TryParse(txtDonGiaNhap.Text, out donGia);
-            if (soLuong <= 0 || donGia <= 0) { MessageBox.Show("Số lượng và đơn giá phải lớn hơn 0."); return; }
-
-            string maSanPham = cboNguyenLieu.SelectedValue.ToString();
-            if (addingDetail)
-            {
-                Function.RunSql(@"INSERT INTO ChiTietPhieuNhap(MaPhieuNhap, MaSanPham, SoLuong, DonGiaNhap)
-                                  VALUES(@MaPhieuNhap,@MaSanPham,@SoLuong,@DonGiaNhap)",
-                    new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()),
-                    new SqlParameter("@MaSanPham", maSanPham),
-                    new SqlParameter("@SoLuong", soLuong),
-                    new SqlParameter("@DonGiaNhap", donGia));
-                Function.RunSql("UPDATE SanPham SET SoLuongTon = SoLuongTon + @SoLuong, GiaNhap = @GiaNhap WHERE MaSanPham=@MaSanPham",
-                    new SqlParameter("@SoLuong", soLuong),
-                    new SqlParameter("@GiaNhap", donGia),
-                    new SqlParameter("@MaSanPham", maSanPham));
-            }
-            else
-            {
-                if (!string.IsNullOrWhiteSpace(oldDetailProduct))
-                {
-                    Function.RunSql("UPDATE SanPham SET SoLuongTon = SoLuongTon - @OldQty WHERE MaSanPham=@MaSanPham",
-                        new SqlParameter("@OldQty", oldDetailQty),
-                        new SqlParameter("@MaSanPham", oldDetailProduct));
-                }
-                Function.RunSql(@"UPDATE ChiTietPhieuNhap SET MaSanPham=@NewSanPham, SoLuong=@SoLuong, DonGiaNhap=@DonGiaNhap
-                                  WHERE MaPhieuNhap=@MaPhieuNhap AND MaSanPham=@OldSanPham",
-                    new SqlParameter("@NewSanPham", maSanPham),
-                    new SqlParameter("@SoLuong", soLuong),
-                    new SqlParameter("@DonGiaNhap", donGia),
-                    new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()),
-                    new SqlParameter("@OldSanPham", oldDetailProduct ?? maSanPham));
-                Function.RunSql("UPDATE SanPham SET SoLuongTon = SoLuongTon + @SoLuong, GiaNhap = @GiaNhap WHERE MaSanPham=@MaSanPham",
-                    new SqlParameter("@SoLuong", soLuong),
-                    new SqlParameter("@GiaNhap", donGia),
-                    new SqlParameter("@MaSanPham", maSanPham));
-            }
-            addingDetail = false;
-            ToggleDetailEditing(false);
-            LoadDetailGrid(txtMaHDN.Text.Trim());
-            LoadReceiptGrid();
-        }
-
-        private void btnSua2_Click(object sender, EventArgs e)
-        {
-            if (DataGridView2.CurrentRow == null) return;
-            addingDetail = false;
-            ToggleDetailEditing(true);
-        }
-
-        private void btnXoa2_Click(object sender, EventArgs e)
-        {
-            if (DataGridView2.CurrentRow == null) return;
-            string maSanPham = Convert.ToString(DataGridView2.CurrentRow.Cells["MaSanPham"].Value);
-            int soLuong = Convert.ToInt32(DataGridView2.CurrentRow.Cells["SoLuong"].Value);
-            if (MessageBox.Show("Xóa chi tiết nhập đã chọn?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
-            Function.RunSql("DELETE FROM ChiTietPhieuNhap WHERE MaPhieuNhap=@MaPhieuNhap AND MaSanPham=@MaSanPham",
-                new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()),
-                new SqlParameter("@MaSanPham", maSanPham));
-            Function.RunSql("UPDATE SanPham SET SoLuongTon = SoLuongTon - @SoLuong WHERE MaSanPham=@MaSanPham",
-                new SqlParameter("@SoLuong", soLuong),
-                new SqlParameter("@MaSanPham", maSanPham));
-            LoadDetailGrid(txtMaHDN.Text.Trim());
-            LoadReceiptGrid();
-        }
-
-        private void btnTimKiem2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHDN.Text) || cboNguyenLieu.SelectedIndex < 0)
-            {
-                if (!string.IsNullOrWhiteSpace(txtMaHDN.Text)) LoadDetailGrid(txtMaHDN.Text.Trim());
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin phiếu nhập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string sql = @"SELECT ct.MaPhieuNhap, ct.MaSanPham, sp.TenSanPham, ct.SoLuong, ct.DonGiaNhap,
-                                  ct.SoLuong * ct.DonGiaNhap AS ThanhTien
-                           FROM ChiTietPhieuNhap ct
-                           INNER JOIN SanPham sp ON ct.MaSanPham = sp.MaSanPham
-                           WHERE ct.MaPhieuNhap=@MaPhieuNhap AND ct.MaSanPham=@MaSanPham";
-            tblCT = Function.GetDataToTable(sql,
-                new SqlParameter("@MaPhieuNhap", txtMaHDN.Text.Trim()),
-                new SqlParameter("@MaSanPham", cboNguyenLieu.SelectedValue));
-            DataGridView2.DataSource = tblCT;
+
+            if (tblTamThoi.Rows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng thêm sản phẩm vào phiếu nhập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Lưu header phiếu nhập
+                if (addingHeader)
+                {
+                    Function.RunSql(@"INSERT INTO PhieuNhapKho(MaPhieuNhap, NgayNhap, MaNhaCungCap, MaNhanVien, TongTien, GhiChu)
+                                      VALUES(@MaPhieuNhap, @NgayNhap, @MaNhaCungCap, @MaNhanVien, 0, @GhiChu)",
+                        new SqlParameter("@MaPhieuNhap", txtMaPN.Text.Trim()),
+                        new SqlParameter("@NgayNhap", dtpNgayNhap.Value),
+                        new SqlParameter("@MaNhaCungCap", cboNhaCungCap.SelectedValue),
+                        new SqlParameter("@MaNhanVien", cboNVNhap.SelectedValue),
+                        new SqlParameter("@GhiChu", txtGhiChu.Text.Trim()));
+                }
+                else
+                {
+                    Function.RunSql(@"UPDATE PhieuNhapKho 
+                                      SET NgayNhap=@NgayNhap, MaNhaCungCap=@MaNhaCungCap, MaNhanVien=@MaNhanVien, GhiChu=@GhiChu 
+                                      WHERE MaPhieuNhap=@MaPhieuNhap",
+                        new SqlParameter("@NgayNhap", dtpNgayNhap.Value),
+                        new SqlParameter("@MaNhaCungCap", cboNhaCungCap.SelectedValue),
+                        new SqlParameter("@MaNhanVien", cboNVNhap.SelectedValue),
+                        new SqlParameter("@GhiChu", txtGhiChu.Text.Trim()),
+                        new SqlParameter("@MaPhieuNhap", txtMaPN.Text.Trim()));
+                }
+
+                // Lưu chi tiết phiếu nhập
+                foreach (DataRow row in tblTamThoi.Rows)
+                {
+                    string maSanPham = row["MaSanPham"].ToString();
+                    int soLuong = Convert.ToInt32(row["SoLuong"]);
+                    decimal donGia = Convert.ToDecimal(row["DonGiaNhap"]);
+
+                    Function.RunSql(@"INSERT INTO ChiTietPhieuNhap(MaPhieuNhap, MaSanPham, SoLuong, DonGiaNhap)
+                                      VALUES(@MaPhieuNhap, @MaSanPham, @SoLuong, @DonGiaNhap)",
+                        new SqlParameter("@MaPhieuNhap", txtMaPN.Text.Trim()),
+                        new SqlParameter("@MaSanPham", maSanPham),
+                        new SqlParameter("@SoLuong", soLuong),
+                        new SqlParameter("@DonGiaNhap", donGia));
+
+                    // Cập nhật tồn kho sản phẩm
+                    Function.RunSql("UPDATE SanPham SET SoLuongTon = SoLuongTon + @SoLuong, GiaNhap = @GiaNhap WHERE MaSanPham=@MaSanPham",
+                        new SqlParameter("@SoLuong", soLuong),
+                        new SqlParameter("@GiaNhap", donGia),
+                        new SqlParameter("@MaSanPham", maSanPham));
+                }
+
+                MessageBox.Show("Lưu phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                addingHeader = false;
+                dtpNgayNhap.Enabled = false;
+                cboNVNhap.Enabled = false;
+                cboNhaCungCap.Enabled = false;
+                LoadReceiptGrid();
+                ResetForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnLamMoi2_Click(object sender, EventArgs e)
+        // ===== BUTTON: THÊM SẢN PHẨM VÀO DATAGRIDVIEW TẠM THỜI =====
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
-            addingDetail = false;
-            ToggleDetailEditing(false);
-            ResetDetail();
-            if (!string.IsNullOrWhiteSpace(txtMaHDN.Text)) LoadDetailGrid(txtMaHDN.Text.Trim());
+            // Tìm sản phẩm từ txtTimSP
+            if (string.IsNullOrWhiteSpace(txtTimSP.Text) || string.IsNullOrWhiteSpace(txtSLNhap.Text) || string.IsNullOrWhiteSpace(txtDonGiaNhap.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin sản phẩm!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int soLuong = 0;
+            decimal donGia = 0;
+            int.TryParse(txtSLNhap.Text, out soLuong);
+            decimal.TryParse(txtDonGiaNhap.Text, out donGia);
+
+            if (soLuong <= 0 || donGia <= 0)
+            {
+                MessageBox.Show("Số lượng và đơn giá phải lớn hơn 0!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lấy thông tin sản phẩm từ database dựa trên txtTimSP
+            string sql = "SELECT MaSanPham, TenSanPham FROM SanPham WHERE MaSanPham LIKE @Ma OR TenSanPham LIKE @Ten LIMIT 1";
+            DataTable dt = Function.GetDataToTable(sql,
+                new SqlParameter("@Ma", "%" + txtTimSP.Text + "%"),
+                new SqlParameter("@Ten", "%" + txtTimSP.Text + "%"));
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string maSanPham = dt.Rows[0]["MaSanPham"].ToString();
+            string tenSanPham = dt.Rows[0]["TenSanPham"].ToString();
+            decimal thanhTien = soLuong * donGia;
+
+            // Kiểm tra sản phẩm đã có trong DataGridView chưa
+            bool existsInGrid = false;
+            foreach (DataRow row in tblTamThoi.Rows)
+            {
+                if (row["MaSanPham"].ToString() == maSanPham)
+                {
+                    // Cộng số lượng nếu đã có
+                    int oldQty = Convert.ToInt32(row["SoLuong"]);
+                    row["SoLuong"] = oldQty + soLuong;
+                    row["DonGiaNhap"] = donGia;
+                    row["ThanhTien"] = (oldQty + soLuong) * donGia;
+                    existsInGrid = true;
+                    break;
+                }
+            }
+
+            // Thêm dòng mới nếu sản phẩm chưa có
+            if (!existsInGrid)
+            {
+                STT++;
+                tblTamThoi.Rows.Add(STT, maSanPham, tenSanPham, soLuong, donGia, thanhTien);
+            }
+
+            dataGridView1.DataSource = tblTamThoi.Copy();
+            ConfigureDetailGridView();
+            UpdateTotalTemporary();
+
+            // Reset input
+            txtTimSP.Text = "";
+            txtSLNhap.Text = "";
+            txtDonGiaNhap.Text = "";
+            txtThanhTien.Text = "";
         }
 
+        // ===== BUTTON: XÓA DÒNG TRONG DATAGRIDVIEW =====
+        private void btnXoa2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn dòng để xóa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("Xóa dòng này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+
+            int rowIndex = dataGridView1.CurrentRow.Index;
+            if (rowIndex < tblTamThoi.Rows.Count)
+            {
+                tblTamThoi.Rows[rowIndex].Delete();
+                tblTamThoi.AcceptChanges();
+                dataGridView1.DataSource = tblTamThoi.Copy();
+                ConfigureDetailGridView();
+                UpdateTotalTemporary();
+            }
+        }
+
+        // ===== BUTTON: LÀM MỚI =====
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+            LoadReceiptGrid();
+        }
+
+        // ===== KEYPRESS VALIDATE =====
         private void txtSLNhap_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar));
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+                UpdateThanhTien();
         }
 
         private void txtDonGiaNhap_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar));
+            e.Handled = !(char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar) || e.KeyChar == '.');
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == '.')
+                UpdateThanhTien();
         }
+
+        private void txtTimSP_TextChanged(object sender, EventArgs e)
+        {
+            // Tìm kiếm sản phẩm khi nhập
+        }
+
+
     }
 }
