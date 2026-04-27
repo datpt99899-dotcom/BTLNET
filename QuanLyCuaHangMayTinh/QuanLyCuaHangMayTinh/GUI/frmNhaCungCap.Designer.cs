@@ -291,7 +291,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.btnLamMoi.Location = new System.Drawing.Point(24, 76);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(94, 34);
+            this.btnLamMoi.Size = new System.Drawing.Size(183, 34);
             this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);

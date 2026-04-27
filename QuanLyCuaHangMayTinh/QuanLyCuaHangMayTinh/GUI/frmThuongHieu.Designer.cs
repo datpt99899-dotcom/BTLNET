@@ -251,7 +251,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.btnLamMoi.Location = new System.Drawing.Point(23, 76);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(92, 34);
+            this.btnLamMoi.Size = new System.Drawing.Size(175, 34);
             this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
