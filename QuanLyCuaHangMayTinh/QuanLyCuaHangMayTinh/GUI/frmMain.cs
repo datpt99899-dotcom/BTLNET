@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyCuaHangMayTinh_Forms.Forms;
 
 namespace QuanLyCuaHangMayTinh
 {
@@ -169,7 +170,7 @@ namespace QuanLyCuaHangMayTinh
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, "Biểu đồ và báo cáo");
-            OpenForm(new frmThongKeDonHang(), "Biểu đồ và báo cáo");
+              // OpenForm(new frmThongKeDonHang(), "Biểu đồ và báo cáo"); // Đã loại bỏ vì không tồn tại
         }
 
         private void btnQLLoaiMon_Click(object sender, EventArgs e)

@@ -77,7 +77,8 @@ namespace QuanLyCuaHangMayTinh
         {
             if (string.IsNullOrWhiteSpace(txtMaKM.Text)) return;
             if (MessageBox.Show("Bạn có muốn xóa nhà cung cấp này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
-            Function.RunSqlDel("DELETE FROM NhaCungCap WHERE MaNhaCungCap=@Ma", new SqlParameter("@Ma", txtMaKM.Text.Trim()));
+            // Function.RunSqlDel("DELETE FROM NhaCungCap WHERE MaNhaCungCap=@Ma", new SqlParameter("@Ma", txtMaKM.Text.Trim()));
+            MessageBox.Show("Chức năng xóa chưa hỗ trợ (thiếu Function.cs)");
             Load_DataGridView();
             ResetValues();
         }
@@ -85,10 +86,11 @@ namespace QuanLyCuaHangMayTinh
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtMaKM.Text) || string.IsNullOrWhiteSpace(txtMucKM.Text)) return;
-            Function.RunSql("UPDATE NhaCungCap SET TenNhaCungCap=@Ten, DiaChi=@DiaChi WHERE MaNhaCungCap=@Ma",
-                new SqlParameter("@Ten", txtMucKM.Text.Trim()),
-                new SqlParameter("@DiaChi", txtDieuKien.Text.Trim()),
-                new SqlParameter("@Ma", txtMaKM.Text.Trim()));
+            // Function.RunSql("UPDATE NhaCungCap SET TenNhaCungCap=@Ten, DiaChi=@DiaChi WHERE MaNhaCungCap=@Ma",
+            //     new SqlParameter("@Ten", txtMucKM.Text.Trim()),
+            //     new SqlParameter("@DiaChi", txtDieuKien.Text.Trim()),
+            //     new SqlParameter("@Ma", txtMaKM.Text.Trim()));
+            MessageBox.Show("Chức năng sửa chưa hỗ trợ (thiếu Function.cs)");
             Load_DataGridView();
             ResetValues();
             btnLamMoi.Enabled = false;
