@@ -31,6 +31,7 @@
             this.pnlTieuDe = new System.Windows.Forms.Panel();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.lblTieuDe = new System.Windows.Forms.Label();
+            this.lblNguoiDung = new System.Windows.Forms.Label();
             this.pnlDeskTop = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnKhuyenMai = new FontAwesome.Sharp.IconButton();
@@ -52,6 +53,7 @@
             // 
             this.pnlTieuDe.BackColor = System.Drawing.Color.Green;
             this.pnlTieuDe.Controls.Add(this.btnDangXuat);
+            this.pnlTieuDe.Controls.Add(this.lblNguoiDung);
             this.pnlTieuDe.Controls.Add(this.lblTieuDe);
             this.pnlTieuDe.Location = new System.Drawing.Point(309, 0);
             this.pnlTieuDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -78,6 +80,17 @@
             this.btnDangXuat.Text = "     Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // lblNguoiDung
+            // 
+            this.lblNguoiDung.AutoSize = true;
+            this.lblNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNguoiDung.ForeColor = System.Drawing.Color.White;
+            this.lblNguoiDung.Location = new System.Drawing.Point(800, 35);
+            this.lblNguoiDung.Name = "lblNguoiDung";
+            this.lblNguoiDung.Size = new System.Drawing.Size(100, 25);
+            this.lblNguoiDung.TabIndex = 30;
+            this.lblNguoiDung.Text = "";
             // 
             // lblTieuDe
             // 
@@ -300,6 +313,7 @@
         private FontAwesome.Sharp.IconButton btnQLHoaDon;
         private FontAwesome.Sharp.IconButton btnQLBan;
         private FontAwesome.Sharp.IconButton btnQLTaiKhoan;
+        private System.Windows.Forms.Label lblNguoiDung;
     }
 }
 

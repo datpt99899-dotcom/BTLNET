@@ -18,10 +18,12 @@ namespace QuanLyCuaHangMayTinh
         public frmLogin()
         {
             InitializeComponent();
+            this.AcceptButton = btnLogin;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            txtTaikhoan.Focus();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
