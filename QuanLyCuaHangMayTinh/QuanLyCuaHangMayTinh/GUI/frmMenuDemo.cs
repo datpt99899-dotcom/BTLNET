@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using QuanLyCuaHangMayTinh_Forms.Forms;
 
 namespace QuanLyCuaHangMayTinh_Forms.Forms
 {
@@ -14,7 +15,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
 
         private void btnLoaiSanPham_Click(object sender, EventArgs e)
         {
-            new frmLoaiSanPham(SelectedRole).ShowDialog();
+            new QuanLyCuaHangMayTinh.frmLoaiSanPham().ShowDialog();
         }
 
         private void btnThuongHieu_Click(object sender, EventArgs e)

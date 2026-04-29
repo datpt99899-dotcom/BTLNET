@@ -7,6 +7,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
     {
         private System.ComponentModel.IContainer components = null;
         private Panel pnlHeader;
+        private Label lblVaiTro;
         private Label lblTitle;
         private GroupBox grpThongTin;
         private Label lblMaThuongHieu;
@@ -38,6 +39,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
 
         private void InitializeComponent()
         {
+            this.lblVaiTro = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpThongTin = new System.Windows.Forms.GroupBox();
@@ -59,6 +61,16 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvThuongHieu = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
+            // 
+            // lblVaiTro
+            // 
+            this.lblVaiTro.AutoSize = true;
+            this.lblVaiTro.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblVaiTro.Location = new System.Drawing.Point(20, 80);
+            this.lblVaiTro.Name = "lblVaiTro";
+            this.lblVaiTro.Size = new System.Drawing.Size(80, 28);
+            this.lblVaiTro.TabIndex = 100;
+            this.lblVaiTro.Text = "Vai trò";
             this.grpThongTin.SuspendLayout();
             this.grpTimKiem.SuspendLayout();
             this.grpChucNang.SuspendLayout();
@@ -94,7 +106,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpThongTin.Controls.Add(this.txtMaThuongHieu);
             this.grpThongTin.Controls.Add(this.txtTenThuongHieu);
             this.grpThongTin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpThongTin.Location = new System.Drawing.Point(24, 98);
+            this.grpThongTin.Location = new System.Drawing.Point(24, 120);
             this.grpThongTin.Name = "grpThongTin";
             this.grpThongTin.Size = new System.Drawing.Size(408, 150);
             this.grpThongTin.TabIndex = 1;
@@ -295,6 +307,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.Controls.Add(this.grpDanhSach);
             this.Controls.Add(this.grpChucNang);
             this.Controls.Add(this.grpTimKiem);
+            this.Controls.Add(this.lblVaiTro);
             this.Controls.Add(this.grpThongTin);
             this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);

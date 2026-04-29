@@ -20,17 +20,17 @@ namespace QuanLyCuaHangMayTinh
         private void frmThongTinTK_Load(object sender, EventArgs e)
         {
             string maNV = StaticData.MaNV;
-            string sql = "select nv.MaNhanVien, nv.TenNhanVien, cv.TenChucVu from NhanVien nv join ChucVu cv on nv.MaChucVu = cv.MaChucVu where nv.MaNhanVien = '" + maNV + "'";
-            DataTable dt = Function.GetDataToTable(sql);
+            string sql = @"SELECT nv.MaNhanVien, nv.HoTen, vt.TenVaiTro
+                           FROM NhanVien nv
+                           JOIN VaiTro vt ON nv.MaVaiTro = vt.MaVaiTro
+                           WHERE nv.MaNhanVien = @MaNV";
+            DataTable dt = Function.GetDataToTable(sql,
+                new System.Data.SqlClient.SqlParameter("@MaNV", maNV));
             if (dt.Rows.Count > 0)
             {
                 txtMaNV.Text = dt.Rows[0]["MaNhanVien"].ToString();
-                txtHoTen.Text = dt.Rows[0]["TenNhanVien"].ToString();
-                txtChucVu.Text = dt.Rows[0]["TenChucVu"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy thông tin tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoTen.Text = dt.Rows[0]["HoTen"].ToString();
+                txtChucVu.Text = dt.Rows[0]["TenVaiTro"].ToString();
             }
         }
     }
