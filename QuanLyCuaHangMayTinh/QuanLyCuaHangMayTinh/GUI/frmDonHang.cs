@@ -248,9 +248,11 @@ namespace QuanLyCuaHangMayTinh
             }
             // Cập nhật CSDL
             string sql = "UPDATE DonDatHang SET TrangThai = @tt WHERE MaDonDatHang = @ma";
-            int kq = Function.ExecuteNonQuery(sql,
+            int kq = 0;
+            Function.RunSql(sql,
                 new SqlParameter("@tt", trangThaiMoi),
                 new SqlParameter("@ma", currentMaDon));
+            kq = 1;
             if (kq > 0)
             {
                 MessageBox.Show("Cập nhật trạng thái thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -297,7 +299,7 @@ namespace QuanLyCuaHangMayTinh
             {
                 try
                 {
-                    using (SqlConnection conn = Function.GetSqlConnection())
+                    using (SqlConnection conn = DapperRepository.CreateConnection())
                     {
                         conn.Open();
                         SqlTransaction trans = conn.BeginTransaction();
@@ -389,8 +391,18 @@ namespace QuanLyCuaHangMayTinh
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập mã đơn hoặc tên khách hàng:", "Tìm kiếm", "");
-            LoadDonHang(keyword);
+            using (Form dlg = new Form())
+            {
+                dlg.Text = "Tìm kiếm"; dlg.Width = 380; dlg.Height = 140; dlg.StartPosition = FormStartPosition.CenterParent;
+                Label lbl = new Label { Text = "Nhập mã đơn hoặc tên khách hàng:", Left = 12, Top = 15, Width = 340 };
+                TextBox txt = new TextBox { Left = 12, Top = 38, Width = 340 };
+                Button ok = new Button { Text = "OK", Left = 180, Top = 70, Width = 80, DialogResult = DialogResult.OK };
+                Button cancel = new Button { Text = "Hủy", Left = 270, Top = 70, Width = 80, DialogResult = DialogResult.Cancel };
+                dlg.Controls.AddRange(new Control[] { lbl, txt, ok, cancel });
+                dlg.AcceptButton = ok; dlg.CancelButton = cancel;
+                if (dlg.ShowDialog() == DialogResult.OK)
+                    LoadDonHang(txt.Text.Trim());
+            }
         }
 
         private void btnDong_Click(object sender, EventArgs e)

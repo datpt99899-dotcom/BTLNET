@@ -26,14 +26,14 @@ namespace QuanLyCuaHangMayTinh
             Function.Connect();
 
             // Cập nhật nhãn các control để phù hợp với schema mới
-            label1.Text = "Mã nhân viên";
+            label1.Text = "Mã NV";
             label2.Text = "Họ tên";
             label3.Text = "Vai trò";
             label4.Text = "Tên đăng nhập";
             label5.Text = "Giới tính";
             label6.Text = "Email";
             label7.Text = "Mật khẩu";
-            label8.Text = "Số điện thoại";
+            label8.Text = "SĐT";
             label12.Text = "Địa chỉ";
 
             // Ẩn trường ngày sinh (không có trong schema mới)

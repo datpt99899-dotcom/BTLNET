@@ -156,7 +156,7 @@ namespace QuanLyCuaHangMayTinh
             btnDonDatHangMoRong.FlatStyle = FlatStyle.Flat;
             btnDonDatHangMoRong.Width = 180; btnDonDatHangMoRong.Height = 42;
             btnDonDatHangMoRong.Left = 10; btnDonDatHangMoRong.Top = panelMenu.Controls.Count * 44;
-            btnDonDatHangMoRong.Click += (s,e) => { ActivateButton(btnDonDatHangMoRong, "Đơn đặt hàng"); OpenForm(new frmDonDatHang(), "Đơn đặt hàng"); };
+            btnDonDatHangMoRong.Click += (s,e) => { ActivateButton(btnDonDatHangMoRong, "Đơn hàng"); OpenForm(new frmDonHang(), "Đơn hàng"); };
             panelMenu.Controls.Add(btnDonDatHangMoRong);
 
             btnTraHangMoRong = new IconButton();
@@ -198,7 +198,7 @@ namespace QuanLyCuaHangMayTinh
         private void btnQLHoaDon_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, "Quản lý hóa đơn");
-            OpenForm(new frmQuanlyHoadon(), "Quản lý hóa đơn");
+            OpenForm(new frmChiTietHoaDon(), "Quản lý hóa đơn");
         }
 
         private void btnQLMon_Click(object sender, EventArgs e)

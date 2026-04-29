@@ -229,7 +229,7 @@ namespace QuanLyCuaHangMayTinh
 
             try
             {
-                using (SqlConnection conn = Function.GetSqlConnection())
+                using (SqlConnection conn = DapperRepository.CreateConnection())
                 {
                     conn.Open();
                     SqlTransaction trans = conn.BeginTransaction();

@@ -58,24 +58,24 @@
             this.pnlTieuDe.Location = new System.Drawing.Point(309, 0);
             this.pnlTieuDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTieuDe.Name = "pnlTieuDe";
-            this.pnlTieuDe.Size = new System.Drawing.Size(1342, 94);
+            this.pnlTieuDe.Size = new System.Drawing.Size(1342, 50);
             this.pnlTieuDe.TabIndex = 8;
             this.pnlTieuDe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTieuDe_Paint);
             this.pnlTieuDe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTieuDe_MouseDown);
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.Yellow;
             this.btnDangXuat.IconChar = FontAwesome.Sharp.IconChar.SignOut;
             this.btnDangXuat.IconColor = System.Drawing.Color.Yellow;
             this.btnDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDangXuat.IconSize = 40;
+            this.btnDangXuat.IconSize = 22;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(1090, 11);
+            this.btnDangXuat.Location = new System.Drawing.Point(1180, 5);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(204, 71);
+            this.btnDangXuat.Size = new System.Drawing.Size(150, 40);
             this.btnDangXuat.TabIndex = 22;
             this.btnDangXuat.Text = "     Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@
             // lblNguoiDung
             // 
             this.lblNguoiDung.AutoSize = true;
-            this.lblNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNguoiDung.ForeColor = System.Drawing.Color.White;
-            this.lblNguoiDung.Location = new System.Drawing.Point(800, 35);
+            this.lblNguoiDung.Location = new System.Drawing.Point(750, 15);
             this.lblNguoiDung.Name = "lblNguoiDung";
             this.lblNguoiDung.Size = new System.Drawing.Size(100, 25);
             this.lblNguoiDung.TabIndex = 30;
@@ -95,9 +95,9 @@
             // lblTieuDe
             // 
             this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTieuDe.ForeColor = System.Drawing.Color.Yellow;
-            this.lblTieuDe.Location = new System.Drawing.Point(46, 42);
+            this.lblTieuDe.Location = new System.Drawing.Point(20, 13);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(0, 51);
             this.lblTieuDe.TabIndex = 2;
@@ -105,10 +105,10 @@
             // pnlDeskTop
             // 
             this.pnlDeskTop.BackColor = System.Drawing.Color.White;
-            this.pnlDeskTop.Location = new System.Drawing.Point(309, 94);
+            this.pnlDeskTop.Location = new System.Drawing.Point(315, 56);
             this.pnlDeskTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDeskTop.Name = "pnlDeskTop";
-            this.pnlDeskTop.Size = new System.Drawing.Size(1342, 826);
+            this.pnlDeskTop.Size = new System.Drawing.Size(1330, 859);
             this.pnlDeskTop.TabIndex = 10;
             // 
             // panelMenu
