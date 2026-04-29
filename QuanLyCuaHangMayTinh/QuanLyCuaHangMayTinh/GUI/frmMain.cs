@@ -10,7 +10,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyCuaHangMayTinh_Forms.Forms;
 
 namespace QuanLyCuaHangMayTinh
 {
@@ -102,47 +101,8 @@ namespace QuanLyCuaHangMayTinh
         {
             ThemChucNangMoRong();
             btnQLBan.Text = "    Quản lý KH";
-            btnKhuyenMai.Text = "    Khuyến mãi";
-
-            // Hiển thị tên người dùng và vai trò
-            lblNguoiDung.Text = $"👤 {StaticData.HoTen}  |  {StaticData.TenVaiTro}";
-
-            // Phân quyền menu theo vai trò
-            SetPermission(StaticData.MaVaiTro);
-
+            btnKhuyenMai.Text = "    Nhà cung cấp";
             OpenForm(new frmThongTinTK(), "Thông tin tài khoản");
-        }
-
-        private void SetPermission(string maVaiTro)
-        {
-            // Admin (VT01): hiện đủ menu
-            // NV bán hàng (VT03): ẩn các menu không liên quan
-            // NV kho (VT02): chỉ nhập kho, danh mục, sản phẩm
-            // Kế toán (VT04): chỉ báo cáo, hóa đơn
-            switch (maVaiTro)
-            {
-                case "VT01": // Admin: hiện tất cả
-                    break;
-                case "VT02": // NV kho
-                    btnQLTaiKhoan.Visible = false;
-                    btnQLHoaDon.Visible = false;
-                    btnBaoCao.Visible = false;
-                    btnKhuyenMai.Visible = false;
-                    break;
-                case "VT03": // NV bán hàng
-                    btnQLTaiKhoan.Visible = false;
-                    btnQLMon.Visible = false;
-                    btnQLLoaiMon.Visible = false;
-                    btnKhuyenMai.Visible = false;
-                    break;
-                case "VT04": // Kế toán
-                    btnQLTaiKhoan.Visible = false;
-                    btnQLMon.Visible = false;
-                    btnQLLoaiMon.Visible = false;
-                    btnQLBan.Visible = false;
-                    btnKhuyenMai.Visible = false;
-                    break;
-            }
         }
 
         private void ThemChucNangMoRong()
@@ -156,7 +116,7 @@ namespace QuanLyCuaHangMayTinh
             btnDonDatHangMoRong.FlatStyle = FlatStyle.Flat;
             btnDonDatHangMoRong.Width = 180; btnDonDatHangMoRong.Height = 42;
             btnDonDatHangMoRong.Left = 10; btnDonDatHangMoRong.Top = panelMenu.Controls.Count * 44;
-            btnDonDatHangMoRong.Click += (s,e) => { ActivateButton(btnDonDatHangMoRong, "Đơn hàng"); OpenForm(new frmDonHang(), "Đơn hàng"); };
+            btnDonDatHangMoRong.Click += (s,e) => { ActivateButton(btnDonDatHangMoRong, "Đơn đặt hàng"); OpenForm(new frmDonDatHang(), "Đơn đặt hàng"); };
             panelMenu.Controls.Add(btnDonDatHangMoRong);
 
             btnTraHangMoRong = new IconButton();
@@ -180,8 +140,7 @@ namespace QuanLyCuaHangMayTinh
 
         private void btnQLBan_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, "Quản lý khách hàng");
-            OpenForm(new frmKhachHang(), "Quản lý khách hàng");
+            MessageBox.Show("Chức năng quản lý khách hàng đang được gom vào các form bán hàng và hóa đơn trong bản dữ liệu mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -198,7 +157,7 @@ namespace QuanLyCuaHangMayTinh
         private void btnQLHoaDon_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, "Quản lý hóa đơn");
-            OpenForm(new frmChiTietHoaDon(), "Quản lý hóa đơn");
+            OpenForm(new frmQuanlyHoadon(), "Quản lý hóa đơn");
         }
 
         private void btnQLMon_Click(object sender, EventArgs e)
@@ -209,8 +168,8 @@ namespace QuanLyCuaHangMayTinh
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, "Báo cáo doanh thu");
-            OpenForm(new frmBaoCao(), "Báo cáo doanh thu");
+            ActivateButton(sender, "Biểu đồ và báo cáo");
+            OpenForm(new frmThongKeDonHang(), "Biểu đồ và báo cáo");
         }
 
         private void btnQLLoaiMon_Click(object sender, EventArgs e)
@@ -239,8 +198,7 @@ namespace QuanLyCuaHangMayTinh
 
         private void btnKhuyenMai_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, "Khuyến mãi");
-            OpenForm(new frmKhuyenMai(), "Khuyến mãi");
+            MessageBox.Show("Chức năng nhà cung cấp hiện được quản lý trong schema dữ liệu mới, form cũ đã được vô hiệu hóa để tránh lỗi schema.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void pnlTieuDe_Paint(object sender, PaintEventArgs e)
