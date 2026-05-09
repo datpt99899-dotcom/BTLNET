@@ -36,7 +36,7 @@ namespace QuanLyCuaHangMayTinh
             btnDonDatHang = new Button { Text = "Đơn đặt hàng", Width = 120, Height = 28, Left = 320, Top = 10, BackColor = Color.White, ForeColor = Color.Green };
             btnTraHang = new Button { Text = "Trả hàng", Width = 120, Height = 28, Left = 450, Top = 10, BackColor = Color.White, ForeColor = Color.Green };
             btnDonDatHang.Click += (s, ev) => { ShowFormInPanel(new frmDonHang(), pnelQuanlybanhang); ActivateButton(btnDonDatHang); };
-            btnTraHang.Click += (s, ev) => { ShowFormInPanel(new QuanLy.frmTraHang(), pnelQuanlybanhang); ActivateButton(btnTraHang); };
+            btnTraHang.Click += (s, ev) => { ShowFormInPanel(new frmTraHang(), pnelQuanlybanhang); ActivateButton(btnTraHang); };
             panel2.Controls.Add(btnDonDatHang);
             panel2.Controls.Add(btnTraHang);
         }

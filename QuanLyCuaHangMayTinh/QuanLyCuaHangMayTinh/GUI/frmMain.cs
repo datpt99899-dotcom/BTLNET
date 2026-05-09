@@ -1,5 +1,4 @@
 ﻿using FontAwesome.Sharp;
-using QuanLyCuaHangMayTinh.QuanLy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
