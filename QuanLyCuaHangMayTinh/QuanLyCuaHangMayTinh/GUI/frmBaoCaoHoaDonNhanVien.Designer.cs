@@ -42,7 +42,7 @@
             this.txtMuckhuyenmai = new System.Windows.Forms.TextBox();
             this.txtTinhtrang = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnHuy = new FontAwesome.Sharp.IconButton();
+//            this.btnHuy = new FontAwesome.Sharp.IconButton();
             this.txtTongtien = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTonghoadon = new System.Windows.Forms.TextBox();

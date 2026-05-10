@@ -18,7 +18,7 @@ namespace QuanLyCuaHangMayTinh
             Application.SetCompatibleTextRenderingDefault(false);
             Function.Connect();
            // Application.Run(new frmBaoCaoKho());
-           Application.Run(new frmLogin());
+           Application.Run(new frmBaoCao());
         }
     }
 }

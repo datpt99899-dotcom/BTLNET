@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTieuDe = new System.Windows.Forms.Panel();
-            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
+//            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.pnlDeskTop = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
