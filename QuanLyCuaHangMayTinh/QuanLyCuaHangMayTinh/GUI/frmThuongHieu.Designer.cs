@@ -16,7 +16,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         private GroupBox grpTimKiem;
         private Label lblTimKiemTitle;
         private TextBox txtTimKiem;
-        private Button btnTimKiem;
         private GroupBox grpChucNang;
         private Button btnThem;
         private Button btnSua;
@@ -25,7 +24,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         private Button btnHuy;
         private Button btnLamMoi;
         private GroupBox grpDanhSach;
-        private DataGridView dgvThuongHieu;
 
         protected override void Dispose(bool disposing)
         {
@@ -48,7 +46,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpTimKiem = new System.Windows.Forms.GroupBox();
             this.lblTimKiemTitle = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.grpChucNang = new System.Windows.Forms.GroupBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -57,23 +54,24 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.grpDanhSach = new System.Windows.Forms.GroupBox();
-            this.dgvThuongHieu = new System.Windows.Forms.DataGridView();
+            this.dgvDSThuongHieu = new System.Windows.Forms.DataGridView();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.grpThongTin.SuspendLayout();
             this.grpTimKiem.SuspendLayout();
             this.grpChucNang.SuspendLayout();
             this.grpDanhSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSThuongHieu)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(96)))), ((int)(((byte)(158)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1084, 78);
+            this.pnlHeader.Size = new System.Drawing.Size(1192, 87);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -81,7 +79,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(22, 14);
+            this.lblTitle.Location = new System.Drawing.Point(416, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(392, 45);
             this.lblTitle.TabIndex = 0;
@@ -94,9 +92,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpThongTin.Controls.Add(this.txtMaThuongHieu);
             this.grpThongTin.Controls.Add(this.txtTenThuongHieu);
             this.grpThongTin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpThongTin.Location = new System.Drawing.Point(24, 98);
+            this.grpThongTin.Location = new System.Drawing.Point(26, 110);
             this.grpThongTin.Name = "grpThongTin";
-            this.grpThongTin.Size = new System.Drawing.Size(408, 150);
+            this.grpThongTin.Size = new System.Drawing.Size(456, 184);
             this.grpThongTin.TabIndex = 1;
             this.grpThongTin.TabStop = false;
             this.grpThongTin.Text = "Thông tin thương hiệu";
@@ -105,36 +103,36 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.lblMaThuongHieu.AutoSize = true;
             this.lblMaThuongHieu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblMaThuongHieu.Location = new System.Drawing.Point(20, 42);
+            this.lblMaThuongHieu.Location = new System.Drawing.Point(22, 47);
             this.lblMaThuongHieu.Name = "lblMaThuongHieu";
-            this.lblMaThuongHieu.Size = new System.Drawing.Size(152, 28);
+            this.lblMaThuongHieu.Size = new System.Drawing.Size(156, 28);
             this.lblMaThuongHieu.TabIndex = 0;
-            this.lblMaThuongHieu.Text = "Mã thương hiệu";
+            this.lblMaThuongHieu.Text = "Mã thương hiệu:";
             // 
             // lblTenThuongHieu
             // 
             this.lblTenThuongHieu.AutoSize = true;
             this.lblTenThuongHieu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTenThuongHieu.Location = new System.Drawing.Point(20, 88);
+            this.lblTenThuongHieu.Location = new System.Drawing.Point(22, 99);
             this.lblTenThuongHieu.Name = "lblTenThuongHieu";
-            this.lblTenThuongHieu.Size = new System.Drawing.Size(153, 28);
+            this.lblTenThuongHieu.Size = new System.Drawing.Size(157, 28);
             this.lblTenThuongHieu.TabIndex = 1;
-            this.lblTenThuongHieu.Text = "Tên thương hiệu";
+            this.lblTenThuongHieu.Text = "Tên thương hiệu:";
             // 
             // txtMaThuongHieu
             // 
             this.txtMaThuongHieu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMaThuongHieu.Location = new System.Drawing.Point(148, 38);
+            this.txtMaThuongHieu.Location = new System.Drawing.Point(190, 44);
             this.txtMaThuongHieu.Name = "txtMaThuongHieu";
-            this.txtMaThuongHieu.Size = new System.Drawing.Size(221, 34);
+            this.txtMaThuongHieu.Size = new System.Drawing.Size(243, 34);
             this.txtMaThuongHieu.TabIndex = 2;
             // 
             // txtTenThuongHieu
             // 
             this.txtTenThuongHieu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTenThuongHieu.Location = new System.Drawing.Point(148, 84);
+            this.txtTenThuongHieu.Location = new System.Drawing.Point(190, 93);
             this.txtTenThuongHieu.Name = "txtTenThuongHieu";
-            this.txtTenThuongHieu.Size = new System.Drawing.Size(221, 34);
+            this.txtTenThuongHieu.Size = new System.Drawing.Size(243, 34);
             this.txtTenThuongHieu.TabIndex = 3;
             // 
             // grpTimKiem
@@ -143,9 +141,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpTimKiem.Controls.Add(this.txtTimKiem);
             this.grpTimKiem.Controls.Add(this.btnTimKiem);
             this.grpTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpTimKiem.Location = new System.Drawing.Point(455, 98);
+            this.grpTimKiem.Location = new System.Drawing.Point(500, 110);
             this.grpTimKiem.Name = "grpTimKiem";
-            this.grpTimKiem.Size = new System.Drawing.Size(603, 88);
+            this.grpTimKiem.Size = new System.Drawing.Size(663, 99);
             this.grpTimKiem.TabIndex = 2;
             this.grpTimKiem.TabStop = false;
             this.grpTimKiem.Text = "Tìm kiếm";
@@ -154,7 +152,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.lblTimKiemTitle.AutoSize = true;
             this.lblTimKiemTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTimKiemTitle.Location = new System.Drawing.Point(19, 39);
+            this.lblTimKiemTitle.Location = new System.Drawing.Point(21, 44);
             this.lblTimKiemTitle.Name = "lblTimKiemTitle";
             this.lblTimKiemTitle.Size = new System.Drawing.Size(82, 28);
             this.lblTimKiemTitle.TabIndex = 0;
@@ -163,23 +161,10 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTimKiem.Location = new System.Drawing.Point(86, 35);
+            this.txtTimKiem.Location = new System.Drawing.Point(109, 44);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(377, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(347, 34);
             this.txtTimKiem.TabIndex = 1;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(96)))), ((int)(((byte)(158)))));
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(480, 33);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(101, 39);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // grpChucNang
             // 
@@ -190,18 +175,18 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpChucNang.Controls.Add(this.btnHuy);
             this.grpChucNang.Controls.Add(this.btnLamMoi);
             this.grpChucNang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpChucNang.Location = new System.Drawing.Point(455, 195);
+            this.grpChucNang.Location = new System.Drawing.Point(500, 218);
             this.grpChucNang.Name = "grpChucNang";
-            this.grpChucNang.Size = new System.Drawing.Size(603, 124);
+            this.grpChucNang.Size = new System.Drawing.Size(663, 148);
             this.grpChucNang.TabIndex = 3;
             this.grpChucNang.TabStop = false;
             this.grpChucNang.Text = "Chức năng";
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(23, 34);
+            this.btnThem.Location = new System.Drawing.Point(25, 38);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(92, 34);
+            this.btnThem.Size = new System.Drawing.Size(101, 38);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -209,9 +194,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(123, 34);
+            this.btnSua.Location = new System.Drawing.Point(151, 38);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(92, 34);
+            this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -219,9 +204,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(223, 34);
+            this.btnXoa.Location = new System.Drawing.Point(280, 38);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(92, 34);
+            this.btnXoa.Size = new System.Drawing.Size(101, 38);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -229,9 +214,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(323, 34);
+            this.btnLuu.Location = new System.Drawing.Point(410, 38);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(92, 34);
+            this.btnLuu.Size = new System.Drawing.Size(101, 38);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -239,9 +224,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(423, 34);
+            this.btnHuy.Location = new System.Drawing.Point(538, 38);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(92, 34);
+            this.btnHuy.Size = new System.Drawing.Size(101, 38);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -249,9 +234,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(23, 76);
+            this.btnLamMoi.Location = new System.Drawing.Point(25, 93);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(175, 34);
+            this.btnLamMoi.Size = new System.Drawing.Size(192, 38);
             this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
@@ -259,45 +244,52 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // grpDanhSach
             // 
-            this.grpDanhSach.Controls.Add(this.dgvThuongHieu);
+            this.grpDanhSach.Controls.Add(this.dgvDSThuongHieu);
             this.grpDanhSach.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpDanhSach.Location = new System.Drawing.Point(24, 332);
+            this.grpDanhSach.Location = new System.Drawing.Point(26, 372);
             this.grpDanhSach.Name = "grpDanhSach";
-            this.grpDanhSach.Size = new System.Drawing.Size(1034, 327);
+            this.grpDanhSach.Size = new System.Drawing.Size(1137, 366);
             this.grpDanhSach.TabIndex = 4;
             this.grpDanhSach.TabStop = false;
             this.grpDanhSach.Text = "Danh sách thương hiệu";
             // 
-            // dgvThuongHieu
+            // dgvDSThuongHieu
             // 
-            this.dgvThuongHieu.AllowUserToAddRows = false;
-            this.dgvThuongHieu.AllowUserToDeleteRows = false;
-            this.dgvThuongHieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvThuongHieu.BackgroundColor = System.Drawing.Color.White;
-            this.dgvThuongHieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThuongHieu.Location = new System.Drawing.Point(16, 29);
-            this.dgvThuongHieu.MultiSelect = false;
-            this.dgvThuongHieu.Name = "dgvThuongHieu";
-            this.dgvThuongHieu.ReadOnly = true;
-            this.dgvThuongHieu.RowHeadersVisible = false;
-            this.dgvThuongHieu.RowHeadersWidth = 62;
-            this.dgvThuongHieu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThuongHieu.Size = new System.Drawing.Size(1001, 281);
-            this.dgvThuongHieu.TabIndex = 0;
-            this.dgvThuongHieu.SelectionChanged += new System.EventHandler(this.dgvThuongHieu_SelectionChanged);
+            this.dgvDSThuongHieu.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDSThuongHieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSThuongHieu.Location = new System.Drawing.Point(27, 51);
+            this.dgvDSThuongHieu.Name = "dgvDSThuongHieu";
+            this.dgvDSThuongHieu.RowHeadersWidth = 62;
+            this.dgvDSThuongHieu.RowTemplate.Height = 28;
+            this.dgvDSThuongHieu.Size = new System.Drawing.Size(1086, 274);
+            this.dgvDSThuongHieu.TabIndex = 0;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimKiem.Location = new System.Drawing.Point(498, 37);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(141, 44);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmThuongHieu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1084, 681);
+            this.ClientSize = new System.Drawing.Size(1192, 763);
             this.Controls.Add(this.grpDanhSach);
             this.Controls.Add(this.grpChucNang);
             this.Controls.Add(this.grpTimKiem);
             this.Controls.Add(this.grpThongTin);
             this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmThuongHieu";
@@ -312,9 +304,12 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpTimKiem.PerformLayout();
             this.grpChucNang.ResumeLayout(false);
             this.grpDanhSach.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSThuongHieu)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+        private DataGridView dgvDSThuongHieu;
+        private Button btnTimKiem;
     }
 }

@@ -46,7 +46,7 @@
             this.lblChartTitle = new System.Windows.Forms.Label();
             this.pnlGapStatsChart = new System.Windows.Forms.Panel();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.dgv = new System.Windows.Forms.DataGridView();
+            this.dgvChiTiet = new System.Windows.Forms.DataGridView();
             this.lblGridTitle = new System.Windows.Forms.Label();
             this.pnlGapChartGrid = new System.Windows.Forms.Panel();
             this.pnlStats = new System.Windows.Forms.Panel();
@@ -80,7 +80,7 @@
             this.cardTB.SuspendLayout();
             this.pnlChart.SuspendLayout();
             this.pnlGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             this.pnlStats.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.flpTabs.SuspendLayout();
@@ -304,7 +304,7 @@
             // 
             this.pnlGrid.BackColor = System.Drawing.Color.White;
             this.pnlGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlGrid.Controls.Add(this.dgv);
+            this.pnlGrid.Controls.Add(this.dgvChiTiet);
             this.pnlGrid.Controls.Add(this.lblGridTitle);
             this.pnlGrid.Location = new System.Drawing.Point(16, 656);
             this.pnlGrid.Name = "pnlGrid";
@@ -312,17 +312,17 @@
             this.pnlGrid.Size = new System.Drawing.Size(1168, 228);
             this.pnlGrid.TabIndex = 8;
             // 
-            // dgv
+            // dgvChiTiet
             // 
-            this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgv.ColumnHeadersHeight = 32;
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.Enabled = false;
-            this.dgv.Location = new System.Drawing.Point(16, 47);
-            this.dgv.Name = "dgv";
-            this.dgv.RowHeadersWidth = 62;
-            this.dgv.Size = new System.Drawing.Size(1134, 163);
-            this.dgv.TabIndex = 1;
+            this.dgvChiTiet.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvChiTiet.ColumnHeadersHeight = 32;
+            this.dgvChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChiTiet.Enabled = false;
+            this.dgvChiTiet.Location = new System.Drawing.Point(16, 47);
+            this.dgvChiTiet.Name = "dgvChiTiet";
+            this.dgvChiTiet.RowHeadersWidth = 62;
+            this.dgvChiTiet.Size = new System.Drawing.Size(1134, 163);
+            this.dgvChiTiet.TabIndex = 1;
             // 
             // lblGridTitle
             // 
@@ -677,7 +677,7 @@
             this.cardTB.PerformLayout();
             this.pnlChart.ResumeLayout(false);
             this.pnlGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             this.pnlStats.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
             this.flpTabs.ResumeLayout(false);
@@ -717,7 +717,7 @@
         private System.Windows.Forms.Label lblChartTitle;
         private System.Windows.Forms.Panel pnlGapStatsChart;
         private System.Windows.Forms.Panel pnlGrid;
-        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridView dgvChiTiet;
         private System.Windows.Forms.Label lblGridTitle;
         private System.Windows.Forms.Panel pnlGapChartGrid;
         private System.Windows.Forms.Panel pnlStats;

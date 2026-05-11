@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHangMayTinh.GUI
 {
-    public partial class frmTonKho : Form
+    public partial class frmNhap : Form
     {
-        public frmTonKho()
+        public frmNhap()
         {
             InitializeComponent();
         }
-
-        private void frmTonKho_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

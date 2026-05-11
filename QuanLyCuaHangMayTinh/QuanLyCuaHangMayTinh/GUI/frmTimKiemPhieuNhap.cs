@@ -10,18 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHangMayTinh.GUI
 {
-    public partial class frmTonKho : Form
+    public partial class frmTimKiemPhieuNhap : Form
     {
-        public frmTonKho()
+        public frmTimKiemPhieuNhap()
         {
             InitializeComponent();
         }
 
-        private void frmTonKho_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
+    
     }
 }

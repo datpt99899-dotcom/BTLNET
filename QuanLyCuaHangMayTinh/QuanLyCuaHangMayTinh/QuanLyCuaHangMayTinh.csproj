@@ -147,6 +147,12 @@
     <Compile Include="GUI\frmNhaCungCap.Designer.cs">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNhap.Designer.cs">
+      <DependentUpon>frmNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,18 @@
     <Compile Include="GUI\frmThuongHieu.Designer.cs">
       <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmTimKiemPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemPhieuNhap.Designer.cs">
+      <DependentUpon>frmTimKiemPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTonKho.Designer.cs">
+      <DependentUpon>frmTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTraHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,12 +202,6 @@
     <Compile Include="GUI\frmPOS.Designer.cs">
       <DependentUpon>frmPOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmBaoCaoHoaDonNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmBaoCaoHoaDonNhanVien.Designer.cs">
-      <DependentUpon>frmBaoCaoHoaDonNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmBaoCaoKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,23 +214,11 @@
     <Compile Include="GUI\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmTonKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmTonKho.Designer.cs">
-      <DependentUpon>frmTonKho.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmNhapKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmNhapKho.Designer.cs">
-      <DependentUpon>frmNhapKho.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmadmin.cs">
       <SubType>Form</SubType>
@@ -310,8 +310,14 @@
     <EmbeddedResource Include="GUI\frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNhap.resx">
+      <DependentUpon>frmNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThongTinTK.resx">
       <DependentUpon>frmThongTinTK.cs</DependentUpon>
@@ -325,23 +331,14 @@
     <EmbeddedResource Include="GUI\frmPOS.resx">
       <DependentUpon>frmPOS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmBaoCaoHoaDonNhanVien.resx">
-      <DependentUpon>frmBaoCaoHoaDonNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmBaoCaoKho.resx">
       <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThuongHieu.resx">
       <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmTonKho.resx">
-      <DependentUpon>frmTonKho.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmNhapKho.resx">
-      <DependentUpon>frmNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -360,6 +357,12 @@
     <EmbeddedResource Include="GUI\frmChiTietHoaDon.resx">
       <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTimKiemPhieuNhap.resx">
+      <DependentUpon>frmTimKiemPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTonKho.resx">
+      <DependentUpon>frmTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTraHang.resx">
       <DependentUpon>frmTraHang.cs</DependentUpon>
