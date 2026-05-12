@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlTieuDe = new System.Windows.Forms.Panel();
-//            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.lblTieuDe = new System.Windows.Forms.Label();
-            this.pnlDeskTop = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnKhuyenMai = new FontAwesome.Sharp.IconButton();
-            this.btnBaoCao = new FontAwesome.Sharp.IconButton();
             this.btnQLLoaiMon = new FontAwesome.Sharp.IconButton();
+            this.btnBaoCao = new FontAwesome.Sharp.IconButton();
             this.btnQLMon = new FontAwesome.Sharp.IconButton();
             this.btnQLHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnQLBan = new FontAwesome.Sharp.IconButton();
@@ -50,8 +48,7 @@
             // 
             // pnlTieuDe
             // 
-            this.pnlTieuDe.BackColor = System.Drawing.Color.Green;
-            this.pnlTieuDe.Controls.Add(this.btnDangXuat);
+            this.pnlTieuDe.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlTieuDe.Controls.Add(this.lblTieuDe);
             this.pnlTieuDe.Location = new System.Drawing.Point(309, 0);
             this.pnlTieuDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -60,24 +57,6 @@
             this.pnlTieuDe.TabIndex = 8;
             this.pnlTieuDe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTieuDe_Paint);
             this.pnlTieuDe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTieuDe_MouseDown);
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.Yellow;
-            this.btnDangXuat.IconChar = FontAwesome.Sharp.IconChar.SignOut;
-            this.btnDangXuat.IconColor = System.Drawing.Color.Yellow;
-            this.btnDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDangXuat.IconSize = 40;
-            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(1090, 11);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(204, 71);
-            this.btnDangXuat.TabIndex = 22;
-            this.btnDangXuat.Text = "     Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = false;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // lblTieuDe
             // 
@@ -89,18 +68,9 @@
             this.lblTieuDe.Size = new System.Drawing.Size(0, 51);
             this.lblTieuDe.TabIndex = 2;
             // 
-            // pnlDeskTop
-            // 
-            this.pnlDeskTop.BackColor = System.Drawing.Color.White;
-            this.pnlDeskTop.Location = new System.Drawing.Point(309, 94);
-            this.pnlDeskTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlDeskTop.Name = "pnlDeskTop";
-            this.pnlDeskTop.Size = new System.Drawing.Size(1342, 826);
-            this.pnlDeskTop.TabIndex = 10;
-            // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Green;
+            this.panelMenu.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelMenu.Controls.Add(this.btnKhuyenMai);
             this.panelMenu.Controls.Add(this.btnQLLoaiMon);
             this.panelMenu.Controls.Add(this.btnBaoCao);
@@ -117,6 +87,7 @@
             // 
             // btnKhuyenMai
             // 
+            this.btnKhuyenMai.BackColor = System.Drawing.Color.DarkBlue;
             this.btnKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhuyenMai.ForeColor = System.Drawing.Color.White;
             this.btnKhuyenMai.IconChar = FontAwesome.Sharp.IconChar.Percentage;
@@ -133,26 +104,9 @@
             this.btnKhuyenMai.UseVisualStyleBackColor = false;
             this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
             // 
-            // btnBaoCao
-            // 
-            this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCao.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.btnBaoCao.IconColor = System.Drawing.Color.White;
-            this.btnBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBaoCao.IconSize = 40;
-            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaoCao.Location = new System.Drawing.Point(3, 286);
-            this.btnBaoCao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(310, 88);
-            this.btnBaoCao.TabIndex = 16;
-            this.btnBaoCao.Text = "     Báo cáo";
-            this.btnBaoCao.UseVisualStyleBackColor = false;
-            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
-            // 
             // btnQLLoaiMon
             // 
+            this.btnQLLoaiMon.BackColor = System.Drawing.Color.DarkBlue;
             this.btnQLLoaiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLLoaiMon.ForeColor = System.Drawing.Color.White;
             this.btnQLLoaiMon.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
@@ -169,8 +123,28 @@
             this.btnQLLoaiMon.UseVisualStyleBackColor = false;
             this.btnQLLoaiMon.Click += new System.EventHandler(this.btnQLLoaiMon_Click);
             // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCao.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
+            this.btnBaoCao.IconColor = System.Drawing.Color.White;
+            this.btnBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBaoCao.IconSize = 40;
+            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCao.Location = new System.Drawing.Point(3, 286);
+            this.btnBaoCao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(310, 88);
+            this.btnBaoCao.TabIndex = 16;
+            this.btnBaoCao.Text = "     Báo cáo";
+            this.btnBaoCao.UseVisualStyleBackColor = false;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
             // btnQLMon
             // 
+            this.btnQLMon.BackColor = System.Drawing.Color.DarkBlue;
             this.btnQLMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLMon.ForeColor = System.Drawing.Color.White;
             this.btnQLMon.IconChar = FontAwesome.Sharp.IconChar.Coffee;
@@ -188,6 +162,7 @@
             // 
             // btnQLHoaDon
             // 
+            this.btnQLHoaDon.BackColor = System.Drawing.Color.DarkBlue;
             this.btnQLHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnQLHoaDon.IconChar = FontAwesome.Sharp.IconChar.Receipt;
@@ -206,6 +181,7 @@
             // 
             // btnQLBan
             // 
+            this.btnQLBan.BackColor = System.Drawing.Color.DarkBlue;
             this.btnQLBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLBan.ForeColor = System.Drawing.Color.White;
             this.btnQLBan.IconChar = FontAwesome.Sharp.IconChar.Table;
@@ -224,6 +200,7 @@
             // 
             // btnQLTaiKhoan
             // 
+            this.btnQLTaiKhoan.BackColor = System.Drawing.Color.DarkBlue;
             this.btnQLTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.White;
             this.btnQLTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
@@ -242,7 +219,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Green;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -253,6 +230,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkBlue;
             this.pictureBox1.Location = new System.Drawing.Point(21, 18);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -265,9 +243,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1652, 921);
+            this.ClientSize = new System.Drawing.Size(996, 921);
             this.Controls.Add(this.pnlTieuDe);
-            this.Controls.Add(this.pnlDeskTop);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -289,7 +266,6 @@
         private System.Windows.Forms.Panel pnlTieuDe;
         private FontAwesome.Sharp.IconButton btnDangXuat;
         private System.Windows.Forms.Label lblTieuDe;
-        private System.Windows.Forms.Panel pnlDeskTop;
         private System.Windows.Forms.Panel panelMenu;
         private FontAwesome.Sharp.IconButton btnKhuyenMai;
         private System.Windows.Forms.Panel panel1;

@@ -30,22 +30,22 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dgvCart = new System.Windows.Forms.DataGridView();
-            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Colum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblSoLuong = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.dgvCart = new System.Windows.Forms.DataGridView();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -62,6 +62,8 @@
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.btnHuyDon = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cboThuongHieu = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -90,15 +92,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin đơn hàng :";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(27, 43);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 28);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Số điện thoại :";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -108,11 +101,22 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "Tên Khách hàng :";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(27, 43);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 28);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Số điện thoại :";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cboThuongHieu);
+            this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.lblSoLuong);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtSearch);
             this.groupBox2.Controls.Add(this.label14);
@@ -122,13 +126,31 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             // 
-            // txtSearch
+            // comboBox1
             // 
-            this.txtSearch.Location = new System.Drawing.Point(188, 73);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(195, 34);
-            this.txtSearch.TabIndex = 9;
-            this.txtSearch.Text = "Tìm kiếm..";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(188, 113);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(195, 36);
+            this.comboBox1.TabIndex = 20;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(24, 116);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(146, 28);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Loại sản phẩm :";
+            // 
+            // lblSoLuong
+            // 
+            this.lblSoLuong.AutoSize = true;
+            this.lblSoLuong.Location = new System.Drawing.Point(442, 138);
+            this.lblSoLuong.Name = "lblSoLuong";
+            this.lblSoLuong.Size = new System.Drawing.Size(101, 28);
+            this.lblSoLuong.TabIndex = 14;
+            this.lblSoLuong.Text = "Số lượng :";
             // 
             // label13
             // 
@@ -140,31 +162,22 @@
             this.label13.TabIndex = 17;
             this.label13.Text = "TÌM KIẾM SẢN PHẨM";
             // 
-            // label10
+            // txtSearch
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(442, 138);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 28);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Số lượng :";
+            this.txtSearch.Location = new System.Drawing.Point(188, 64);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(195, 34);
+            this.txtSearch.TabIndex = 9;
+            this.txtSearch.Text = "Tìm kiếm..";
             // 
-            // label15
+            // label14
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(24, 138);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 28);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Loại sản phẩm :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(188, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 36);
-            this.comboBox1.TabIndex = 20;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(170, 28);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Nhập tên/ Mã SP :";
             // 
             // dgvCart
             // 
@@ -183,13 +196,34 @@
             this.dgvCart.Size = new System.Drawing.Size(664, 304);
             this.dgvCart.TabIndex = 1;
             // 
-            // colDelete
+            // MaSP
             // 
-            this.colDelete.HeaderText = "";
-            this.colDelete.MinimumWidth = 6;
-            this.colDelete.Name = "colDelete";
-            this.colDelete.Text = "X";
-            this.colDelete.Width = 125;
+            this.MaSP.HeaderText = "MaSP";
+            this.MaSP.MinimumWidth = 6;
+            this.MaSP.Name = "MaSP";
+            this.MaSP.Visible = false;
+            this.MaSP.Width = 125;
+            // 
+            // TenSP
+            // 
+            this.TenSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.MinimumWidth = 6;
+            this.TenSP.Name = "TenSP";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 125;
+            // 
+            // Column
+            // 
+            this.Column.HeaderText = "Đơn giá";
+            this.Column.MinimumWidth = 6;
+            this.Column.Name = "Column";
+            this.Column.Width = 125;
             // 
             // Colum
             // 
@@ -199,43 +233,13 @@
             this.Colum.ReadOnly = true;
             this.Colum.Width = 125;
             // 
-            // Column
+            // colDelete
             // 
-            this.Column.HeaderText = "Đơn giá";
-            this.Column.MinimumWidth = 6;
-            this.Column.Name = "Column";
-            this.Column.Width = 125;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 125;
-            // 
-            // TenSP
-            // 
-            this.TenSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenSP.HeaderText = "Tên sản phẩm";
-            this.TenSP.MinimumWidth = 6;
-            this.TenSP.Name = "TenSP";
-            // 
-            // MaSP
-            // 
-            this.MaSP.HeaderText = "MaSP";
-            this.MaSP.MinimumWidth = 6;
-            this.MaSP.Name = "MaSP";
-            this.MaSP.Visible = false;
-            this.MaSP.Width = 125;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 76);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(170, 28);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Nhập tên/ Mã SP :";
+            this.colDelete.HeaderText = "";
+            this.colDelete.MinimumWidth = 6;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Text = "X";
+            this.colDelete.Width = 125;
             // 
             // groupBox3
             // 
@@ -398,6 +402,23 @@
             this.panel4.Size = new System.Drawing.Size(1345, 660);
             this.panel4.TabIndex = 18;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(24, 161);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(131, 28);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "Thương hiệu :";
+            // 
+            // cboThuongHieu
+            // 
+            this.cboThuongHieu.FormattingEnabled = true;
+            this.cboThuongHieu.Location = new System.Drawing.Point(188, 158);
+            this.cboThuongHieu.Name = "cboThuongHieu";
+            this.cboThuongHieu.Size = new System.Drawing.Size(195, 36);
+            this.cboThuongHieu.TabIndex = 20;
+            // 
             // frmPOS
             // 
             this.ClientSize = new System.Drawing.Size(1345, 660);
@@ -474,7 +495,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label14;
@@ -501,5 +522,7 @@
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btnHuyDon;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cboThuongHieu;
+        private System.Windows.Forms.Label label20;
     }
 }

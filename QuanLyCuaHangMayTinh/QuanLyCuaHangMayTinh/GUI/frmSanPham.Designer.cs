@@ -118,7 +118,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -131,7 +131,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(22, 14);
+            this.lblTitle.Location = new System.Drawing.Point(448, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(540, 46);
             this.lblTitle.TabIndex = 0;
@@ -446,9 +446,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // txtTuKhoa
             // 
             this.txtTuKhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTuKhoa.Location = new System.Drawing.Point(80, 32);
+            this.txtTuKhoa.Location = new System.Drawing.Point(106, 33);
             this.txtTuKhoa.Name = "txtTuKhoa";
-            this.txtTuKhoa.Size = new System.Drawing.Size(235, 34);
+            this.txtTuKhoa.Size = new System.Drawing.Size(209, 34);
             this.txtTuKhoa.TabIndex = 3;
             // 
             // cboLocLoai
@@ -471,7 +471,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))));
+            this.btnTimKiem.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Location = new System.Drawing.Point(279, 83);
