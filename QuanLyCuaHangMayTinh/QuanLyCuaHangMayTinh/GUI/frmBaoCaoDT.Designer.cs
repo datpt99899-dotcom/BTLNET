@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
             this.tblStats = new System.Windows.Forms.TableLayoutPanel();
             this.cardDoanhThu = new System.Windows.Forms.Panel();
@@ -43,19 +46,18 @@
             this.lblTBTitle = new System.Windows.Forms.Label();
             this.lblTB = new System.Windows.Forms.Label();
             this.pnlChart = new System.Windows.Forms.Panel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblChartTitle = new System.Windows.Forms.Label();
             this.pnlGapStatsChart = new System.Windows.Forms.Panel();
             this.pnlGrid = new System.Windows.Forms.Panel();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
             this.lblGridTitle = new System.Windows.Forms.Label();
-            this.pnlGapChartGrid = new System.Windows.Forms.Panel();
             this.pnlStats = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.flpTabs = new System.Windows.Forms.FlowLayoutPanel();
             this.btnTabDoanhThu = new System.Windows.Forms.Button();
             this.btnTabSPBanChay = new System.Windows.Forms.Button();
             this.btnTabDonTrangThai = new System.Windows.Forms.Button();
-            this.btnTabBieuDo = new System.Windows.Forms.Button();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.tblFilter = new System.Windows.Forms.TableLayoutPanel();
             this.pnlFrom = new System.Windows.Forms.Panel();
@@ -74,11 +76,18 @@
             this.pnlTabIndicator = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblChiPhi = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.tblStats.SuspendLayout();
             this.cardDoanhThu.SuspendLayout();
             this.cardDonHang.SuspendLayout();
             this.cardTB.SuspendLayout();
             this.pnlChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             this.pnlStats.SuspendLayout();
@@ -92,6 +101,7 @@
             this.flpActions.SuspendLayout();
             this.pnlTabs.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnXemBaoCao
@@ -111,11 +121,13 @@
             // 
             // tblStats
             // 
-            this.tblStats.ColumnCount = 3;
-            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblStats.ColumnCount = 4;
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblStats.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblStats.Controls.Add(this.cardDoanhThu, 0, 0);
+            this.tblStats.Controls.Add(this.panel1, 3, 0);
             this.tblStats.Controls.Add(this.cardDonHang, 1, 0);
             this.tblStats.Controls.Add(this.cardTB, 2, 0);
             this.tblStats.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -133,12 +145,11 @@
             this.cardDoanhThu.Controls.Add(this.lblDoanhThuHint);
             this.cardDoanhThu.Controls.Add(this.lblDoanhThuTitle);
             this.cardDoanhThu.Controls.Add(this.lblDoanhThu);
-            this.cardDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cardDoanhThu.Location = new System.Drawing.Point(0, 0);
             this.cardDoanhThu.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.cardDoanhThu.Name = "cardDoanhThu";
             this.cardDoanhThu.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.cardDoanhThu.Size = new System.Drawing.Size(368, 122);
+            this.cardDoanhThu.Size = new System.Drawing.Size(270, 122);
             this.cardDoanhThu.TabIndex = 0;
             // 
             // lblDoanhThuHint
@@ -166,11 +177,11 @@
             // lblDoanhThu
             // 
             this.lblDoanhThu.AutoSize = true;
-            this.lblDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoanhThu.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDoanhThu.Location = new System.Drawing.Point(14, 29);
+            this.lblDoanhThu.Location = new System.Drawing.Point(14, 37);
             this.lblDoanhThu.Name = "lblDoanhThu";
-            this.lblDoanhThu.Size = new System.Drawing.Size(23, 28);
+            this.lblDoanhThu.Size = new System.Drawing.Size(27, 32);
             this.lblDoanhThu.TabIndex = 1;
             this.lblDoanhThu.Text = "0";
             // 
@@ -181,12 +192,11 @@
             this.cardDonHang.Controls.Add(this.lblDonHangHint);
             this.cardDonHang.Controls.Add(this.lblDonHangTitle);
             this.cardDonHang.Controls.Add(this.lblDonHang);
-            this.cardDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardDonHang.Location = new System.Drawing.Point(378, 0);
+            this.cardDonHang.Location = new System.Drawing.Point(283, 0);
             this.cardDonHang.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.cardDonHang.Name = "cardDonHang";
             this.cardDonHang.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.cardDonHang.Size = new System.Drawing.Size(368, 122);
+            this.cardDonHang.Size = new System.Drawing.Size(273, 122);
             this.cardDonHang.TabIndex = 1;
             // 
             // lblDonHangHint
@@ -214,11 +224,11 @@
             // lblDonHang
             // 
             this.lblDonHang.AutoSize = true;
-            this.lblDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDonHang.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDonHang.Location = new System.Drawing.Point(14, 29);
+            this.lblDonHang.Location = new System.Drawing.Point(14, 37);
             this.lblDonHang.Name = "lblDonHang";
-            this.lblDonHang.Size = new System.Drawing.Size(23, 28);
+            this.lblDonHang.Size = new System.Drawing.Size(27, 32);
             this.lblDonHang.TabIndex = 1;
             this.lblDonHang.Text = "0";
             // 
@@ -229,12 +239,11 @@
             this.cardTB.Controls.Add(this.lblTBHint);
             this.cardTB.Controls.Add(this.lblTBTitle);
             this.cardTB.Controls.Add(this.lblTB);
-            this.cardTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTB.Location = new System.Drawing.Point(756, 0);
+            this.cardTB.Location = new System.Drawing.Point(566, 0);
             this.cardTB.Margin = new System.Windows.Forms.Padding(0);
             this.cardTB.Name = "cardTB";
             this.cardTB.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.cardTB.Size = new System.Drawing.Size(378, 122);
+            this.cardTB.Size = new System.Drawing.Size(267, 122);
             this.cardTB.TabIndex = 2;
             // 
             // lblTBHint
@@ -262,24 +271,41 @@
             // lblTB
             // 
             this.lblTB.AutoSize = true;
-            this.lblTB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.lblTB.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTB.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTB.Location = new System.Drawing.Point(14, 29);
+            this.lblTB.Location = new System.Drawing.Point(14, 37);
             this.lblTB.Name = "lblTB";
-            this.lblTB.Size = new System.Drawing.Size(23, 28);
+            this.lblTB.Size = new System.Drawing.Size(27, 32);
             this.lblTB.TabIndex = 1;
             this.lblTB.Text = "0";
             // 
             // pnlChart
             // 
-            this.pnlChart.BackColor = System.Drawing.Color.White;
+            this.pnlChart.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChart.Controls.Add(this.chart2);
             this.pnlChart.Controls.Add(this.lblChartTitle);
-            this.pnlChart.Location = new System.Drawing.Point(16, 400);
+            this.pnlChart.Location = new System.Drawing.Point(16, 401);
             this.pnlChart.Name = "pnlChart";
             this.pnlChart.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
-            this.pnlChart.Size = new System.Drawing.Size(1168, 244);
+            this.pnlChart.Size = new System.Drawing.Size(1168, 257);
             this.pnlChart.TabIndex = 6;
+            // 
+            // chart2
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
+            this.chart2.Location = new System.Drawing.Point(96, 44);
+            this.chart2.Name = "chart2";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
+            this.chart2.Size = new System.Drawing.Size(1008, 199);
+            this.chart2.TabIndex = 2;
+            this.chart2.Text = "chart2";
             // 
             // lblChartTitle
             // 
@@ -290,7 +316,7 @@
             this.lblChartTitle.Name = "lblChartTitle";
             this.lblChartTitle.Size = new System.Drawing.Size(1134, 23);
             this.lblChartTitle.TabIndex = 0;
-            this.lblChartTitle.Text = "BIỂU ĐỒ DOANH THU (THEO NGÀY)";
+            this.lblChartTitle.Text = "BIỂU ĐỒ DOANH THU ";
             // 
             // pnlGapStatsChart
             // 
@@ -306,7 +332,7 @@
             this.pnlGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlGrid.Controls.Add(this.dgvChiTiet);
             this.pnlGrid.Controls.Add(this.lblGridTitle);
-            this.pnlGrid.Location = new System.Drawing.Point(16, 656);
+            this.pnlGrid.Location = new System.Drawing.Point(16, 675);
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlGrid.Size = new System.Drawing.Size(1168, 228);
@@ -335,14 +361,6 @@
             this.lblGridTitle.TabIndex = 0;
             this.lblGridTitle.Text = "CHI TIẾT DOANH THU";
             // 
-            // pnlGapChartGrid
-            // 
-            this.pnlGapChartGrid.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGapChartGrid.Location = new System.Drawing.Point(16, 644);
-            this.pnlGapChartGrid.Name = "pnlGapChartGrid";
-            this.pnlGapChartGrid.Size = new System.Drawing.Size(1168, 12);
-            this.pnlGapChartGrid.TabIndex = 7;
-            // 
             // pnlStats
             // 
             this.pnlStats.BackColor = System.Drawing.Color.White;
@@ -357,9 +375,10 @@
             // pnlContent
             // 
             this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlContent.Controls.Add(this.btnThoat);
+            this.pnlContent.Controls.Add(this.btnLamMoi);
             this.pnlContent.Controls.Add(this.pnlGrid);
             this.pnlContent.Controls.Add(this.flpTabs);
-            this.pnlContent.Controls.Add(this.pnlGapChartGrid);
             this.pnlContent.Controls.Add(this.pnlChart);
             this.pnlContent.Controls.Add(this.pnlGapStatsChart);
             this.pnlContent.Controls.Add(this.pnlStats);
@@ -368,7 +387,7 @@
             this.pnlContent.Location = new System.Drawing.Point(1, 77);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Padding = new System.Windows.Forms.Padding(16, 0, 16, 16);
-            this.pnlContent.Size = new System.Drawing.Size(1200, 937);
+            this.pnlContent.Size = new System.Drawing.Size(1200, 975);
             this.pnlContent.TabIndex = 3;
             // 
             // flpTabs
@@ -377,7 +396,6 @@
             this.flpTabs.Controls.Add(this.btnTabDoanhThu);
             this.flpTabs.Controls.Add(this.btnTabSPBanChay);
             this.flpTabs.Controls.Add(this.btnTabDonTrangThai);
-            this.flpTabs.Controls.Add(this.btnTabBieuDo);
             this.flpTabs.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.flpTabs.Enabled = false;
             this.flpTabs.Location = new System.Drawing.Point(16, 27);
@@ -389,6 +407,7 @@
             // 
             // btnTabDoanhThu
             // 
+            this.btnTabDoanhThu.BackColor = System.Drawing.Color.White;
             this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTabDoanhThu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -399,7 +418,7 @@
             this.btnTabDoanhThu.Size = new System.Drawing.Size(155, 43);
             this.btnTabDoanhThu.TabIndex = 0;
             this.btnTabDoanhThu.Text = "Doanh thu";
-            this.btnTabDoanhThu.UseVisualStyleBackColor = true;
+            this.btnTabDoanhThu.UseVisualStyleBackColor = false;
             // 
             // btnTabSPBanChay
             // 
@@ -428,20 +447,6 @@
             this.btnTabDonTrangThai.TabIndex = 2;
             this.btnTabDonTrangThai.Text = "Đơn theo trạng thái";
             this.btnTabDonTrangThai.UseVisualStyleBackColor = true;
-            // 
-            // btnTabBieuDo
-            // 
-            this.btnTabBieuDo.FlatAppearance.BorderSize = 0;
-            this.btnTabBieuDo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabBieuDo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnTabBieuDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabBieuDo.Location = new System.Drawing.Point(539, 0);
-            this.btnTabBieuDo.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabBieuDo.Name = "btnTabBieuDo";
-            this.btnTabBieuDo.Size = new System.Drawing.Size(133, 43);
-            this.btnTabBieuDo.TabIndex = 3;
-            this.btnTabBieuDo.Text = "Biểu đồ";
-            this.btnTabBieuDo.UseVisualStyleBackColor = true;
             // 
             // pnlFilter
             // 
@@ -499,7 +504,7 @@
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.lblFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblFrom.Location = new System.Drawing.Point(0, 0);
+            this.lblFrom.Location = new System.Drawing.Point(0, -4);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(85, 28);
             this.lblFrom.TabIndex = 0;
@@ -531,7 +536,7 @@
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.lblTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblTo.Location = new System.Drawing.Point(0, 0);
+            this.lblTo.Location = new System.Drawing.Point(0, -4);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(99, 28);
             this.lblTo.TabIndex = 0;
@@ -565,11 +570,11 @@
             this.lblLoai.AutoSize = true;
             this.lblLoai.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.lblLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.lblLoai.Location = new System.Drawing.Point(0, 0);
+            this.lblLoai.Location = new System.Drawing.Point(0, -4);
             this.lblLoai.Name = "lblLoai";
-            this.lblLoai.Size = new System.Drawing.Size(58, 28);
+            this.lblLoai.Size = new System.Drawing.Size(150, 28);
             this.lblLoai.TabIndex = 0;
-            this.lblLoai.Text = "Theo";
+            this.lblLoai.Text = "Loại sản phẩm ";
             // 
             // flpActions
             // 
@@ -658,16 +663,92 @@
             this.pnlHeader.Size = new System.Drawing.Size(1200, 75);
             this.pnlHeader.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblChiPhi);
+            this.panel1.Location = new System.Drawing.Point(849, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
+            this.panel1.Size = new System.Drawing.Size(275, 122);
+            this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(14, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tổng chi phí trong kỳ ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.label2.Location = new System.Drawing.Point(14, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tổng chi phí ";
+            // 
+            // lblChiPhi
+            // 
+            this.lblChiPhi.AutoSize = true;
+            this.lblChiPhi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChiPhi.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblChiPhi.Location = new System.Drawing.Point(14, 37);
+            this.lblChiPhi.Name = "lblChiPhi";
+            this.lblChiPhi.Size = new System.Drawing.Size(27, 32);
+            this.lblChiPhi.TabIndex = 1;
+            this.lblChiPhi.Text = "0";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThoat.Location = new System.Drawing.Point(1038, 913);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(129, 46);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát ";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLamMoi.Location = new System.Drawing.Point(867, 913);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(161, 46);
+            this.btnLamMoi.TabIndex = 10;
+            this.btnLamMoi.Text = "Làm mới ";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            // 
             // frmBaoCaoDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 1007);
+            this.ClientSize = new System.Drawing.Size(1202, 1050);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmBaoCaoDT";
             this.Text = "frmBaoCaoDT";
-            this.Load += new System.EventHandler(this.frmBaoCaoDT_Load);
             this.tblStats.ResumeLayout(false);
             this.cardDoanhThu.ResumeLayout(false);
             this.cardDoanhThu.PerformLayout();
@@ -676,6 +757,7 @@
             this.cardTB.ResumeLayout(false);
             this.cardTB.PerformLayout();
             this.pnlChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             this.pnlStats.ResumeLayout(false);
@@ -693,6 +775,8 @@
             this.pnlTabs.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -719,14 +803,12 @@
         private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.DataGridView dgvChiTiet;
         private System.Windows.Forms.Label lblGridTitle;
-        private System.Windows.Forms.Panel pnlGapChartGrid;
         private System.Windows.Forms.Panel pnlStats;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.FlowLayoutPanel flpTabs;
         private System.Windows.Forms.Button btnTabDoanhThu;
         private System.Windows.Forms.Button btnTabSPBanChay;
         private System.Windows.Forms.Button btnTabDonTrangThai;
-        private System.Windows.Forms.Button btnTabBieuDo;
         private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.TableLayoutPanel tblFilter;
         private System.Windows.Forms.Panel pnlFrom;
@@ -745,5 +827,12 @@
         private System.Windows.Forms.Panel pnlTabIndicator;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblChiPhi;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

@@ -144,7 +144,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Turquoise;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -158,7 +158,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkBlue;
             this.pictureBox2.Location = new System.Drawing.Point(42, 218);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";

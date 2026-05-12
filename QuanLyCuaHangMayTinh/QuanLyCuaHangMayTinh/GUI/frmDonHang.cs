@@ -44,7 +44,7 @@ namespace QuanLyCuaHangMayTinh
             // dgvDonHang
             // 
             this.dgvDonHang.ColumnHeadersHeight = 29;
-            this.dgvDonHang.Location = new System.Drawing.Point(12, 87);
+            this.dgvDonHang.Location = new System.Drawing.Point(12, 146);
             this.dgvDonHang.MultiSelect = false;
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.ReadOnly = true;
@@ -57,7 +57,7 @@ namespace QuanLyCuaHangMayTinh
             // dgvChiTiet
             // 
             this.dgvChiTiet.ColumnHeadersHeight = 29;
-            this.dgvChiTiet.Location = new System.Drawing.Point(528, 87);
+            this.dgvChiTiet.Location = new System.Drawing.Point(567, 146);
             this.dgvChiTiet.Name = "dgvChiTiet";
             this.dgvChiTiet.ReadOnly = true;
             this.dgvChiTiet.RowHeadersWidth = 51;
@@ -71,40 +71,40 @@ namespace QuanLyCuaHangMayTinh
             "Đang xử lý",
             "Đã giao",
             "Đã hủy"});
-            this.cboTrangThai.Location = new System.Drawing.Point(139, 387);
+            this.cboTrangThai.Location = new System.Drawing.Point(139, 446);
             this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(150, 31);
+            this.cboTrangThai.Size = new System.Drawing.Size(150, 36);
             this.cboTrangThai.TabIndex = 2;
             // 
             // txtMaDon
             // 
-            this.txtMaDon.Location = new System.Drawing.Point(118, 37);
+            this.txtMaDon.Location = new System.Drawing.Point(67, 57);
             this.txtMaDon.Name = "txtMaDon";
             this.txtMaDon.ReadOnly = true;
-            this.txtMaDon.Size = new System.Drawing.Size(150, 30);
+            this.txtMaDon.Size = new System.Drawing.Size(150, 35);
             this.txtMaDon.TabIndex = 3;
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(319, 386);
+            this.btnCapNhat.Location = new System.Drawing.Point(319, 445);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(193, 32);
+            this.btnCapNhat.Size = new System.Drawing.Size(224, 37);
             this.btnCapNhat.TabIndex = 4;
             this.btnCapNhat.Text = "Cập nhật trạng thái";
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnChuyenHoaDon
             // 
-            this.btnChuyenHoaDon.Location = new System.Drawing.Point(549, 388);
+            this.btnChuyenHoaDon.Location = new System.Drawing.Point(566, 447);
             this.btnChuyenHoaDon.Name = "btnChuyenHoaDon";
-            this.btnChuyenHoaDon.Size = new System.Drawing.Size(224, 30);
+            this.btnChuyenHoaDon.Size = new System.Drawing.Size(261, 35);
             this.btnChuyenHoaDon.TabIndex = 5;
             this.btnChuyenHoaDon.Text = "Chuyển thành hóa đơn";
             this.btnChuyenHoaDon.Click += new System.EventHandler(this.btnChuyenHoaDon_Click);
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(295, 32);
+            this.btnTim.Location = new System.Drawing.Point(421, 57);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(122, 38);
             this.btnTim.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(833, 390);
+            this.btnDong.Location = new System.Drawing.Point(872, 444);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(95, 38);
             this.btnDong.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // lblMaDon
             // 
-            this.lblMaDon.Location = new System.Drawing.Point(12, 40);
+            this.lblMaDon.Location = new System.Drawing.Point(12, 57);
             this.lblMaDon.Name = "lblMaDon";
             this.lblMaDon.Size = new System.Drawing.Size(83, 30);
             this.lblMaDon.TabIndex = 8;
@@ -130,9 +130,9 @@ namespace QuanLyCuaHangMayTinh
             // 
             // lblTrangThai
             // 
-            this.lblTrangThai.Location = new System.Drawing.Point(8, 390);
+            this.lblTrangThai.Location = new System.Drawing.Point(8, 449);
             this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(100, 23);
+            this.lblTrangThai.Size = new System.Drawing.Size(125, 33);
             this.lblTrangThai.TabIndex = 9;
             this.lblTrangThai.Text = "Trạng thái mới:";
             // 
@@ -140,16 +140,16 @@ namespace QuanLyCuaHangMayTinh
             // 
             this.lblThongTin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThongTin.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblThongTin.Location = new System.Drawing.Point(8, 9);
+            this.lblThongTin.Location = new System.Drawing.Point(345, 9);
             this.lblThongTin.Name = "lblThongTin";
-            this.lblThongTin.Size = new System.Drawing.Size(281, 23);
+            this.lblThongTin.Size = new System.Drawing.Size(346, 43);
             this.lblThongTin.TabIndex = 10;
             this.lblThongTin.Text = "DANH SÁCH ĐƠN HÀNG";
             // 
             // frmDonHang
             // 
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(940, 440);
+            this.ClientSize = new System.Drawing.Size(1036, 517);
             this.Controls.Add(this.dgvDonHang);
             this.Controls.Add(this.dgvChiTiet);
             this.Controls.Add(this.cboTrangThai);

@@ -307,5 +307,7 @@ ORDER BY TenNhaCungCap;";
             LoadNhaCungCap();
             SetFormMode(FormMode.View);
         }
+
+      
     }
 }

@@ -36,13 +36,13 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1002, 117);
+            this.pnlHeader.Size = new System.Drawing.Size(1210, 91);
             this.pnlHeader.TabIndex = 6;
             // 
             // lblTitle
@@ -50,12 +50,12 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(23, 21);
+            this.lblTitle.Location = new System.Drawing.Point(419, 21);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(324, 45);
+            this.lblTitle.Size = new System.Drawing.Size(392, 45);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Danh mục sản phẩm";
+            this.lblTitle.Text = "DANH MỤC SẢN PHẨM ";
             // 
             // cboVaiTro
             // 
@@ -128,7 +128,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1002, 512);
+            this.ClientSize = new System.Drawing.Size(1210, 581);
             this.Controls.Add(this.btnSanPham);
             this.Controls.Add(this.btnNhaCungCap);
             this.Controls.Add(this.btnThuongHieu);

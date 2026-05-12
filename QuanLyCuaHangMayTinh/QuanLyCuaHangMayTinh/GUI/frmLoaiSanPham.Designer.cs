@@ -68,7 +68,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(166)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -82,7 +82,7 @@ namespace QuanLyCuaHangMayTinh
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(22, 14);
+            this.lblTitle.Location = new System.Drawing.Point(431, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(421, 45);
             this.lblTitle.TabIndex = 0;
@@ -146,7 +146,7 @@ namespace QuanLyCuaHangMayTinh
             this.grpTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.grpTimKiem.Location = new System.Drawing.Point(455, 98);
             this.grpTimKiem.Name = "grpTimKiem";
-            this.grpTimKiem.Size = new System.Drawing.Size(603, 88);
+            this.grpTimKiem.Size = new System.Drawing.Size(797, 88);
             this.grpTimKiem.TabIndex = 2;
             this.grpTimKiem.TabStop = false;
             this.grpTimKiem.Text = "Tìm kiếm";
@@ -171,12 +171,12 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(166)))));
+            this.btnTimKiem.BackColor = System.Drawing.Color.LightBlue;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTimKiem.Location = new System.Drawing.Point(480, 33);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(101, 39);
+            this.btnTimKiem.Size = new System.Drawing.Size(135, 39);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@ namespace QuanLyCuaHangMayTinh
             this.grpChucNang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.grpChucNang.Location = new System.Drawing.Point(455, 195);
             this.grpChucNang.Name = "grpChucNang";
-            this.grpChucNang.Size = new System.Drawing.Size(603, 124);
+            this.grpChucNang.Size = new System.Drawing.Size(797, 124);
             this.grpChucNang.TabIndex = 3;
             this.grpChucNang.TabStop = false;
             this.grpChucNang.Text = "Chức năng";
@@ -264,7 +264,7 @@ namespace QuanLyCuaHangMayTinh
             this.grpDanhSach.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.grpDanhSach.Location = new System.Drawing.Point(24, 332);
             this.grpDanhSach.Name = "grpDanhSach";
-            this.grpDanhSach.Size = new System.Drawing.Size(1034, 327);
+            this.grpDanhSach.Size = new System.Drawing.Size(1228, 327);
             this.grpDanhSach.TabIndex = 4;
             this.grpDanhSach.TabStop = false;
             this.grpDanhSach.Text = "Danh sách loại sản phẩm";
@@ -276,7 +276,7 @@ namespace QuanLyCuaHangMayTinh
             this.dgvLoaiSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLoaiSanPham.BackgroundColor = System.Drawing.Color.White;
             this.dgvLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoaiSanPham.Location = new System.Drawing.Point(16, 29);
+            this.dgvLoaiSanPham.Location = new System.Drawing.Point(124, 40);
             this.dgvLoaiSanPham.MultiSelect = false;
             this.dgvLoaiSanPham.Name = "dgvLoaiSanPham";
             this.dgvLoaiSanPham.ReadOnly = true;

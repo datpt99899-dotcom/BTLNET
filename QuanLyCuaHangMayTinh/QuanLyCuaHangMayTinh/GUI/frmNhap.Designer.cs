@@ -339,7 +339,7 @@
             // 
             this.btnDong.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnDong.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(1125, 776);
+            this.btnDong.Location = new System.Drawing.Point(1125, 773);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(137, 50);
             this.btnDong.TabIndex = 71;

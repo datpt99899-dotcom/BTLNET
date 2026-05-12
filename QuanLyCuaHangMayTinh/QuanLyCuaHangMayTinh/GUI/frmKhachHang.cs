@@ -58,7 +58,7 @@ namespace QuanLyCuaHangMayTinh
             this.panel1.Location = new System.Drawing.Point(-514, -272);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1306, 789);
+            this.panel1.Size = new System.Drawing.Size(1394, 796);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

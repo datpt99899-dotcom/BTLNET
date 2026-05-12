@@ -123,11 +123,23 @@
   <ItemGroup>
     <Compile Include="DbHelper.cs" />
     <Compile Include="FormMode.cs" />
+    <Compile Include="GUI\frmBaoCaoDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBaoCaoDonHang.Designer.cs">
+      <DependentUpon>frmBaoCaoDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmBaoCaoDT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmBaoCaoDT.Designer.cs">
       <DependentUpon>frmBaoCaoDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBaoCaoSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBaoCaoSP.Designer.cs">
+      <DependentUpon>frmBaoCaoSP.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLoaiSanPham.cs">
       <SubType>Form</SubType>
@@ -201,12 +213,6 @@
     </Compile>
     <Compile Include="GUI\frmPOS.Designer.cs">
       <DependentUpon>frmPOS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmBaoCaoKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmBaoCaoKho.Designer.cs">
-      <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
@@ -295,8 +301,14 @@
     <Compile Include="DTO\PhieuTraHangDTO.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\frmBaoCaoDonHang.resx">
+      <DependentUpon>frmBaoCaoDonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmBaoCaoDT.resx">
       <DependentUpon>frmBaoCaoDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBaoCaoSP.resx">
+      <DependentUpon>frmBaoCaoSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
@@ -330,9 +342,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPOS.resx">
       <DependentUpon>frmPOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmBaoCaoKho.resx">
-      <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThuongHieu.resx">
       <DependentUpon>frmThuongHieu.cs</DependentUpon>

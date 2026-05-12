@@ -46,6 +46,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpTimKiem = new System.Windows.Forms.GroupBox();
             this.lblTimKiemTitle = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.grpChucNang = new System.Windows.Forms.GroupBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.grpDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvDSThuongHieu = new System.Windows.Forms.DataGridView();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.grpThongTin.SuspendLayout();
             this.grpTimKiem.SuspendLayout();
@@ -166,6 +166,20 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.txtTimKiem.Size = new System.Drawing.Size(347, 34);
             this.txtTimKiem.TabIndex = 1;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimKiem.Location = new System.Drawing.Point(498, 37);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(141, 44);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // grpChucNang
             // 
             this.grpChucNang.Controls.Add(this.btnThem);
@@ -244,8 +258,10 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // grpDanhSach
             // 
+            this.grpDanhSach.BackColor = System.Drawing.Color.RoyalBlue;
             this.grpDanhSach.Controls.Add(this.dgvDSThuongHieu);
             this.grpDanhSach.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.grpDanhSach.ForeColor = System.Drawing.SystemColors.Control;
             this.grpDanhSach.Location = new System.Drawing.Point(26, 372);
             this.grpDanhSach.Name = "grpDanhSach";
             this.grpDanhSach.Size = new System.Drawing.Size(1137, 366);
@@ -263,20 +279,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.dgvDSThuongHieu.RowTemplate.Height = 28;
             this.dgvDSThuongHieu.Size = new System.Drawing.Size(1086, 274);
             this.dgvDSThuongHieu.TabIndex = 0;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.LightBlue;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTimKiem.Location = new System.Drawing.Point(498, 37);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(141, 44);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmThuongHieu
             // 

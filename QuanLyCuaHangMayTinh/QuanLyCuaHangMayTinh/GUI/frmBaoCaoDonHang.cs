@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHangMayTinh.GUI
 {
-    public partial class frmBaoCaoDT : Form
+    public partial class frmBaoCaoDonHang : Form
     {
-        public frmBaoCaoDT()
+        public frmBaoCaoDonHang()
         {
             InitializeComponent();
         }
-
     }
 }

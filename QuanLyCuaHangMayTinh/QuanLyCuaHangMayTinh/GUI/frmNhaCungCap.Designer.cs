@@ -86,7 +86,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(22, 14);
+            this.lblTitle.Location = new System.Drawing.Point(396, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(411, 45);
             this.lblTitle.TabIndex = 0;
@@ -105,7 +105,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpThongTin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.grpThongTin.Location = new System.Drawing.Point(24, 98);
             this.grpThongTin.Name = "grpThongTin";
-            this.grpThongTin.Size = new System.Drawing.Size(462, 222);
+            this.grpThongTin.Size = new System.Drawing.Size(462, 258);
             this.grpThongTin.TabIndex = 5;
             this.grpThongTin.TabStop = false;
             this.grpThongTin.Text = "Thông tin nhà cung cấp";
@@ -116,9 +116,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblMaNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblMaNhaCungCap.Location = new System.Drawing.Point(20, 39);
             this.lblMaNhaCungCap.Name = "lblMaNhaCungCap";
-            this.lblMaNhaCungCap.Size = new System.Drawing.Size(83, 28);
+            this.lblMaNhaCungCap.Size = new System.Drawing.Size(97, 28);
             this.lblMaNhaCungCap.TabIndex = 0;
-            this.lblMaNhaCungCap.Text = "Mã NCC";
+            this.lblMaNhaCungCap.Text = "Mã NCC : ";
             // 
             // lblTenNhaCungCap
             // 
@@ -126,9 +126,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblTenNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblTenNhaCungCap.Location = new System.Drawing.Point(20, 82);
             this.lblTenNhaCungCap.Name = "lblTenNhaCungCap";
-            this.lblTenNhaCungCap.Size = new System.Drawing.Size(84, 28);
+            this.lblTenNhaCungCap.Size = new System.Drawing.Size(93, 28);
             this.lblTenNhaCungCap.TabIndex = 1;
-            this.lblTenNhaCungCap.Text = "Tên NCC";
+            this.lblTenNhaCungCap.Text = "Tên NCC :";
             // 
             // lblDiaChi
             // 
@@ -136,9 +136,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblDiaChi.Location = new System.Drawing.Point(20, 125);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(71, 28);
+            this.lblDiaChi.Size = new System.Drawing.Size(80, 28);
             this.lblDiaChi.TabIndex = 2;
-            this.lblDiaChi.Text = "Địa chỉ";
+            this.lblDiaChi.Text = "Địa chỉ :";
             // 
             // lblSoDienThoai
             // 
@@ -146,14 +146,14 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.lblSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblSoDienThoai.Location = new System.Drawing.Point(20, 168);
             this.lblSoDienThoai.Name = "lblSoDienThoai";
-            this.lblSoDienThoai.Size = new System.Drawing.Size(128, 28);
+            this.lblSoDienThoai.Size = new System.Drawing.Size(137, 28);
             this.lblSoDienThoai.TabIndex = 3;
-            this.lblSoDienThoai.Text = "Số điện thoại";
+            this.lblSoDienThoai.Text = "Số điện thoại :";
             // 
             // txtMaNhaCungCap
             // 
             this.txtMaNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMaNhaCungCap.Location = new System.Drawing.Point(146, 35);
+            this.txtMaNhaCungCap.Location = new System.Drawing.Point(157, 35);
             this.txtMaNhaCungCap.Name = "txtMaNhaCungCap";
             this.txtMaNhaCungCap.Size = new System.Drawing.Size(280, 34);
             this.txtMaNhaCungCap.TabIndex = 4;
@@ -161,7 +161,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // txtTenNhaCungCap
             // 
             this.txtTenNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTenNhaCungCap.Location = new System.Drawing.Point(146, 78);
+            this.txtTenNhaCungCap.Location = new System.Drawing.Point(157, 78);
             this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
             this.txtTenNhaCungCap.Size = new System.Drawing.Size(280, 34);
             this.txtTenNhaCungCap.TabIndex = 5;
@@ -169,7 +169,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDiaChi.Location = new System.Drawing.Point(146, 121);
+            this.txtDiaChi.Location = new System.Drawing.Point(157, 121);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(280, 34);
             this.txtDiaChi.TabIndex = 6;
@@ -177,7 +177,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSoDienThoai.Location = new System.Drawing.Point(146, 164);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(157, 164);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(280, 34);
             this.txtSoDienThoai.TabIndex = 7;
@@ -208,9 +208,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTimKiem.Location = new System.Drawing.Point(86, 35);
+            this.txtTimKiem.Location = new System.Drawing.Point(107, 35);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(421, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(400, 34);
             this.txtTimKiem.TabIndex = 1;
             // 
             // btnTimKiem
@@ -237,7 +237,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpChucNang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.grpChucNang.Location = new System.Drawing.Point(510, 198);
             this.grpChucNang.Name = "grpChucNang";
-            this.grpChucNang.Size = new System.Drawing.Size(648, 122);
+            this.grpChucNang.Size = new System.Drawing.Size(648, 158);
             this.grpChucNang.TabIndex = 3;
             this.grpChucNang.TabStop = false;
             this.grpChucNang.Text = "Chức năng";
@@ -253,25 +253,25 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(126, 34);
+            this.btnSua.Location = new System.Drawing.Point(138, 33);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 36);
+            this.btnSua.Size = new System.Drawing.Size(108, 36);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(228, 34);
+            this.btnXoa.Location = new System.Drawing.Point(272, 33);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(94, 34);
+            this.btnXoa.Size = new System.Drawing.Size(107, 36);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(330, 34);
+            this.btnLuu.Location = new System.Drawing.Point(401, 34);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(94, 34);
             this.btnLuu.TabIndex = 3;
@@ -280,16 +280,16 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(432, 34);
+            this.btnHuy.Location = new System.Drawing.Point(521, 33);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(94, 34);
+            this.btnHuy.Size = new System.Drawing.Size(111, 36);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(24, 76);
+            this.btnLamMoi.Location = new System.Drawing.Point(24, 87);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(183, 34);
             this.btnLamMoi.TabIndex = 5;

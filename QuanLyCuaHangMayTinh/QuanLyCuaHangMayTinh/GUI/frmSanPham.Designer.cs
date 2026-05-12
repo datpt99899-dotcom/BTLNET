@@ -408,7 +408,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.grpTimKiem.Location = new System.Drawing.Point(513, 101);
             this.grpTimKiem.Name = "grpTimKiem";
-            this.grpTimKiem.Size = new System.Drawing.Size(847, 104);
+            this.grpTimKiem.Size = new System.Drawing.Size(847, 136);
             this.grpTimKiem.TabIndex = 4;
             this.grpTimKiem.TabStop = false;
             this.grpTimKiem.Text = "Tìm kiếm và lọc";
@@ -474,7 +474,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))));
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(80, 66);
+            this.btnTimKiem.Location = new System.Drawing.Point(279, 83);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(95, 38);
             this.btnTimKiem.TabIndex = 6;
@@ -484,7 +484,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLoc
             // 
-            this.btnLoc.Location = new System.Drawing.Point(181, 66);
+            this.btnLoc.Location = new System.Drawing.Point(380, 83);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(95, 36);
             this.btnLoc.TabIndex = 7;
@@ -493,7 +493,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnBoLoc
             // 
-            this.btnBoLoc.Location = new System.Drawing.Point(282, 66);
+            this.btnBoLoc.Location = new System.Drawing.Point(481, 83);
             this.btnBoLoc.Name = "btnBoLoc";
             this.btnBoLoc.Size = new System.Drawing.Size(95, 38);
             this.btnBoLoc.TabIndex = 8;
@@ -509,7 +509,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.grpChucNang.Controls.Add(this.btnHuy);
             this.grpChucNang.Controls.Add(this.btnLamMoi);
             this.grpChucNang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.grpChucNang.Location = new System.Drawing.Point(513, 216);
+            this.grpChucNang.Location = new System.Drawing.Point(513, 243);
             this.grpChucNang.Name = "grpChucNang";
             this.grpChucNang.Size = new System.Drawing.Size(847, 76);
             this.grpChucNang.TabIndex = 3;
