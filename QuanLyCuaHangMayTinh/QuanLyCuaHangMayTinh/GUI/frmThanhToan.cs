@@ -1,26 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHangMayTinh
+namespace QuanLyCuaHangMayTinh.GUI
 {
-    public class frmThanhToan : Form
+    public partial class frmThanhToan : Form
     {
         public frmThanhToan()
         {
-            Text = "Xử lý thanh toán";
-            Width = 900;
-            Height = 600;
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // frmThanhToan
-            // 
-            this.ClientSize = new System.Drawing.Size(1164, 650);
-            this.Name = "frmThanhToan";
-            this.ResumeLayout(false);
-
+            InitializeComponent();
         }
     }
 }
