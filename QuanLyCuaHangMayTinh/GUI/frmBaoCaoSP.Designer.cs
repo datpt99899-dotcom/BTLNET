@@ -28,25 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.chtSanPham = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlChart = new System.Windows.Forms.Panel();
+            this.chtDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblChartTitle = new System.Windows.Forms.Label();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
             this.lblGridTitle = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.flpTabs = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnTabDoanhThu = new System.Windows.Forms.Button();
-            this.btnTabSPBanChay = new System.Windows.Forms.Button();
-            this.btnTabDonTrangThai = new System.Windows.Forms.Button();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.pnlFrom = new System.Windows.Forms.Panel();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
@@ -57,6 +54,7 @@
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTongBan = new System.Windows.Forms.Label();
             this.lblTongNhap = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,21 +67,18 @@
             this.btnXuatExcel = new System.Windows.Forms.Button();
             this.pnlTabs = new System.Windows.Forms.Panel();
             this.pnlTabIndicator = new System.Windows.Forms.Panel();
-            this.lblTongBan = new System.Windows.Forms.Label();
-            this.chtDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtSanPham)).BeginInit();
             this.pnlChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             this.pnlContent.SuspendLayout();
             this.pnlGrid.SuspendLayout();
-            this.flpTabs.SuspendLayout();
             this.pnlFilter.SuspendLayout();
             this.pnlFrom.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlLoai.SuspendLayout();
             this.pnlTabs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -110,16 +105,16 @@
             // 
             // chtSanPham
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chtSanPham.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chtSanPham.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chtSanPham.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chtSanPham.Legends.Add(legend1);
             this.chtSanPham.Location = new System.Drawing.Point(30, 44);
             this.chtSanPham.Name = "chtSanPham";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chtSanPham.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chtSanPham.Series.Add(series1);
             this.chtSanPham.Size = new System.Drawing.Size(465, 199);
             this.chtSanPham.TabIndex = 2;
             this.chtSanPham.Text = "chart2";
@@ -136,6 +131,22 @@
             this.pnlChart.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlChart.Size = new System.Drawing.Size(1168, 260);
             this.pnlChart.TabIndex = 6;
+            // 
+            // chtDoanhThu
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chtDoanhThu.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chtDoanhThu.Legends.Add(legend2);
+            this.chtDoanhThu.Location = new System.Drawing.Point(626, 44);
+            this.chtDoanhThu.Name = "chtDoanhThu";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chtDoanhThu.Series.Add(series2);
+            this.chtDoanhThu.Size = new System.Drawing.Size(465, 199);
+            this.chtDoanhThu.TabIndex = 2;
+            this.chtDoanhThu.Text = "chart2";
             // 
             // lblChartTitle
             // 
@@ -175,7 +186,6 @@
             // 
             this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlContent.Controls.Add(this.pnlGrid);
-            this.pnlContent.Controls.Add(this.flpTabs);
             this.pnlContent.Controls.Add(this.pnlChart);
             this.pnlContent.Controls.Add(this.pnlFilter);
             this.pnlContent.Controls.Add(this.pnlTabs);
@@ -196,64 +206,6 @@
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlGrid.Size = new System.Drawing.Size(1168, 313);
             this.pnlGrid.TabIndex = 8;
-            // 
-            // flpTabs
-            // 
-            this.flpTabs.BackColor = System.Drawing.Color.Gainsboro;
-            this.flpTabs.Controls.Add(this.btnTabDoanhThu);
-            this.flpTabs.Controls.Add(this.btnTabSPBanChay);
-            this.flpTabs.Controls.Add(this.btnTabDonTrangThai);
-            this.flpTabs.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.flpTabs.Enabled = false;
-            this.flpTabs.Location = new System.Drawing.Point(16, 27);
-            this.flpTabs.Margin = new System.Windows.Forms.Padding(0);
-            this.flpTabs.Name = "flpTabs";
-            this.flpTabs.Size = new System.Drawing.Size(1168, 45);
-            this.flpTabs.TabIndex = 0;
-            this.flpTabs.WrapContents = false;
-            // 
-            // btnTabDoanhThu
-            // 
-            this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
-            this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDoanhThu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabDoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.btnTabDoanhThu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabDoanhThu.Name = "btnTabDoanhThu";
-            this.btnTabDoanhThu.Size = new System.Drawing.Size(155, 43);
-            this.btnTabDoanhThu.TabIndex = 0;
-            this.btnTabDoanhThu.Text = "Doanh thu";
-            this.btnTabDoanhThu.UseVisualStyleBackColor = true;
-            // 
-            // btnTabSPBanChay
-            // 
-            this.btnTabSPBanChay.BackColor = System.Drawing.Color.White;
-            this.btnTabSPBanChay.FlatAppearance.BorderSize = 0;
-            this.btnTabSPBanChay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabSPBanChay.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabSPBanChay.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnTabSPBanChay.Location = new System.Drawing.Point(155, 0);
-            this.btnTabSPBanChay.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabSPBanChay.Name = "btnTabSPBanChay";
-            this.btnTabSPBanChay.Size = new System.Drawing.Size(132, 43);
-            this.btnTabSPBanChay.TabIndex = 1;
-            this.btnTabSPBanChay.Text = "SP bán chạy";
-            this.btnTabSPBanChay.UseVisualStyleBackColor = false;
-            // 
-            // btnTabDonTrangThai
-            // 
-            this.btnTabDonTrangThai.FlatAppearance.BorderSize = 0;
-            this.btnTabDonTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDonTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnTabDonTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabDonTrangThai.Location = new System.Drawing.Point(287, 0);
-            this.btnTabDonTrangThai.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabDonTrangThai.Name = "btnTabDonTrangThai";
-            this.btnTabDonTrangThai.Size = new System.Drawing.Size(252, 43);
-            this.btnTabDonTrangThai.TabIndex = 2;
-            this.btnTabDonTrangThai.Text = "Đơn theo trạng thái";
-            this.btnTabDonTrangThai.UseVisualStyleBackColor = true;
             // 
             // pnlFilter
             // 
@@ -383,6 +335,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 149);
             this.panel1.TabIndex = 2;
+            // 
+            // lblTongBan
+            // 
+            this.lblTongBan.AutoSize = true;
+            this.lblTongBan.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongBan.ForeColor = System.Drawing.Color.Red;
+            this.lblTongBan.Location = new System.Drawing.Point(7, 112);
+            this.lblTongBan.Name = "lblTongBan";
+            this.lblTongBan.Size = new System.Drawing.Size(31, 30);
+            this.lblTongBan.TabIndex = 0;
+            this.lblTongBan.Text = "0 ";
             // 
             // lblTongNhap
             // 
@@ -526,33 +489,6 @@
             this.pnlTabIndicator.Size = new System.Drawing.Size(1174, 3);
             this.pnlTabIndicator.TabIndex = 1;
             // 
-            // lblTongBan
-            // 
-            this.lblTongBan.AutoSize = true;
-            this.lblTongBan.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongBan.ForeColor = System.Drawing.Color.Red;
-            this.lblTongBan.Location = new System.Drawing.Point(7, 112);
-            this.lblTongBan.Name = "lblTongBan";
-            this.lblTongBan.Size = new System.Drawing.Size(31, 30);
-            this.lblTongBan.TabIndex = 0;
-            this.lblTongBan.Text = "0 ";
-            // 
-            // chtDoanhThu
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chtDoanhThu.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chtDoanhThu.Legends.Add(legend4);
-            this.chtDoanhThu.Location = new System.Drawing.Point(626, 44);
-            this.chtDoanhThu.Name = "chtDoanhThu";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chtDoanhThu.Series.Add(series4);
-            this.chtDoanhThu.Size = new System.Drawing.Size(465, 199);
-            this.chtDoanhThu.TabIndex = 2;
-            this.chtDoanhThu.Text = "chart2";
-            // 
             // frmBaoCaoSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -566,10 +502,10 @@
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtSanPham)).EndInit();
             this.pnlChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             this.pnlContent.ResumeLayout(false);
             this.pnlGrid.ResumeLayout(false);
-            this.flpTabs.ResumeLayout(false);
             this.pnlFilter.ResumeLayout(false);
             this.pnlFrom.ResumeLayout(false);
             this.pnlFrom.PerformLayout();
@@ -578,7 +514,6 @@
             this.pnlLoai.ResumeLayout(false);
             this.pnlLoai.PerformLayout();
             this.pnlTabs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,10 +529,6 @@
         private System.Windows.Forms.Label lblGridTitle;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel pnlGrid;
-        private System.Windows.Forms.FlowLayoutPanel flpTabs;
-        private System.Windows.Forms.Button btnTabDoanhThu;
-        private System.Windows.Forms.Button btnTabSPBanChay;
-        private System.Windows.Forms.Button btnTabDonTrangThai;
         private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.Panel pnlFrom;
         private System.Windows.Forms.DateTimePicker dtpTo;

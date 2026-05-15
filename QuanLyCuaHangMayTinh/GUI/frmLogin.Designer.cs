@@ -84,7 +84,7 @@
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnExit.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnExit.Location = new System.Drawing.Point(86, 369);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExit.Name = "btnExit";
@@ -99,7 +99,7 @@
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnLogin.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnLogin.Location = new System.Drawing.Point(86, 302);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
@@ -111,7 +111,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.Turquoise;
+            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
             this.label6.Location = new System.Drawing.Point(-2, 14);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -194,7 +194,7 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.Turquoise;
+            this.label5.BackColor = System.Drawing.Color.RoyalBlue;
             this.label5.Location = new System.Drawing.Point(81, 255);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -204,7 +204,7 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.Turquoise;
+            this.label4.BackColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(81, 168);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -216,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Turquoise;
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label3.Location = new System.Drawing.Point(210, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";

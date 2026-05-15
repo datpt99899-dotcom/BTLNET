@@ -40,10 +40,6 @@
             this.lblGridTitle = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.flpTabs = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnTabDoanhThu = new System.Windows.Forms.Button();
-            this.btnTabSPBanChay = new System.Windows.Forms.Button();
-            this.btnTabDonTrangThai = new System.Windows.Forms.Button();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
@@ -70,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             this.pnlContent.SuspendLayout();
             this.pnlGrid.SuspendLayout();
-            this.flpTabs.SuspendLayout();
             this.pnlFilter.SuspendLayout();
             this.pnlFrom.SuspendLayout();
             this.pnlLoai.SuspendLayout();
@@ -165,7 +160,6 @@
             // 
             this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlContent.Controls.Add(this.pnlGrid);
-            this.pnlContent.Controls.Add(this.flpTabs);
             this.pnlContent.Controls.Add(this.pnlChart);
             this.pnlContent.Controls.Add(this.pnlFilter);
             this.pnlContent.Controls.Add(this.pnlTabs);
@@ -186,64 +180,6 @@
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlGrid.Size = new System.Drawing.Size(1168, 313);
             this.pnlGrid.TabIndex = 8;
-            // 
-            // flpTabs
-            // 
-            this.flpTabs.BackColor = System.Drawing.Color.Gainsboro;
-            this.flpTabs.Controls.Add(this.btnTabDoanhThu);
-            this.flpTabs.Controls.Add(this.btnTabSPBanChay);
-            this.flpTabs.Controls.Add(this.btnTabDonTrangThai);
-            this.flpTabs.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.flpTabs.Enabled = false;
-            this.flpTabs.Location = new System.Drawing.Point(16, 27);
-            this.flpTabs.Margin = new System.Windows.Forms.Padding(0);
-            this.flpTabs.Name = "flpTabs";
-            this.flpTabs.Size = new System.Drawing.Size(1168, 45);
-            this.flpTabs.TabIndex = 0;
-            this.flpTabs.WrapContents = false;
-            // 
-            // btnTabDoanhThu
-            // 
-            this.btnTabDoanhThu.FlatAppearance.BorderSize = 0;
-            this.btnTabDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDoanhThu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabDoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.btnTabDoanhThu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabDoanhThu.Name = "btnTabDoanhThu";
-            this.btnTabDoanhThu.Size = new System.Drawing.Size(155, 43);
-            this.btnTabDoanhThu.TabIndex = 0;
-            this.btnTabDoanhThu.Text = "Doanh thu";
-            this.btnTabDoanhThu.UseVisualStyleBackColor = true;
-            // 
-            // btnTabSPBanChay
-            // 
-            this.btnTabSPBanChay.FlatAppearance.BorderSize = 0;
-            this.btnTabSPBanChay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabSPBanChay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabSPBanChay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.btnTabSPBanChay.Location = new System.Drawing.Point(155, 0);
-            this.btnTabSPBanChay.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabSPBanChay.Name = "btnTabSPBanChay";
-            this.btnTabSPBanChay.Size = new System.Drawing.Size(132, 43);
-            this.btnTabSPBanChay.TabIndex = 1;
-            this.btnTabSPBanChay.Text = "SP bán chạy";
-            this.btnTabSPBanChay.UseVisualStyleBackColor = true;
-            // 
-            // btnTabDonTrangThai
-            // 
-            this.btnTabDonTrangThai.BackColor = System.Drawing.Color.White;
-            this.btnTabDonTrangThai.FlatAppearance.BorderSize = 0;
-            this.btnTabDonTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTabDonTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTabDonTrangThai.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnTabDonTrangThai.Location = new System.Drawing.Point(287, 0);
-            this.btnTabDonTrangThai.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTabDonTrangThai.Name = "btnTabDonTrangThai";
-            this.btnTabDonTrangThai.Size = new System.Drawing.Size(252, 43);
-            this.btnTabDonTrangThai.TabIndex = 2;
-            this.btnTabDonTrangThai.Text = "Đơn theo trạng thái";
-            this.btnTabDonTrangThai.UseVisualStyleBackColor = false;
             // 
             // pnlFilter
             // 
@@ -511,7 +447,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             this.pnlContent.ResumeLayout(false);
             this.pnlGrid.ResumeLayout(false);
-            this.flpTabs.ResumeLayout(false);
             this.pnlFilter.ResumeLayout(false);
             this.pnlFrom.ResumeLayout(false);
             this.pnlFrom.PerformLayout();
@@ -533,10 +468,6 @@
         private System.Windows.Forms.Label lblGridTitle;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel pnlGrid;
-        private System.Windows.Forms.FlowLayoutPanel flpTabs;
-        private System.Windows.Forms.Button btnTabDoanhThu;
-        private System.Windows.Forms.Button btnTabSPBanChay;
-        private System.Windows.Forms.Button btnTabDonTrangThai;
         private System.Windows.Forms.Panel pnlFilter;
         private System.Windows.Forms.Panel pnlFrom;
         private System.Windows.Forms.DateTimePicker dtpTo;
