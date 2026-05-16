@@ -8,6 +8,10 @@ namespace QuanLyCuaHangMayTinh
         [STAThread]
         static void Main()
         {
+            // Tắt DPI auto-scaling của Windows — giữ layout đúng pixel như Designer.
+            // Phải gọi TRƯỚC EnableVisualStyles và TRƯỚC khi tạo form đầu tiên.
+            try { SetProcessDPIAware(); } catch { /* OS cũ không hỗ trợ — bỏ qua */ }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             try { Function.Connect(); }
@@ -19,5 +23,8 @@ namespace QuanLyCuaHangMayTinh
             }
             Application.Run(new frmLogin());
         }
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
     }
 }

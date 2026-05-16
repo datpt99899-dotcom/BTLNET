@@ -39,10 +39,9 @@ namespace QuanLyCuaHangMayTinh.GUI
                     dtpTo?.Value ?? DateTime.Today, 10);
                 if (dgvChiTiet != null) dgvChiTiet.DataSource = data;
 
-                // Ẩn chart cũ + dùng LiveCharts (RowChart cho top sản phẩm bán chạy)
-                if (chtSanPham != null) chtSanPham.Visible = false;
-                if (chtDoanhThu != null) chtDoanhThu.Visible = false;
-                LiveChartsHelper.RenderRowChart(pnlChart, data, "TenSanPham", "TongSoLuong", "Số lượng bán");
+                // Bind LiveCharts vào 2 chart đã có sẵn trong Designer
+                LiveChartsHelper.BindRow(chtSanPham, data, "TenSanPham", "TongSoLuong", "Số lượng bán");
+                LiveChartsHelper.BindCartesian(chtDoanhThu, data, "TenSanPham", "DoanhThu", "Doanh thu", true);
             }
             catch (Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }
         }

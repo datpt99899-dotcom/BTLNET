@@ -630,7 +630,7 @@
             // frmNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1366, 923);
             this.Controls.Add(this.cboMaPN);
             this.Controls.Add(this.panel4);

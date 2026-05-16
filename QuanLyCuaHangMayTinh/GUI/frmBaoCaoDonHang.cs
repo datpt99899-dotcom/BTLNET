@@ -39,9 +39,8 @@ namespace QuanLyCuaHangMayTinh.GUI
                     dtpTo?.Value ?? DateTime.Today);
                 if (dgvChiTiet != null) dgvChiTiet.DataSource = data;
 
-                // Ẩn chart cũ + dùng LiveCharts (PieChart cho trạng thái đơn)
-                if (chart2 != null) chart2.Visible = false;
-                LiveChartsHelper.RenderPieChart(pnlChart, data, "TrangThai", "SoLuong");
+                // Bind LiveCharts vào chart2 (PieChart) có sẵn trong Designer
+                LiveChartsHelper.BindPie(chart2, data, "TrangThai", "SoLuong");
             }
             catch (Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }
         }

@@ -114,5 +114,43 @@ namespace QuanLyCuaHangMayTinh.DAL
                     Convert.ToInt32(row["TongDon"]),
                     Convert.ToDecimal(row["TBDon"]));
         }
+
+        // ═══════════════════════════════════════════════════════════════════
+        //   DAPPER ORM — minh hoạ rubric mục 2.3 (EF/Dapper)
+        // ═══════════════════════════════════════════════════════════════════
+        // Dapper là micro-ORM nhẹ, map kết quả query trực tiếp sang object/POCO
+        // hoặc dynamic. Ở đây ta minh hoạ 2 truy vấn báo cáo dùng Dapper —
+        // ngắn gọn hơn ADO.NET truyền thống mà vẫn dùng parameterized query.
+
+        /// <summary>(Dapper) Tổng doanh thu trong khoảng — trả về 1 giá trị decimal.</summary>
+        public decimal DapperGetTongDoanhThu(DateTime fromDate, DateTime toDate)
+        {
+            const string sql = @"
+                SELECT ISNULL(SUM(TongTien), 0)
+                FROM   HoaDonBan
+                WHERE  TrangThai IN (N'Hoàn thành', N'Đã giao')
+                  AND  NgayBan BETWEEN @from AND @to";
+            return DapperRepository.QuerySingleOrDefault<decimal>(sql, new
+            {
+                from = fromDate.Date,
+                to = toDate.Date.AddDays(1).AddSeconds(-1)
+            });
+        }
+
+        /// <summary>(Dapper) Đếm số đơn theo từng trạng thái — trả về list dynamic.</summary>
+        public System.Collections.Generic.List<dynamic> DapperDemDonTheoTrangThai(DateTime fromDate, DateTime toDate)
+        {
+            const string sql = @"
+                SELECT TrangThai, COUNT(*) AS SoLuong, SUM(TongTien) AS TongTien
+                FROM   DonDatHang
+                WHERE  NgayDat BETWEEN @from AND @to
+                GROUP  BY TrangThai
+                ORDER  BY SoLuong DESC";
+            return DapperRepository.QueryList<dynamic>(sql, new
+            {
+                from = fromDate.Date,
+                to = toDate.Date.AddDays(1).AddSeconds(-1)
+            });
+        }
     }
 }

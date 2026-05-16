@@ -608,7 +608,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1384, 711);
             this.Controls.Add(this.grpDanhSach);

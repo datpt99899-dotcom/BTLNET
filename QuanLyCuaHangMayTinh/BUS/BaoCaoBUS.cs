@@ -16,5 +16,12 @@ namespace QuanLyCuaHangMayTinh.BUS
 
         public (decimal tongDoanhThu, int tongDon, decimal trungBinhDon) GetKPI(DateTime from, DateTime to)
             => _dal.GetKPI(from, to);
+
+        // ─── Dapper demos (rubric 2.3) ───
+        public decimal DapperGetTongDoanhThu(DateTime from, DateTime to)
+            => _dal.DapperGetTongDoanhThu(from, to);
+
+        public System.Collections.Generic.List<dynamic> DapperDemDonTheoTrangThai(DateTime from, DateTime to)
+            => _dal.DapperDemDonTheoTrangThai(from, to);
     }
 }

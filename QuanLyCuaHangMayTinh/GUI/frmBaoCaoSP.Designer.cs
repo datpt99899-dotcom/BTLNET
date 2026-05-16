@@ -28,15 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.chtSanPham = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chtSanPham = new LiveCharts.WinForms.CartesianChart();
             this.pnlChart = new System.Windows.Forms.Panel();
             this.lblChartTitle = new System.Windows.Forms.Label();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
@@ -66,9 +60,8 @@
             this.pnlTabs = new System.Windows.Forms.Panel();
             this.pnlTabIndicator = new System.Windows.Forms.Panel();
             this.lblTongBan = new System.Windows.Forms.Label();
-            this.chtDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chtDoanhThu = new LiveCharts.WinForms.CartesianChart();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtSanPham)).BeginInit();
             this.pnlChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             this.pnlContent.SuspendLayout();
@@ -78,7 +71,6 @@
             this.panel1.SuspendLayout();
             this.pnlLoai.SuspendLayout();
             this.pnlTabs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -105,19 +97,10 @@
             // 
             // chtSanPham
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chtSanPham.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chtSanPham.Legends.Add(legend3);
             this.chtSanPham.Location = new System.Drawing.Point(30, 44);
             this.chtSanPham.Name = "chtSanPham";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chtSanPham.Series.Add(series3);
             this.chtSanPham.Size = new System.Drawing.Size(465, 199);
             this.chtSanPham.TabIndex = 2;
-            this.chtSanPham.Text = "chart2";
             // 
             // pnlChart
             // 
@@ -483,24 +466,15 @@
             // 
             // chtDoanhThu
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chtDoanhThu.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chtDoanhThu.Legends.Add(legend4);
             this.chtDoanhThu.Location = new System.Drawing.Point(626, 44);
             this.chtDoanhThu.Name = "chtDoanhThu";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chtDoanhThu.Series.Add(series4);
             this.chtDoanhThu.Size = new System.Drawing.Size(465, 199);
             this.chtDoanhThu.TabIndex = 2;
-            this.chtDoanhThu.Text = "chart2";
             // 
             // frmBaoCaoSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1201, 988);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlContent);
@@ -508,7 +482,6 @@
             this.Text = "frmBaoCaoSP";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtSanPham)).EndInit();
             this.pnlChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             this.pnlContent.ResumeLayout(false);
@@ -521,7 +494,6 @@
             this.pnlLoai.ResumeLayout(false);
             this.pnlLoai.PerformLayout();
             this.pnlTabs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,7 +502,7 @@
 
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chtSanPham;
+        private LiveCharts.WinForms.CartesianChart chtSanPham;
         private System.Windows.Forms.Panel pnlChart;
         private System.Windows.Forms.Label lblChartTitle;
         private System.Windows.Forms.DataGridView dgvChiTiet;
@@ -560,6 +532,6 @@
         private System.Windows.Forms.Label lblTongNhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTongBan;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chtDoanhThu;
+        private LiveCharts.WinForms.CartesianChart chtDoanhThu;
     }
 }

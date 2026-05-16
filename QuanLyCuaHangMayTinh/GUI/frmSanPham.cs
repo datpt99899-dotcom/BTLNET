@@ -35,11 +35,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         private void frmSanPham_Load(object sender, EventArgs e)
         {
             ThemeManager.Apply(this);
-
-            // Hiển thị vai trò trên title bar để người dùng biết quyền hiện tại
-            string suffix = _canManage ? "(Đầy đủ quyền)" : "(Chỉ xem - không có quyền sửa)";
-            this.Text = $"Quản lý sản phẩm - Vai trò: {_currentRole} {suffix}";
-
             try
             {
                 LoadDanhMucCombobox();

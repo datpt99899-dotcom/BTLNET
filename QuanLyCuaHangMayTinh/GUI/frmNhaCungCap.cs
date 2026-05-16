@@ -11,7 +11,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
 {
     public partial class frmNhaCungCap : Form
     {
-        private Label lblVaiTro = new Label();
         private readonly string _currentRole;
         private bool _canManage;
         private FormMode _mode = FormMode.View;
@@ -29,7 +28,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
         private void frmNhaCungCap_Load(object sender, EventArgs e)
         {
             ThemeManager.Apply(this);
-            lblVaiTro.Text = "Vai trò hiện tại: " + _currentRole;
             _canManage = string.Equals(_currentRole, "Admin", StringComparison.CurrentCultureIgnoreCase)
                       || string.Equals(_currentRole, "Nhân viên kho", StringComparison.CurrentCultureIgnoreCase);
 

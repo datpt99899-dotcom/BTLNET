@@ -258,22 +258,22 @@ namespace QuanLyCuaHangMayTinh
             });
             _modules.Add(m4);
 
-            // ===== Module 1.4: Báo cáo (đề ghi: dành cho Admin) =====
+            // ===== Module 1.4: Báo cáo & Thống kê (đề ghi rõ: DÀNH CHO ADMIN) =====
             var m5 = new Module { Name = "Báo cáo", Icon = IconChar.ChartLine };
             m5.Items.Add(new SubItem {
                 Title = "Doanh thu", Icon = IconChar.MoneyBillWave,
                 CreateForm = () => new frmBaoCaoDT(),
-                AllowedRoles = new[] { "VT01", "VT04" }
+                AllowedRoles = new[] { "VT01" }
             });
             m5.Items.Add(new SubItem {
                 Title = "SP bán chạy", Icon = IconChar.ChartBar,
                 CreateForm = () => new frmBaoCaoSP(),
-                AllowedRoles = new[] { "VT01", "VT04" }
+                AllowedRoles = new[] { "VT01" }
             });
             m5.Items.Add(new SubItem {
                 Title = "Đơn hàng", Icon = IconChar.FileInvoice,
                 CreateForm = () => new frmBaoCaoDonHang(),
-                AllowedRoles = new[] { "VT01", "VT04" }
+                AllowedRoles = new[] { "VT01" }
             });
             _modules.Add(m5);
         }

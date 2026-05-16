@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using LiveCharts;
 using WpfCharts = LiveCharts.Wpf;
@@ -11,53 +10,40 @@ using WinFormsCharts = LiveCharts.WinForms;
 namespace QuanLyCuaHangMayTinh.GUI
 {
     /// <summary>
-    /// Helper tích hợp LiveCharts cho các form báo cáo — đáp ứng yêu cầu rubric mục 1.4
-    /// (Biểu đồ LiveCharts/Krypton để đạt mức Tốt).
-    ///
-    /// Cách dùng:
-    ///   LiveChartsHelper.RenderLineChart(panel, data, "Ngay", "DoanhThu");
-    ///   LiveChartsHelper.RenderPieChart(panel, data, "TrangThai", "SoLuong");
-    ///   LiveChartsHelper.RenderRowChart(panel, data, "TenSanPham", "TongSoLuong");
-    ///
-    /// Lưu ý kỹ thuật:
-    ///   - LiveCharts có 2 namespace cùng tên class: LiveCharts.Wpf vs LiveCharts.WinForms.
-    ///   - Để tránh ambiguous reference (CS0104), ta dùng alias:
-    ///       WpfCharts        = LiveCharts.Wpf (chứa LineSeries, PieSeries, Axis, ...)
-    ///       WinFormsCharts   = LiveCharts.WinForms (chứa CartesianChart, PieChart - container)
-    ///   - KHÔNG sửa Designer.cs — chỉ inject control runtime vào panel có sẵn.
+    /// Helper bind data vào các CartesianChart / PieChart đã được tạo SẴN
+    /// trong Designer của 3 form báo cáo. KHÔNG tạo chart runtime —
+    /// đảm bảo UI lúc chạy khớp 100% với thiết kế Designer.
     /// </summary>
     internal static class LiveChartsHelper
     {
-        // Chuyển từ System.Drawing.Color → System.Windows.Media.Color
         private static System.Windows.Media.Color ToMediaColor(System.Drawing.Color c)
             => System.Windows.Media.Color.FromArgb(c.A, c.R, c.G, c.B);
 
-        // Bảng màu cho biểu đồ tròn (mỗi slice 1 màu)
         private static readonly System.Windows.Media.Color[] Palette = new[]
         {
-            System.Windows.Media.Color.FromRgb(0x4A, 0x90, 0xE2),   // xanh dương
-            System.Windows.Media.Color.FromRgb(0x50, 0xC8, 0x78),   // xanh lá
-            System.Windows.Media.Color.FromRgb(0xF5, 0xA6, 0x23),   // cam
-            System.Windows.Media.Color.FromRgb(0xE5, 0x6E, 0x6E),   // đỏ
-            System.Windows.Media.Color.FromRgb(0x9B, 0x59, 0xB6),   // tím
-            System.Windows.Media.Color.FromRgb(0x1A, 0xBC, 0x9C),   // teal
-            System.Windows.Media.Color.FromRgb(0xE6, 0x7E, 0x22),   // cam đậm
+            System.Windows.Media.Color.FromRgb(0x4A, 0x90, 0xE2),
+            System.Windows.Media.Color.FromRgb(0x50, 0xC8, 0x78),
+            System.Windows.Media.Color.FromRgb(0xF5, 0xA6, 0x23),
+            System.Windows.Media.Color.FromRgb(0xE5, 0x6E, 0x6E),
+            System.Windows.Media.Color.FromRgb(0x9B, 0x59, 0xB6),
+            System.Windows.Media.Color.FromRgb(0x1A, 0xBC, 0x9C),
+            System.Windows.Media.Color.FromRgb(0xE6, 0x7E, 0x22),
         };
 
         /// <summary>
-        /// Vẽ biểu đồ ĐƯỜNG (CartesianChart) — thường dùng cho doanh thu theo ngày.
+        /// Bind data vào CartesianChart có sẵn (đường hoặc cột).
         /// </summary>
-        public static void RenderLineChart(Panel host, DataTable data,
+        public static void BindCartesian(WinFormsCharts.CartesianChart chart, DataTable data,
             string labelColumn, string valueColumn,
             string seriesTitle = "Doanh thu", bool asBar = false)
         {
-            if (host == null) return;
-            host.Controls.Clear();
-            if (data == null || data.Rows.Count == 0)
-            {
-                ShowEmptyMessage(host, "Không có dữ liệu để hiển thị");
-                return;
-            }
+            if (chart == null) return;
+
+            chart.Series = new SeriesCollection();
+            chart.AxisX.Clear();
+            chart.AxisY.Clear();
+
+            if (data == null || data.Rows.Count == 0) return;
 
             var labels = new List<string>();
             var values = new ChartValues<double>();
@@ -104,13 +90,8 @@ namespace QuanLyCuaHangMayTinh.GUI
                 };
             }
 
-            var chart = new WinFormsCharts.CartesianChart
-            {
-                Dock = DockStyle.Fill,
-                BackColor = AppTheme.CardBg,
-                Series = new SeriesCollection { series },
-                LegendLocation = LegendLocation.Top
-            };
+            chart.Series.Add(series);
+            chart.LegendLocation = LegendLocation.Top;
             chart.AxisX.Add(new WpfCharts.Axis
             {
                 Title = "Thời gian",
@@ -119,28 +100,21 @@ namespace QuanLyCuaHangMayTinh.GUI
             });
             chart.AxisY.Add(new WpfCharts.Axis
             {
-                Title = "Giá trị (VNĐ)",
+                Title = "Giá trị",
                 LabelFormatter = v => v.ToString("N0")
             });
-
-            host.Controls.Add(chart);
         }
 
         /// <summary>
-        /// Vẽ biểu đồ TRÒN (PieChart) — thường dùng cho đơn hàng theo trạng thái.
+        /// Bind data vào PieChart có sẵn — thường dùng cho đơn theo trạng thái.
         /// </summary>
-        public static void RenderPieChart(Panel host, DataTable data,
+        public static void BindPie(WinFormsCharts.PieChart chart, DataTable data,
             string labelColumn, string valueColumn)
         {
-            if (host == null) return;
-            host.Controls.Clear();
-            if (data == null || data.Rows.Count == 0)
-            {
-                ShowEmptyMessage(host, "Không có dữ liệu để hiển thị");
-                return;
-            }
+            if (chart == null) return;
+            chart.Series = new SeriesCollection();
+            if (data == null || data.Rows.Count == 0) return;
 
-            var seriesCollection = new SeriesCollection();
             int colorIdx = 0;
             foreach (DataRow r in data.Rows)
             {
@@ -148,7 +122,7 @@ namespace QuanLyCuaHangMayTinh.GUI
 
                 var color = Palette[colorIdx % Palette.Length];
                 colorIdx++;
-                seriesCollection.Add(new WpfCharts.PieSeries
+                chart.Series.Add(new WpfCharts.PieSeries
                 {
                     Title = r[labelColumn].ToString(),
                     Values = new ChartValues<double> { Convert.ToDouble(r[valueColumn]) },
@@ -159,32 +133,23 @@ namespace QuanLyCuaHangMayTinh.GUI
                 });
             }
 
-            var pie = new WinFormsCharts.PieChart
-            {
-                Dock = DockStyle.Fill,
-                BackColor = AppTheme.CardBg,
-                Series = seriesCollection,
-                LegendLocation = LegendLocation.Right,
-                InnerRadius = 40,
-                StartingRotationAngle = 0
-            };
-            host.Controls.Add(pie);
+            chart.LegendLocation = LegendLocation.Right;
+            chart.InnerRadius = 40;
+            chart.StartingRotationAngle = 0;
         }
 
         /// <summary>
-        /// Vẽ biểu đồ CỘT NGANG (Row) — thường dùng cho top sản phẩm bán chạy.
+        /// Bind data vào CartesianChart dưới dạng cột ngang (Row) — top sản phẩm bán chạy.
         /// </summary>
-        public static void RenderRowChart(Panel host, DataTable data,
+        public static void BindRow(WinFormsCharts.CartesianChart chart, DataTable data,
             string labelColumn, string valueColumn,
             string seriesTitle = "Số lượng")
         {
-            if (host == null) return;
-            host.Controls.Clear();
-            if (data == null || data.Rows.Count == 0)
-            {
-                ShowEmptyMessage(host, "Không có dữ liệu để hiển thị");
-                return;
-            }
+            if (chart == null) return;
+            chart.Series = new SeriesCollection();
+            chart.AxisX.Clear();
+            chart.AxisY.Clear();
+            if (data == null || data.Rows.Count == 0) return;
 
             var labels = new List<string>();
             var values = new ChartValues<double>();
@@ -206,13 +171,8 @@ namespace QuanLyCuaHangMayTinh.GUI
                 DataLabels = true
             };
 
-            var chart = new WinFormsCharts.CartesianChart
-            {
-                Dock = DockStyle.Fill,
-                BackColor = AppTheme.CardBg,
-                Series = new SeriesCollection { row },
-                LegendLocation = LegendLocation.None
-            };
+            chart.Series.Add(row);
+            chart.LegendLocation = LegendLocation.None;
             chart.AxisY.Add(new WpfCharts.Axis
             {
                 Title = "Sản phẩm",
@@ -223,21 +183,6 @@ namespace QuanLyCuaHangMayTinh.GUI
                 Title = seriesTitle,
                 LabelFormatter = v => v.ToString("N0")
             });
-
-            host.Controls.Add(chart);
-        }
-
-        private static void ShowEmptyMessage(Panel host, string message)
-        {
-            var lbl = new Label
-            {
-                Text = message,
-                Dock = DockStyle.Fill,
-                TextAlign = ContentAlignment.MiddleCenter,
-                ForeColor = AppTheme.TextSecondary,
-                Font = new Font("Segoe UI", 11F, FontStyle.Italic)
-            };
-            host.Controls.Add(lbl);
         }
     }
 }

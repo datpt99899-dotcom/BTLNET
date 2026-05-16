@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new LiveCharts.WinForms.PieChart();
             this.pnlChart = new System.Windows.Forms.Panel();
             this.lblChartTitle = new System.Windows.Forms.Label();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
@@ -61,7 +58,6 @@
             this.pnlTabs = new System.Windows.Forms.Panel();
             this.pnlTabIndicator = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.pnlChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             this.pnlContent.SuspendLayout();
@@ -96,19 +92,10 @@
             // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(96, 44);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(1008, 199);
             this.chart2.TabIndex = 2;
-            this.chart2.Text = "chart2";
             // 
             // pnlChart
             // 
@@ -442,7 +429,7 @@
             // frmBaoCaoDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1199, 982);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlContent);
@@ -450,7 +437,6 @@
             this.Text = "frmBaoCaoDonHang";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.pnlChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).EndInit();
             this.pnlContent.ResumeLayout(false);
@@ -469,7 +455,7 @@
 
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private LiveCharts.WinForms.PieChart chart2;
         private System.Windows.Forms.Panel pnlChart;
         private System.Windows.Forms.Label lblChartTitle;
         private System.Windows.Forms.DataGridView dgvChiTiet;

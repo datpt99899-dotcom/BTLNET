@@ -29,9 +29,6 @@ namespace QuanLyCuaHangMayTinh
                       || string.Equals(_currentRole, "Nhân viên kho", StringComparison.CurrentCultureIgnoreCase)
                       || string.Equals(_currentRole, "NhanVienKho", StringComparison.CurrentCultureIgnoreCase);
             InitializeComponent();
-
-            string suffix = _canManage ? "(Đầy đủ quyền)" : "(Chỉ xem)";
-            this.Text = $"Quản lý loại sản phẩm - Vai trò: {_currentRole} {suffix}";
         }
 
         private void LoadLoaiSanPham(string keyword = "")

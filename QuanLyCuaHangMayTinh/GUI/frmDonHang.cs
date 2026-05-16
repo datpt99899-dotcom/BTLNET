@@ -516,7 +516,7 @@ namespace QuanLyCuaHangMayTinh.GUI
                 Width = 200,
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
-            cboTrangThaiMoi.Items.AddRange(new object[] { "Chờ xử lý", "Đang giao", "Đã giao", "Hủy" });
+            cboTrangThaiMoi.Items.AddRange(new object[] { "Chờ xử lý", "Đang giao", "Đã giao", "Hoàn thành", "Hủy" });
             cboTrangThaiMoi.SelectedItem = _trangThaiHienTai;
             Controls.Add(cboTrangThaiMoi);
 
