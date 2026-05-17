@@ -169,10 +169,9 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTimKiem.Location = new System.Drawing.Point(498, 37);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(141, 44);
@@ -199,12 +198,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(25, 38);
             this.btnThem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(25, 38);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
             this.btnThem.TabIndex = 0;
@@ -214,12 +212,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(151, 38);
             this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(151, 38);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 1;
@@ -229,12 +226,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(280, 38);
             this.btnXoa.BackColor = System.Drawing.Color.Gray;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(280, 38);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
             this.btnXoa.TabIndex = 2;
@@ -244,12 +240,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(410, 38);
             this.btnLuu.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.FlatAppearance.BorderSize = 0;
-            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(410, 38);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(101, 38);
             this.btnLuu.TabIndex = 3;
@@ -259,12 +254,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(538, 38);
             this.btnHuy.BackColor = System.Drawing.Color.Gray;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(538, 38);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(101, 38);
             this.btnHuy.TabIndex = 4;
@@ -274,12 +268,11 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(25, 93);
             this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
-            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(25, 93);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(192, 38);
             this.btnLamMoi.TabIndex = 5;
@@ -313,7 +306,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             // frmThuongHieu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1192, 763);

@@ -40,7 +40,7 @@ namespace QuanLyCuaHangMayTinh.GUI
 
             // Mã khách hàng tự sinh - không cho sửa
             txtMakhachhang.ReadOnly = true;
-            txtMakhachhang.BackColor = Color.LightYellow;
+            txtMakhachhang.BackColor = Color.White;
 
             // Phân quyền nút
             if (!_canEdit)
@@ -107,6 +107,7 @@ namespace QuanLyCuaHangMayTinh.GUI
         {
             txtTenkhachhang.ReadOnly = !enable;
             mskDienthoai.ReadOnly = !enable;
+            mskDienthoai.BackColor = Color.White;
             txtEmail.ReadOnly = !enable;
             txtDiachi.ReadOnly = !enable;
             btnLuu.Enabled = enable && _canEdit;

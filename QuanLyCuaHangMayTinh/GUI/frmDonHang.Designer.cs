@@ -24,6 +24,7 @@
             this.dgvDonHang = new System.Windows.Forms.DataGridView();
             this.lblGridTitle = new System.Windows.Forms.Label();
             this.pnlFilter = new System.Windows.Forms.Panel();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnXuatExcel = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.lblFrom = new System.Windows.Forms.Label();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.lblTrangThai = new System.Windows.Forms.Label();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.pnlGrid.SuspendLayout();
@@ -136,6 +136,21 @@
             this.pnlFilter.Size = new System.Drawing.Size(1168, 184);
             this.pnlFilter.TabIndex = 0;
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnLamMoi.Location = new System.Drawing.Point(820, 115);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(161, 46);
+            this.btnLamMoi.TabIndex = 8;
+            this.btnLamMoi.Text = "Làm mới ";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -183,10 +198,9 @@
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnSua.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnSua.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSua.Location = new System.Drawing.Point(847, 45);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(134, 46);
@@ -277,25 +291,8 @@
             this.lblTrangThai.TabIndex = 0;
             this.lblTrangThai.Text = "Trạng thái";
             // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.FlatAppearance.BorderSize = 0;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnLamMoi.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnLamMoi.Location = new System.Drawing.Point(820, 115);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(161, 46);
-            this.btnLamMoi.TabIndex = 8;
-            this.btnLamMoi.Text = "Làm mới ";
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            // 
             // frmDonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 900);
             this.Controls.Add(this.pnlContent);

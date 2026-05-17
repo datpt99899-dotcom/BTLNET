@@ -172,9 +172,8 @@ namespace QuanLyCuaHangMayTinh
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTimKiem.Location = new System.Drawing.Point(480, 33);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(135, 39);
@@ -201,12 +200,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(23, 34);
             this.btnThem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(23, 34);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(92, 36);
             this.btnThem.TabIndex = 0;
@@ -216,12 +214,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(123, 34);
             this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(123, 34);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 36);
             this.btnSua.TabIndex = 1;
@@ -231,12 +228,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(223, 34);
             this.btnXoa.BackColor = System.Drawing.Color.Gray;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(223, 34);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 36);
             this.btnXoa.TabIndex = 2;
@@ -246,12 +242,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(323, 34);
             this.btnLuu.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.FlatAppearance.BorderSize = 0;
-            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(323, 34);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(92, 36);
             this.btnLuu.TabIndex = 3;
@@ -261,12 +256,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(423, 34);
             this.btnHuy.BackColor = System.Drawing.Color.Gray;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(423, 34);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(92, 36);
             this.btnHuy.TabIndex = 4;
@@ -276,12 +270,11 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(23, 76);
             this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
-            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(23, 76);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(151, 42);
             this.btnLamMoi.TabIndex = 5;
@@ -320,7 +313,6 @@ namespace QuanLyCuaHangMayTinh
             // 
             // frmLoaiSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1279, 681);
