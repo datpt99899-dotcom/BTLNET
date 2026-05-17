@@ -164,9 +164,9 @@ namespace QuanLyCuaHangMayTinh
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTimKiem.Location = new System.Drawing.Point(86, 35);
+            this.txtTimKiem.Location = new System.Drawing.Point(107, 35);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(377, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(356, 34);
             this.txtTimKiem.TabIndex = 1;
             // 
             // btnTimKiem

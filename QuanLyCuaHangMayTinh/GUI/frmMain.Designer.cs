@@ -70,9 +70,9 @@
             this.btnDangXuatDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuatDS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDangXuatDS.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuatDS.Location = new System.Drawing.Point(1738, 22);
+            this.btnDangXuatDS.Location = new System.Drawing.Point(1698, 22);
             this.btnDangXuatDS.Name = "btnDangXuatDS";
-            this.btnDangXuatDS.Size = new System.Drawing.Size(153, 36);
+            this.btnDangXuatDS.Size = new System.Drawing.Size(193, 42);
             this.btnDangXuatDS.TabIndex = 2;
             this.btnDangXuatDS.Text = "🚪 Đăng xuất";
             this.btnDangXuatDS.UseVisualStyleBackColor = false;
