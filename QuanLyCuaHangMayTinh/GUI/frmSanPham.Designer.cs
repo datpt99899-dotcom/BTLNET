@@ -235,7 +235,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.lblGiaBan.AutoSize = true;
             this.lblGiaBan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblGiaBan.Location = new System.Drawing.Point(274, 220);
+            this.lblGiaBan.Location = new System.Drawing.Point(283, 220);
             this.lblGiaBan.Name = "lblGiaBan";
             this.lblGiaBan.Size = new System.Drawing.Size(79, 28);
             this.lblGiaBan.TabIndex = 6;
@@ -255,7 +255,7 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             // 
             this.lblBaoHanh.AutoSize = true;
             this.lblBaoHanh.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblBaoHanh.Location = new System.Drawing.Point(272, 257);
+            this.lblBaoHanh.Location = new System.Drawing.Point(281, 257);
             this.lblBaoHanh.Name = "lblBaoHanh";
             this.lblBaoHanh.Size = new System.Drawing.Size(93, 28);
             this.lblBaoHanh.TabIndex = 8;
@@ -329,15 +329,15 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.txtGiaNhap.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtGiaNhap.Location = new System.Drawing.Point(145, 216);
             this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(125, 34);
+            this.txtGiaNhap.Size = new System.Drawing.Size(132, 34);
             this.txtGiaNhap.TabIndex = 16;
             // 
             // txtGiaBan
             // 
             this.txtGiaBan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtGiaBan.Location = new System.Drawing.Point(361, 216);
+            this.txtGiaBan.Location = new System.Drawing.Point(370, 216);
             this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(116, 34);
+            this.txtGiaBan.Size = new System.Drawing.Size(138, 34);
             this.txtGiaBan.TabIndex = 17;
             // 
             // txtSoLuongTon
@@ -345,15 +345,15 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             this.txtSoLuongTon.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtSoLuongTon.Location = new System.Drawing.Point(145, 253);
             this.txtSoLuongTon.Name = "txtSoLuongTon";
-            this.txtSoLuongTon.Size = new System.Drawing.Size(125, 34);
+            this.txtSoLuongTon.Size = new System.Drawing.Size(132, 34);
             this.txtSoLuongTon.TabIndex = 18;
             // 
             // txtBaoHanhThang
             // 
             this.txtBaoHanhThang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtBaoHanhThang.Location = new System.Drawing.Point(361, 253);
+            this.txtBaoHanhThang.Location = new System.Drawing.Point(370, 253);
             this.txtBaoHanhThang.Name = "txtBaoHanhThang";
-            this.txtBaoHanhThang.Size = new System.Drawing.Size(116, 34);
+            this.txtBaoHanhThang.Size = new System.Drawing.Size(138, 34);
             this.txtBaoHanhThang.TabIndex = 19;
             // 
             // rtbMoTa
