@@ -416,6 +416,11 @@
     <None Include="Resources\tra_thach_dao.jpg" />
     <None Include="Resources\traxanh_latte.jpg" />
     <None Include="Resources\b-pc-mcc-1920x1080.png" />
+    <None Include="Resources\account_circle_200dp_2854C5_FILL0_wght400_GRAD0_opsz48.png" />
+    <None Include="Resources\lock_200dp_2854C5_FILL0_wght400_GRAD0_opsz48.png" />
+    <None Include="Resources\lapstore.jpg" />
+    <Content Include="Resources\visibility_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\visibility_50dp_2854C5_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
   <ItemGroup>
