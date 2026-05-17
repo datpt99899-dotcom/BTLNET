@@ -212,6 +212,11 @@
     <Compile Include="GUI\frmTraHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StaticData.cs" />
     <Compile Include="GUI\frmPOS.cs">
       <SubType>Form</SubType>
@@ -249,11 +254,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="DAL\AuthRepository.cs" />
@@ -340,8 +340,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -359,14 +359,6 @@
       <DependentUpon>QuanLyCuaHangMayTinhDataSet.xsd</DependentUpon>
     </None>
     <None Include="Resources\icons8-add-30.png" />
-    <None Include="Resources\icons8-home-30.png" />
-    <None Include="Resources\icons8-product-30.png" />
-    <None Include="Resources\icons8-sale-30.png" />
-    <None Include="Resources\icons8-settings-30.png" />
-    <None Include="Resources\icons8-shop-30.png" />
-    <None Include="Resources\icons8-statistics-30.png" />
-    <None Include="Resources\table_red.png" />
-    <None Include="Resources\table_white.png" />
     <None Include="packages.config" />
     <None Include="Database\CreateDatabase.sql" />
     <None Include="Database\SeedData.sql" />
@@ -376,51 +368,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
-    <None Include="Resources\logo1.png" />
-    <None Include="Resources\pngegg %281%29.png" />
-    <None Include="Resources\hello.png" />
     <None Include="Resources\Image1.bmp" />
-    <None Include="Resources\banhmi_ga.jpg" />
-    <None Include="Resources\bmousse_cacao.jpg" />
-    <None Include="Resources\caphemuoi.jpg" />
-    <None Include="Resources\caramel_macchiato.jpg" />
-    <None Include="Resources\cfd.jpg" />
-    <None Include="Resources\cfs.jpg" />
-    <None Include="Resources\choco_macchiato.jpg" />
-    <None Include="Resources\chocolate_nong.jpg" />
-    <None Include="Resources\coldbrew.jpg" />
-    <None Include="Resources\daxay_socola.jpg" />
-    <None Include="Resources\daxay_suachua_dau.jpg" />
-    <None Include="Resources\daxay_traxanh.jpg" />
-    <None Include="Resources\ep_cam.jpg" />
-    <None Include="Resources\ep_duahau.jpg" />
-    <None Include="Resources\hitea_kombucha.jpg" />
-    <None Include="Resources\hitea_vai.jpg" />
-    <None Include="Resources\hitea_yuzu.jpg" />
-    <None Include="Resources\latte_da.jpg" />
-    <None Include="Resources\soda_chanhday.jpg" />
-    <None Include="Resources\soda_vietquat.jpg" />
-    <None Include="Resources\suatuoi_duongden.jpg" />
-    <None Include="Resources\tra_cam_xa.jpg" />
-    <None Include="Resources\tra_chanh_sa.jpg" />
-    <None Include="Resources\tra_dao_cam_sa.jpg" />
-    <None Include="Resources\tra_dao_da.jpg" />
-    <None Include="Resources\tra_dau_macchiato.jpg" />
-    <None Include="Resources\tra_den_macchiato.jpg" />
-    <None Include="Resources\tra_oolong_vai.jpg" />
-    <None Include="Resources\tra_sen_vang.jpg" />
-    <None Include="Resources\tra_sua_oolong.jpg" />
-    <None Include="Resources\tra_sua_socola.jpg" />
-    <None Include="Resources\tra_sua_tc.jpg" />
-    <None Include="Resources\tra_thach_dao.jpg" />
-    <None Include="Resources\traxanh_latte.jpg" />
-    <None Include="Resources\b-pc-mcc-1920x1080.png" />
-    <None Include="Resources\account_circle_200dp_2854C5_FILL0_wght400_GRAD0_opsz48.png" />
-    <None Include="Resources\lock_200dp_2854C5_FILL0_wght400_GRAD0_opsz48.png" />
     <None Include="Resources\lapstore.jpg" />
-    <Content Include="Resources\visibility_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
-    <None Include="Resources\visibility_50dp_2854C5_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
   <ItemGroup>
