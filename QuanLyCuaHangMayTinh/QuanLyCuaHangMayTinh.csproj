@@ -370,6 +370,10 @@
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
     <None Include="Resources\lapstore.jpg" />
+    <None Include="Resources\ban.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\eye.png" />
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
   <ItemGroup>
