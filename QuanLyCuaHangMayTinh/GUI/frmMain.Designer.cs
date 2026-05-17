@@ -36,10 +36,10 @@
             this.pnlTabBarDS.SuspendLayout();
             this.pnlContentDS.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // pnlTieuDe
-            //
-            this.pnlTieuDe.BackColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            // 
+            this.pnlTieuDe.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlTieuDe.Controls.Add(this.lblNguoiDungDS);
             this.pnlTieuDe.Controls.Add(this.btnDangXuatDS);
             this.pnlTieuDe.Controls.Add(this.lblTieuDe);
@@ -48,36 +48,24 @@
             this.pnlTieuDe.Name = "pnlTieuDe";
             this.pnlTieuDe.Size = new System.Drawing.Size(1920, 80);
             this.pnlTieuDe.TabIndex = 0;
-            this.pnlTieuDe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTieuDe_MouseDown);
             this.pnlTieuDe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTieuDe_Paint);
-            //
-            // lblTieuDe (placeholder logo bên trái)
-            //
-            this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.BackColor = System.Drawing.Color.Transparent;
-            this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTieuDe.ForeColor = System.Drawing.Color.White;
-            this.lblTieuDe.Location = new System.Drawing.Point(20, 26);
-            this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(335, 25);
-            this.lblTieuDe.TabIndex = 0;
-            this.lblTieuDe.Text = "🖥  Hệ thống quản lý cửa hàng máy tính";
-            //
-            // lblNguoiDungDS (placeholder thông tin user - sẽ bị thay khi chạy)
-            //
+            this.pnlTieuDe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTieuDe_MouseDown);
+            // 
+            // lblNguoiDungDS
+            // 
             this.lblNguoiDungDS.AutoSize = true;
             this.lblNguoiDungDS.BackColor = System.Drawing.Color.Transparent;
             this.lblNguoiDungDS.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblNguoiDungDS.ForeColor = System.Drawing.Color.White;
             this.lblNguoiDungDS.Location = new System.Drawing.Point(1570, 30);
             this.lblNguoiDungDS.Name = "lblNguoiDungDS";
-            this.lblNguoiDungDS.Size = new System.Drawing.Size(177, 19);
+            this.lblNguoiDungDS.Size = new System.Drawing.Size(311, 28);
             this.lblNguoiDungDS.TabIndex = 1;
             this.lblNguoiDungDS.Text = "👤 Nguyễn Văn Admin (Admin)";
-            //
-            // btnDangXuatDS (placeholder nút Đăng xuất - sẽ bị thay khi chạy)
-            //
-            this.btnDangXuatDS.BackColor = System.Drawing.Color.FromArgb(192, 57, 43);
+            // 
+            // btnDangXuatDS
+            // 
+            this.btnDangXuatDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.btnDangXuatDS.FlatAppearance.BorderSize = 0;
             this.btnDangXuatDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuatDS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -88,10 +76,22 @@
             this.btnDangXuatDS.TabIndex = 2;
             this.btnDangXuatDS.Text = "🚪 Đăng xuất";
             this.btnDangXuatDS.UseVisualStyleBackColor = false;
-            //
+            // 
+            // lblTieuDe
+            // 
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.BackColor = System.Drawing.Color.Transparent;
+            this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTieuDe.ForeColor = System.Drawing.Color.White;
+            this.lblTieuDe.Location = new System.Drawing.Point(20, 26);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(554, 38);
+            this.lblTieuDe.TabIndex = 0;
+            this.lblTieuDe.Text = "🖥  Hệ thống quản lý cửa hàng máy tính";
+            // 
             // panelMenu
-            //
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelMenu.Controls.Add(this.btnNguoiDungDS);
             this.panelMenu.Controls.Add(this.btnDanhMucDS);
             this.panelMenu.Controls.Add(this.btnDonHangDS);
@@ -103,10 +103,10 @@
             this.panelMenu.Size = new System.Drawing.Size(260, 960);
             this.panelMenu.TabIndex = 1;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
-            //
-            // btnNguoiDungDS (placeholder - sẽ bị thay bởi IconButton thật khi chạy)
-            //
-            this.btnNguoiDungDS.BackColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            // 
+            // btnNguoiDungDS
+            // 
+            this.btnNguoiDungDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.btnNguoiDungDS.FlatAppearance.BorderSize = 0;
             this.btnNguoiDungDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNguoiDungDS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -118,10 +118,10 @@
             this.btnNguoiDungDS.Text = "👤  Người dùng";
             this.btnNguoiDungDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNguoiDungDS.UseVisualStyleBackColor = false;
-            //
+            // 
             // btnDanhMucDS
-            //
-            this.btnDanhMucDS.BackColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            // 
+            this.btnDanhMucDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.btnDanhMucDS.FlatAppearance.BorderSize = 0;
             this.btnDanhMucDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDanhMucDS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -133,14 +133,14 @@
             this.btnDanhMucDS.Text = "📋  Danh mục";
             this.btnDanhMucDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDanhMucDS.UseVisualStyleBackColor = false;
-            //
+            // 
             // btnDonHangDS
-            //
-            this.btnDonHangDS.BackColor = System.Drawing.Color.FromArgb(255, 215, 0);
+            // 
+            this.btnDonHangDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.btnDonHangDS.FlatAppearance.BorderSize = 0;
             this.btnDonHangDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonHangDS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDonHangDS.ForeColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            this.btnDonHangDS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.btnDonHangDS.Location = new System.Drawing.Point(3, 142);
             this.btnDonHangDS.Name = "btnDonHangDS";
             this.btnDonHangDS.Size = new System.Drawing.Size(254, 60);
@@ -148,10 +148,10 @@
             this.btnDonHangDS.Text = "🛒  Đơn hàng";
             this.btnDonHangDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDonHangDS.UseVisualStyleBackColor = false;
-            //
+            // 
             // btnKhoDS
-            //
-            this.btnKhoDS.BackColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            // 
+            this.btnKhoDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.btnKhoDS.FlatAppearance.BorderSize = 0;
             this.btnKhoDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhoDS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -163,10 +163,10 @@
             this.btnKhoDS.Text = "🏭  Kho/Nhập kho";
             this.btnKhoDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhoDS.UseVisualStyleBackColor = false;
-            //
+            // 
             // btnBaoCaoDS
-            //
-            this.btnBaoCaoDS.BackColor = System.Drawing.Color.FromArgb(20, 35, 80);
+            // 
+            this.btnBaoCaoDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.btnBaoCaoDS.FlatAppearance.BorderSize = 0;
             this.btnBaoCaoDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaoCaoDS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -178,50 +178,47 @@
             this.btnBaoCaoDS.Text = "📊  Báo cáo";
             this.btnBaoCaoDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoCaoDS.UseVisualStyleBackColor = false;
-            //
-            // pnlTabBarDS (placeholder tab bar - sẽ bị thay)
-            //
-            this.pnlTabBarDS.BackColor = System.Drawing.Color.FromArgb(240, 242, 247);
+            // 
+            // pnlTabBarDS
+            // 
+            this.pnlTabBarDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
             this.pnlTabBarDS.Controls.Add(this.lblTabHintDS);
             this.pnlTabBarDS.Location = new System.Drawing.Point(260, 80);
             this.pnlTabBarDS.Name = "pnlTabBarDS";
             this.pnlTabBarDS.Size = new System.Drawing.Size(1660, 50);
             this.pnlTabBarDS.TabIndex = 2;
-            //
+            // 
             // lblTabHintDS
-            //
+            // 
             this.lblTabHintDS.AutoSize = true;
             this.lblTabHintDS.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
             this.lblTabHintDS.ForeColor = System.Drawing.Color.Gray;
             this.lblTabHintDS.Location = new System.Drawing.Point(15, 16);
             this.lblTabHintDS.Name = "lblTabHintDS";
-            this.lblTabHintDS.Size = new System.Drawing.Size(386, 19);
+            this.lblTabHintDS.Size = new System.Drawing.Size(0, 28);
             this.lblTabHintDS.TabIndex = 0;
-            this.lblTabHintDS.Text = "[ Thanh tab các form con sẽ hiển thị ở đây khi chạy ]";
-            //
-            // pnlContentDS (placeholder vùng content - sẽ bị thay)
-            //
+            // 
+            // pnlContentDS
+            // 
             this.pnlContentDS.BackColor = System.Drawing.Color.White;
             this.pnlContentDS.Controls.Add(this.lblContentHintDS);
             this.pnlContentDS.Location = new System.Drawing.Point(260, 130);
             this.pnlContentDS.Name = "pnlContentDS";
             this.pnlContentDS.Size = new System.Drawing.Size(1660, 910);
             this.pnlContentDS.TabIndex = 3;
-            //
+            // 
             // lblContentHintDS
-            //
+            // 
             this.lblContentHintDS.AutoSize = true;
             this.lblContentHintDS.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Italic);
             this.lblContentHintDS.ForeColor = System.Drawing.Color.LightGray;
             this.lblContentHintDS.Location = new System.Drawing.Point(40, 40);
             this.lblContentHintDS.Name = "lblContentHintDS";
-            this.lblContentHintDS.Size = new System.Drawing.Size(429, 20);
+            this.lblContentHintDS.Size = new System.Drawing.Size(0, 30);
             this.lblContentHintDS.TabIndex = 0;
-            this.lblContentHintDS.Text = "[ Form con (Sản phẩm, Hóa đơn, Báo cáo...) hiển thị ở đây ]";
-            //
+            // 
             // frm_quanly
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1920, 1040);
@@ -244,6 +241,7 @@
             this.pnlContentDS.ResumeLayout(false);
             this.pnlContentDS.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion

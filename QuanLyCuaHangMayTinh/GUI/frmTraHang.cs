@@ -232,7 +232,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnLamMoi.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.Location = new System.Drawing.Point(839, 20);
             this.btnLamMoi.Name = "btnLamMoi";
@@ -244,7 +244,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnTimHoaDon
             // 
-            this.btnTimHoaDon.BackColor = System.Drawing.Color.LightBlue;
+            this.btnTimHoaDon.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnTimHoaDon.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimHoaDon.Location = new System.Drawing.Point(657, 20);
             this.btnTimHoaDon.Name = "btnTimHoaDon";
@@ -372,7 +372,6 @@ namespace QuanLyCuaHangMayTinh
             this.groupBox4.Size = new System.Drawing.Size(1081, 115);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tổng kết";
             // 
             // txtTongTienTra
             // 
@@ -430,7 +429,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnLuu.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLuu.Location = new System.Drawing.Point(96, 778);
@@ -443,7 +442,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.Tomato;
+            this.btnHuy.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.SystemColors.Control;
             this.btnHuy.Location = new System.Drawing.Point(282, 778);
@@ -456,7 +455,7 @@ namespace QuanLyCuaHangMayTinh
             // 
             // btnIn
             // 
-            this.btnIn.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnIn.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.ForeColor = System.Drawing.SystemColors.Control;
             this.btnIn.Location = new System.Drawing.Point(416, 778);

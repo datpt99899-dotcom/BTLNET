@@ -229,8 +229,8 @@
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Location = new System.Drawing.Point(266, 682);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(170, 50);
@@ -242,7 +242,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(862, 682);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 50);
@@ -252,9 +252,9 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(667, 682);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 50);
@@ -288,13 +288,11 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(68, 632);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(459, 28);
+            this.label8.Size = new System.Drawing.Size(0, 28);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Kích đúp vào phiếu nhập để hiện thông tin chi tiết !";
             // 
             // frmTimKiemPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1237, 748);
             this.Controls.Add(this.btnTimKiem);

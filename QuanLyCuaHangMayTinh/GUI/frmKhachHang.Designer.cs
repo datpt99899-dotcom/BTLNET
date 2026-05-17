@@ -106,7 +106,6 @@
             this.mskDienthoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.mskDienthoai.Location = new System.Drawing.Point(686, 84);
             this.mskDienthoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mskDienthoai.Mask = "";
             this.mskDienthoai.Name = "mskDienthoai";
             this.mskDienthoai.Size = new System.Drawing.Size(337, 30);
             this.mskDienthoai.TabIndex = 1;
@@ -131,6 +130,7 @@
             // 
             // txtMakhachhang
             // 
+            this.txtMakhachhang.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtMakhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtMakhachhang.Location = new System.Drawing.Point(180, 40);
             this.txtMakhachhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -219,7 +219,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label9.Location = new System.Drawing.Point(22, 294);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(317, 26);
@@ -332,7 +332,6 @@
             // 
             // frmKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1171, 750);
