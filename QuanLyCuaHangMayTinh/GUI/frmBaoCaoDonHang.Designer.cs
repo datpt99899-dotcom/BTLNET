@@ -167,14 +167,6 @@
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlGrid.Size = new System.Drawing.Size(1168, 313);
             this.pnlGrid.TabIndex = 8;
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            //
             // 
             // pnlFilter
             // 
@@ -196,11 +188,10 @@
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.Gray;
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnThoat.Location = new System.Drawing.Point(960, 77);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnThoat.Name = "btnThoat";
@@ -212,11 +203,10 @@
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnLamMoi.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLamMoi.Location = new System.Drawing.Point(789, 77);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnLamMoi.Name = "btnLamMoi";
@@ -371,11 +361,10 @@
             // btnInBaoCao
             // 
             this.btnInBaoCao.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.White;
             this.btnInBaoCao.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnInBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnInBaoCao.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnInBaoCao.Location = new System.Drawing.Point(1102, 12);
             this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnInBaoCao.Name = "btnInBaoCao";
@@ -422,7 +411,6 @@
             // 
             // frmBaoCaoDonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1199, 982);
             this.Controls.Add(this.pnlHeader);

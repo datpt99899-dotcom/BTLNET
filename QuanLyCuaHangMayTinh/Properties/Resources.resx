@@ -121,14 +121,23 @@
   <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coldbrew" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coldbrew.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tra_den_macchiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_den_macchiato.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="table_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tra_dao_cam_sa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_dao_cam_sa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="latte_da" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\latte_da.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +151,11 @@
   <data name="tra_dao_da" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tra_dao_da.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ep_cam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ep_cam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hitea_vai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hitea_vai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bmousse_cacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bmousse_cacao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tra_thach_dao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_thach_dao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tra_cam_xa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tra_cam_xa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,38 +163,29 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tra_sua_tc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_sua_tc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caramel_macchiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caramel_macchiato.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tra_sua_oolong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_sua_oolong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="suatuoi_duongden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suatuoi_duongden.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="banhmi_ga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banhmi_ga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tra_sua_socola" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_sua_socola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tra_dao_cam_sa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_dao_cam_sa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tra_oolong_vai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_oolong_vai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hello" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tra_thach_dao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_thach_dao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tra_sua_tc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_sua_tc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tra_sen_vang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tra_sen_vang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tra_dau_macchiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_dau_macchiato.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tra_oolong_vai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_oolong_vai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmousse_cacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmousse_cacao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cfd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cfd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,14 +196,14 @@
   <data name="traxanh_latte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\traxanh_latte.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-add-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-add-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="b-pc-mcc-1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b-pc-mcc-1920x1080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="choco_macchiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\choco_macchiato.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngegg (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngegg (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-add-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-add-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hitea_yuzu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hitea_yuzu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,23 +217,38 @@
   <data name="soda_chanhday" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soda_chanhday.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="suatuoi_duongden" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\suatuoi_duongden.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ep_cam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ep_cam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tra_dau_macchiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_dau_macchiato.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="soda_vietquat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soda_vietquat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tra_den_macchiato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_den_macchiato.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ep_duahau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ep_duahau.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caphemuoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caphemuoi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="table_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\table_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hello" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="human" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\human.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngegg (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngegg (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="may" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,16 +256,16 @@
   <data name="cfs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cfs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hitea_vai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hitea_vai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tra_sua_oolong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_sua_oolong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="daxay_socola" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\daxay_socola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ep_duahau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ep_duahau.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tra_sua_socola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra_sua_socola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="b-pc-mcc-1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b-pc-mcc-1920x1080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="may1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

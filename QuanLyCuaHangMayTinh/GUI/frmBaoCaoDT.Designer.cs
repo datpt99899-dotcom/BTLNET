@@ -34,6 +34,10 @@
             this.lblDoanhThuHint = new System.Windows.Forms.Label();
             this.lblDoanhThuTitle = new System.Windows.Forms.Label();
             this.lblDoanhThu = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblChiPhi = new System.Windows.Forms.Label();
             this.cardDonHang = new System.Windows.Forms.Panel();
             this.lblDonHangHint = new System.Windows.Forms.Label();
             this.lblDonHangTitle = new System.Windows.Forms.Label();
@@ -51,6 +55,8 @@
             this.lblGridTitle = new System.Windows.Forms.Label();
             this.pnlStats = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.tblFilter = new System.Windows.Forms.TableLayoutPanel();
             this.pnlFrom = new System.Windows.Forms.Panel();
@@ -69,14 +75,9 @@
             this.pnlTabIndicator = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblChiPhi = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.tblStats.SuspendLayout();
             this.cardDoanhThu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.cardDonHang.SuspendLayout();
             this.cardTB.SuspendLayout();
             this.pnlChart.SuspendLayout();
@@ -92,7 +93,6 @@
             this.flpActions.SuspendLayout();
             this.pnlTabs.SuspendLayout();
             this.pnlHeader.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnXemBaoCao
@@ -175,6 +175,53 @@
             this.lblDoanhThu.Size = new System.Drawing.Size(27, 32);
             this.lblDoanhThu.TabIndex = 1;
             this.lblDoanhThu.Text = "0";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblChiPhi);
+            this.panel1.Location = new System.Drawing.Point(849, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
+            this.panel1.Size = new System.Drawing.Size(275, 122);
+            this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(14, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tổng chi phí trong kỳ ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
+            this.label2.Location = new System.Drawing.Point(14, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tổng chi phí ";
+            // 
+            // lblChiPhi
+            // 
+            this.lblChiPhi.AutoSize = true;
+            this.lblChiPhi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChiPhi.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblChiPhi.Location = new System.Drawing.Point(14, 37);
+            this.lblChiPhi.Name = "lblChiPhi";
+            this.lblChiPhi.Size = new System.Drawing.Size(27, 32);
+            this.lblChiPhi.TabIndex = 1;
+            this.lblChiPhi.Text = "0";
             // 
             // cardDonHang
             // 
@@ -370,14 +417,36 @@
             this.pnlContent.Padding = new System.Windows.Forms.Padding(16, 0, 16, 16);
             this.pnlContent.Size = new System.Drawing.Size(1200, 975);
             this.pnlContent.TabIndex = 3;
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            //
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Gray;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnThoat.Location = new System.Drawing.Point(1038, 913);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(129, 46);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát ";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnLamMoi.Location = new System.Drawing.Point(867, 913);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(161, 46);
+            this.btnLamMoi.TabIndex = 10;
+            this.btnLamMoi.Text = "Làm mới ";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
             // pnlFilter
             // 
@@ -504,7 +573,7 @@
             this.lblLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
             this.lblLoai.Location = new System.Drawing.Point(0, -4);
             this.lblLoai.Name = "lblLoai";
-            this.lblLoai.Size = new System.Drawing.Size(150, 28);
+            this.lblLoai.Size = new System.Drawing.Size(147, 28);
             this.lblLoai.TabIndex = 0;
             this.lblLoai.Text = "Thống kê theo";
             // 
@@ -525,11 +594,10 @@
             // btnInBaoCao
             // 
             this.btnInBaoCao.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.White;
             this.btnInBaoCao.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnInBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnInBaoCao.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnInBaoCao.Location = new System.Drawing.Point(171, 28);
             this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnInBaoCao.Name = "btnInBaoCao";
@@ -596,88 +664,8 @@
             this.pnlHeader.Size = new System.Drawing.Size(1200, 75);
             this.pnlHeader.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblChiPhi);
-            this.panel1.Location = new System.Drawing.Point(849, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
-            this.panel1.Size = new System.Drawing.Size(275, 122);
-            this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(14, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tổng chi phí trong kỳ ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
-            this.label2.Location = new System.Drawing.Point(14, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tổng chi phí ";
-            // 
-            // lblChiPhi
-            // 
-            this.lblChiPhi.AutoSize = true;
-            this.lblChiPhi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChiPhi.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblChiPhi.Location = new System.Drawing.Point(14, 37);
-            this.lblChiPhi.Name = "lblChiPhi";
-            this.lblChiPhi.Size = new System.Drawing.Size(27, 32);
-            this.lblChiPhi.TabIndex = 1;
-            this.lblChiPhi.Text = "0";
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.Gray;
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThoat.Location = new System.Drawing.Point(1038, 913);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(129, 46);
-            this.btnThoat.TabIndex = 9;
-            this.btnThoat.Text = "Thoát ";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.FlatAppearance.BorderSize = 0;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnLamMoi.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnLamMoi.Location = new System.Drawing.Point(867, 913);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(161, 46);
-            this.btnLamMoi.TabIndex = 10;
-            this.btnLamMoi.Text = "Làm mới ";
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            // 
             // frmBaoCaoDT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1202, 1050);
             this.Controls.Add(this.pnlContent);
@@ -687,6 +675,8 @@
             this.tblStats.ResumeLayout(false);
             this.cardDoanhThu.ResumeLayout(false);
             this.cardDoanhThu.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.cardDonHang.ResumeLayout(false);
             this.cardDonHang.PerformLayout();
             this.cardTB.ResumeLayout(false);
@@ -708,8 +698,6 @@
             this.pnlTabs.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -32,6 +32,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.chtSanPham = new LiveCharts.WinForms.CartesianChart();
             this.pnlChart = new System.Windows.Forms.Panel();
+            this.chtDoanhThu = new LiveCharts.WinForms.CartesianChart();
             this.lblChartTitle = new System.Windows.Forms.Label();
             this.dgvChiTiet = new System.Windows.Forms.DataGridView();
             this.lblGridTitle = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTongBan = new System.Windows.Forms.Label();
             this.lblTongNhap = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.btnXuatExcel = new System.Windows.Forms.Button();
             this.pnlTabs = new System.Windows.Forms.Panel();
             this.pnlTabIndicator = new System.Windows.Forms.Panel();
-            this.lblTongBan = new System.Windows.Forms.Label();
-            this.chtDoanhThu = new LiveCharts.WinForms.CartesianChart();
             this.pnlHeader.SuspendLayout();
             this.pnlChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
@@ -114,6 +114,13 @@
             this.pnlChart.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlChart.Size = new System.Drawing.Size(1168, 260);
             this.pnlChart.TabIndex = 6;
+            // 
+            // chtDoanhThu
+            // 
+            this.chtDoanhThu.Location = new System.Drawing.Point(626, 44);
+            this.chtDoanhThu.Name = "chtDoanhThu";
+            this.chtDoanhThu.Size = new System.Drawing.Size(465, 199);
+            this.chtDoanhThu.TabIndex = 2;
             // 
             // lblChartTitle
             // 
@@ -173,14 +180,6 @@
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(16, 12, 16, 16);
             this.pnlGrid.Size = new System.Drawing.Size(1168, 313);
             this.pnlGrid.TabIndex = 8;
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            //
             // 
             // pnlFilter
             // 
@@ -257,7 +256,6 @@
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.Gray;
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -273,11 +271,10 @@
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Gray;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnLamMoi.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLamMoi.Location = new System.Drawing.Point(791, 77);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnLamMoi.Name = "btnLamMoi";
@@ -312,6 +309,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 149);
             this.panel1.TabIndex = 2;
+            // 
+            // lblTongBan
+            // 
+            this.lblTongBan.AutoSize = true;
+            this.lblTongBan.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongBan.ForeColor = System.Drawing.Color.Red;
+            this.lblTongBan.Location = new System.Drawing.Point(7, 112);
+            this.lblTongBan.Name = "lblTongBan";
+            this.lblTongBan.Size = new System.Drawing.Size(31, 30);
+            this.lblTongBan.TabIndex = 0;
+            this.lblTongBan.Text = "0 ";
             // 
             // lblTongNhap
             // 
@@ -401,11 +409,10 @@
             // btnInBaoCao
             // 
             this.btnInBaoCao.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.White;
             this.btnInBaoCao.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnInBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnInBaoCao.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnInBaoCao.Location = new System.Drawing.Point(1104, 12);
             this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnInBaoCao.Name = "btnInBaoCao";
@@ -450,27 +457,8 @@
             this.pnlTabIndicator.Size = new System.Drawing.Size(1174, 3);
             this.pnlTabIndicator.TabIndex = 1;
             // 
-            // lblTongBan
-            // 
-            this.lblTongBan.AutoSize = true;
-            this.lblTongBan.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongBan.ForeColor = System.Drawing.Color.Red;
-            this.lblTongBan.Location = new System.Drawing.Point(7, 112);
-            this.lblTongBan.Name = "lblTongBan";
-            this.lblTongBan.Size = new System.Drawing.Size(31, 30);
-            this.lblTongBan.TabIndex = 0;
-            this.lblTongBan.Text = "0 ";
-            // 
-            // chtDoanhThu
-            // 
-            this.chtDoanhThu.Location = new System.Drawing.Point(626, 44);
-            this.chtDoanhThu.Name = "chtDoanhThu";
-            this.chtDoanhThu.Size = new System.Drawing.Size(465, 199);
-            this.chtDoanhThu.TabIndex = 2;
-            // 
             // frmBaoCaoSP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1201, 988);
             this.Controls.Add(this.pnlHeader);

@@ -416,6 +416,11 @@
     <None Include="Resources\tra_thach_dao.jpg" />
     <None Include="Resources\traxanh_latte.jpg" />
     <None Include="Resources\b-pc-mcc-1920x1080.png" />
+    <None Include="Resources\human.jpg" />
+    <None Include="Resources\khoa.jpg" />
+    <None Include="Resources\mat.jpg" />
+    <None Include="Resources\may.jpg" />
+    <None Include="Resources\may1.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
   <ItemGroup>
