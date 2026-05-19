@@ -75,7 +75,7 @@ namespace QuanLyCuaHangMayTinh.GUI
                            ISNULL(kh.SoDienThoai, '') AS SoDienThoai,
                            nv.HoTen AS TenNhanVien,
                            hd.TongTien, hd.HinhThucThanhToan, hd.TrangThai,
-                           ISNULL(hd.MaDonDatHang, '') AS MaDonDatHang
+                          ISNULL(hd.MaDonDatHang, '') AS MaDonDatHang
                     FROM HoaDonBan hd
                     LEFT JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
                     LEFT JOIN NhanVien  nv ON hd.MaNhanVien = nv.MaNhanVien

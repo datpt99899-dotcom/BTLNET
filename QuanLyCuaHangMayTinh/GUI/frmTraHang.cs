@@ -285,6 +285,7 @@ namespace QuanLyCuaHangMayTinh
             // dgvSanPhamTra
             // 
             this.dgvSanPhamTra.AllowUserToAddRows = false;
+            this.dgvSanPhamTra.AutoGenerateColumns = false;  // ← thêm dòng này
             this.dgvSanPhamTra.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvSanPhamTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPhamTra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -305,6 +306,7 @@ namespace QuanLyCuaHangMayTinh
             // MaSP
             // 
             this.MaSP.HeaderText = "Mã SP";
+            this.MaSP.DataPropertyName = "MaSP";
             this.MaSP.MinimumWidth = 6;
             this.MaSP.Name = "MaSP";
             this.MaSP.ReadOnly = true;
@@ -313,6 +315,7 @@ namespace QuanLyCuaHangMayTinh
             // TenSP
             // 
             this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.DataPropertyName = "TenSP";
             this.TenSP.MinimumWidth = 6;
             this.TenSP.Name = "TenSP";
             this.TenSP.ReadOnly = true;
@@ -321,6 +324,7 @@ namespace QuanLyCuaHangMayTinh
             // SoLuongDaMua
             // 
             this.SoLuongDaMua.HeaderText = "SL đã mua";
+            this.SoLuongDaMua.DataPropertyName = "SoLuongDaMua";
             this.SoLuongDaMua.MinimumWidth = 6;
             this.SoLuongDaMua.Name = "SoLuongDaMua";
             this.SoLuongDaMua.ReadOnly = true;
@@ -329,6 +333,7 @@ namespace QuanLyCuaHangMayTinh
             // SoLuongTra
             // 
             this.SoLuongTra.HeaderText = "SL trả";
+            this.SoLuongTra.DataPropertyName = "SoLuongTra";
             this.SoLuongTra.MinimumWidth = 6;
             this.SoLuongTra.Name = "SoLuongTra";
             this.SoLuongTra.Width = 80;
@@ -336,6 +341,7 @@ namespace QuanLyCuaHangMayTinh
             // DonGia
             // 
             this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.DataPropertyName = "DonGia";
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
@@ -344,6 +350,7 @@ namespace QuanLyCuaHangMayTinh
             // ThanhTienTra
             // 
             this.ThanhTienTra.HeaderText = "Thành tiền trả";
+            this.ThanhTienTra.DataPropertyName = "ThanhTienTra";
             this.ThanhTienTra.MinimumWidth = 6;
             this.ThanhTienTra.Name = "ThanhTienTra";
             this.ThanhTienTra.ReadOnly = true;
@@ -352,6 +359,7 @@ namespace QuanLyCuaHangMayTinh
             // LyDo
             // 
             this.LyDo.HeaderText = "Lý do trả";
+            this.LyDo.DataPropertyName = "LyDo";
             this.LyDo.MinimumWidth = 6;
             this.LyDo.Name = "LyDo";
             this.LyDo.Width = 150;

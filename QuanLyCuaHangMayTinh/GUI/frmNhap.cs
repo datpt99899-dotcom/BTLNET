@@ -67,6 +67,12 @@ namespace QuanLyCuaHangMayTinh.GUI
             if (btnTimKiem != null) btnTimKiem.Click += BtnSua_Click;
             if (btnXuat    != null) btnXuat.Click    += BtnXuat_Click;
             if (cboMaSP  != null) cboMaSP.SelectedIndexChanged  += CboMaSP_SelectedIndexChanged;
+            // Thêm vào sau dòng:
+            // if (cboMaSP != null) cboMaSP.SelectedIndexChanged += CboMaSP_SelectedIndexChanged;
+
+            if (txtSoLuong != null) txtSoLuong.TextChanged += TinhThanhTien;
+            if (txtDonGia != null) txtDonGia.TextChanged += TinhThanhTien;
+            if (txtGiamGia != null) txtGiamGia.TextChanged += TinhThanhTien;
             if (cboMaNCC != null) cboMaNCC.SelectedIndexChanged += CboMaNCC_SelectedIndexChanged;
 
             // Double-click vào dòng chi tiết để xóa khỏi danh sách (trước khi lưu)
@@ -331,7 +337,15 @@ namespace QuanLyCuaHangMayTinh.GUI
                 if (soLuong <= 0) { MessageBox.Show("Số lượng phải > 0"); return; }
                 if (donGia  <= 0) { MessageBox.Show("Đơn giá phải > 0"); return; }
 
+                decimal giamGia = 0;
+                decimal.TryParse(
+                    txtGiamGia?.Text?.Replace("%", "").Trim(),
+                    out giamGia);
+
                 decimal thanhTien = soLuong * donGia;
+                if (giamGia > 0)
+                    thanhTien = thanhTien - (thanhTien * giamGia / 100);
+
                 _dtChiTiet.Rows.Add(cboMaSP.SelectedValue.ToString(), txtTenSP.Text, soLuong, donGia, thanhTien);
                 UpdateTongTien();
                 txtSoLuong.Text = ""; txtDonGia.Text = "";
@@ -383,5 +397,29 @@ namespace QuanLyCuaHangMayTinh.GUI
             if (lblBangChu  != null) lblBangChu.Text  = "";
             if (txtMaPN != null) txtMaPN.Text = _bus.GenerateMaPhieuNhap();
         }
+        private void TinhThanhTien(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal soLuong = 0, donGia = 0, giamGia = 0;
+
+                decimal.TryParse(txtSoLuong?.Text?.Trim(), out soLuong);
+                decimal.TryParse(
+                    txtDonGia?.Text?.Replace(",", "").Replace(".", "").Trim(),
+                    out donGia);
+                decimal.TryParse(
+                    txtGiamGia?.Text?.Replace("%", "").Trim(),
+                    out giamGia);
+
+                decimal thanhTien = soLuong * donGia;
+                if (giamGia > 0)
+                    thanhTien = thanhTien - (thanhTien * giamGia / 100);
+
+                if (txtThanhTien != null)
+                    txtThanhTien.Text = thanhTien > 0 ? thanhTien.ToString("N0") : "";
+            }
+            catch { }
+        }
     }
+
 }

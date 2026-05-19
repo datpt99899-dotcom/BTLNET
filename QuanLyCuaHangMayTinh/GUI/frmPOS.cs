@@ -69,7 +69,12 @@ namespace QuanLyCuaHangMayTinh
 
             if (txtSearch  != null) txtSearch.TextChanged  += (s, ev) => LoadSanPham();
             if (txtGiamGia != null) txtGiamGia.TextChanged += (s, ev) => TinhTong();
-            if (comboBox1  != null) comboBox1.SelectedIndexChanged    += (s, ev) => LoadSanPham();
+            if (comboBox1 != null) comboBox1.SelectedIndexChanged += (s, ev) =>
+            {
+                string maLoai = comboBox1.SelectedValue?.ToString() ?? "";
+                LoadComboThuongHieu(maLoai);   // lọc thương hiệu theo loại
+                LoadSanPham();                  // lọc sản phẩm
+            };
             if (cboThuongHieu != null) cboThuongHieu.SelectedIndexChanged += (s, ev) => LoadSanPham();
         }
 
@@ -103,15 +108,34 @@ namespace QuanLyCuaHangMayTinh
             catch { }
         }
 
-        private void LoadComboThuongHieu()
+        private void LoadComboThuongHieu(string maLoai = "")
         {
             if (cboThuongHieu == null) return;
             try
             {
-                var dt = Function.GetDataToTable("SELECT MaThuongHieu, TenThuongHieu FROM ThuongHieu ORDER BY TenThuongHieu");
+                DataTable dt;
+                if (string.IsNullOrEmpty(maLoai))
+                {
+                    // Chưa chọn loại → hiện tất cả thương hiệu
+                    dt = Function.GetDataToTable(
+                        "SELECT MaThuongHieu, TenThuongHieu FROM ThuongHieu ORDER BY TenThuongHieu");
+                }
+                else
+                {
+                    // Đã chọn loại → chỉ hiện thương hiệu có SP thuộc loại đó
+                    dt = Function.GetDataToTable(
+                        @"SELECT DISTINCT th.MaThuongHieu, th.TenThuongHieu
+                  FROM ThuongHieu th
+                  INNER JOIN SanPham sp ON sp.MaThuongHieu = th.MaThuongHieu
+                  WHERE sp.MaLoai = @maLoai
+                  ORDER BY th.TenThuongHieu",
+                        new SqlParameter("@maLoai", maLoai));
+                }
+
                 var rowAll = dt.NewRow();
                 rowAll["MaThuongHieu"] = ""; rowAll["TenThuongHieu"] = "-- Tất cả --";
                 dt.Rows.InsertAt(rowAll, 0);
+
                 cboThuongHieu.DataSource = dt;
                 cboThuongHieu.DisplayMember = "TenThuongHieu";
                 cboThuongHieu.ValueMember = "MaThuongHieu";
