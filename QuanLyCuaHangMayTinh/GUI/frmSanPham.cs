@@ -58,6 +58,13 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
                 MessageBox.Show("Không thể khởi tạo dữ liệu cho form sản phẩm.\n" + ex.Message,
                     "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            // Thêm vào sau các dòng LoadCombo...:
+            cboLoaiSanPham.SelectedIndexChanged += (s, ev) =>
+            {
+                string maLoai = cboLoaiSanPham.SelectedValue?.ToString() ?? "";
+                LoadComboThuongHieu(cboThuongHieu, false, maLoai);
+                LoadComboNhaCungCap(cboNhaCungCap, false, maLoai);
+            };
         }
 
         private void LoadDanhMucCombobox()
@@ -85,9 +92,16 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
             combo.ValueMember = "MaLoai";
         }
 
-        private void LoadComboThuongHieu(ComboBox combo, bool includeAll)
+        private void LoadComboThuongHieu(ComboBox combo, bool includeAll, string maLoai = "")
         {
-            var dt = DbHelper.GetDataTable("SELECT MaThuongHieu, TenThuongHieu FROM ThuongHieu ORDER BY TenThuongHieu;");
+            string sql = string.IsNullOrEmpty(maLoai)
+                ? "SELECT MaThuongHieu, TenThuongHieu FROM ThuongHieu ORDER BY TenThuongHieu"
+                : @"SELECT DISTINCT th.MaThuongHieu, th.TenThuongHieu
+            FROM ThuongHieu th
+            INNER JOIN SanPham sp ON sp.MaThuongHieu = th.MaThuongHieu
+            WHERE sp.MaLoai = '" + maLoai + "' ORDER BY th.TenThuongHieu";
+
+            var dt = DbHelper.GetDataTable(sql);
             if (includeAll)
             {
                 var row = dt.NewRow();
@@ -95,15 +109,21 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
                 row["TenThuongHieu"] = "-- Tất cả --";
                 dt.Rows.InsertAt(row, 0);
             }
-
             combo.DataSource = dt;
             combo.DisplayMember = "TenThuongHieu";
             combo.ValueMember = "MaThuongHieu";
         }
 
-        private void LoadComboNhaCungCap(ComboBox combo, bool includeAll)
+        private void LoadComboNhaCungCap(ComboBox combo, bool includeAll, string maLoai = "")
         {
-            var dt = DbHelper.GetDataTable("SELECT MaNCC, TenNCC FROM NhaCungCap ORDER BY TenNCC;");
+            string sql = string.IsNullOrEmpty(maLoai)
+                ? "SELECT MaNCC, TenNCC FROM NhaCungCap ORDER BY TenNCC"
+                : @"SELECT DISTINCT ncc.MaNCC, ncc.TenNCC
+            FROM NhaCungCap ncc
+            INNER JOIN SanPham sp ON sp.MaNCC = ncc.MaNCC
+            WHERE sp.MaLoai = '" + maLoai + "' ORDER BY ncc.TenNCC";
+
+            var dt = DbHelper.GetDataTable(sql);
             if (includeAll)
             {
                 var row = dt.NewRow();
@@ -111,7 +131,6 @@ namespace QuanLyCuaHangMayTinh_Forms.Forms
                 row["TenNCC"] = "-- Tất cả --";
                 dt.Rows.InsertAt(row, 0);
             }
-
             combo.DataSource = dt;
             combo.DisplayMember = "TenNCC";
             combo.ValueMember = "MaNCC";
