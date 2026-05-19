@@ -90,7 +90,6 @@
             // 
             this.mskSDT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskSDT.Location = new System.Drawing.Point(857, 144);
-            this.mskSDT.Mask = "";
             this.mskSDT.Name = "mskSDT";
             this.mskSDT.Size = new System.Drawing.Size(213, 34);
             this.mskSDT.TabIndex = 53;
@@ -319,8 +318,8 @@
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Location = new System.Drawing.Point(468, 862);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(170, 50);
@@ -370,20 +369,18 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.Control;
             this.btnThem.Location = new System.Drawing.Point(307, 773);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(210, 50);
             this.btnThem.TabIndex = 63;
-            this.btnThem.Text = "Thêm phiếu nhập ";
+            this.btnThem.Text = "Thêm sản phẩm ";
             this.btnThem.UseVisualStyleBackColor = false;
             // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLuu.Location = new System.Drawing.Point(549, 773);
@@ -407,8 +404,8 @@
             // btnXuat
             // 
             this.btnXuat.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnXuat.ForeColor = System.Drawing.Color.White;
             this.btnXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.Color.White;
             this.btnXuat.Location = new System.Drawing.Point(920, 773);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(170, 50);
@@ -419,8 +416,8 @@
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.Gray;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.Location = new System.Drawing.Point(703, 773);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(186, 50);
@@ -634,7 +631,6 @@
             // 
             // frmNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1366, 923);
             this.Controls.Add(this.cboMaPN);
