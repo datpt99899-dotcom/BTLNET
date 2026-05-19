@@ -142,7 +142,7 @@ namespace QuanLyCuaHangMayTinh
                 BackColor = Color.FromArgb(192, 57, 43),
                 FlatStyle = FlatStyle.Flat,
                 Font = new Font("Segoe UI", 9.5F, FontStyle.Bold),
-                Size = new Size(120, 36),
+                Size = new Size(160, 36),
                 TextImageRelation = TextImageRelation.ImageBeforeText,
                 ImageAlign = ContentAlignment.MiddleLeft,
                 TextAlign = ContentAlignment.MiddleLeft,
